@@ -198,3 +198,7 @@ Route::get('pub-admin', function () {
 Route::get('marketing', function () {
     return view("USER.marketing");
 })->name("marketing");
+
+Route::get('developementStudies', function () {
+    return view("USER.developementStudies");
+})->name("developementStudies");
