@@ -427,6 +427,115 @@
                 <p style="text-align:left; "><b>Total Unit: 22</b></p>
             </div>
         </div>
+        <div class="certificate-advert" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
+            <h2>LOOKING FOR SOMETHING ELSE?</h2>
+            <p style="font-size: 15px; margin:5px;">Check out our 10 months  professional certificate programs</p>
+
+            <ol class="course-list desk" style="width: 90%; margin:10px 0;">
+                <li class="course-item">
+                    <a href="/register">
+                    Web Development
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Creative Writing
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Social Media Strategist
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Private Investigator
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Programming
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Networking
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Cyber Security
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    3D Motion Graphics
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Criminal Justice
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Graphic Design | Media Arts
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Human Resource Management
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Social Awareness
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Public Speaking
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Graphics Design
+                    </a>
+                </li>
+            </ol>
+            <ol class="course-list mobile" style="width: 90%; margin:10px 0;">
+                <li class="course-item">
+                    <a href="/register">
+                    Web Development
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Private Investigator
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Programming
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Cyber Security
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    3D Motion Graphics
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Human Resource Management
+                    </a>
+                </li>
+            </ol>
+        </div>
     </main>
     {{-- function for the tab --}}
     <script>

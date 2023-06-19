@@ -409,7 +409,7 @@
                 <p style="text-align:left; "><b>Total Unit: 25</b></p>
             </div>
         </div>
-        <div style="display: flex; flex-direction:column; align-items:center; justify-content:center; margin: 10px;">
+        <div class="certificate-advert" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
             <h2>LOOKING FOR SOMETHING ELSE?</h2>
             <p style="font-size: 15px; margin:5px;">Check out our 10 months  professional certificate programs</p>
 
