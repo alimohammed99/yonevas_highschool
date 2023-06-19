@@ -79,9 +79,9 @@
         <li class="fm"><a class="hvr-sweep-to-right ftiles" href="{{ route('banking-finance') }}"><span class="blurb2">Banking and Finance</span></a>
         </li>
         <li class="fm"><a class="hvr-sweep-to-right ftiles" href="{{ route('hospitality') }}"><span class="blurb2">Hospitality and Tourism</span></a></li>
-        {{-- <li class="fm">
-            <a class="hvr-sweep-to-right ftiles" href="javascript:void(0)"><span class="blurb2">Marketing</span></a>
-        </li> --}}
+        <li class="fm">
+            <a class="hvr-sweep-to-right ftiles" href="{{ route('marketing') }}"><span class="blurb2">Marketing</span></a>
+        </li>
         {{-- <li class="fm"><a class="hvr-sweep-to-right ftiles" href="javascript:void(0)"><span class="blurb2">Insurance</span></a></li> --}}
         <li class="fm"><a class="hvr-sweep-to-right ftiles" href="{{ route('pub-admin') }}"><span class="blurb2">Public Administration</span></a></li>
         <li class="fm"><a class="hvr-sweep-to-right ftiles" href="{{ route('entreprenurship') }}"><span class="blurb2">Entrepreneurship Management</span></a></li>

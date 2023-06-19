@@ -194,3 +194,7 @@ Route::get('banking-finance', function () {
 Route::get('pub-admin', function () {
     return view("USER.pub-admin");
 })->name("pub-admin");
+
+Route::get('marketing', function () {
+    return view("USER.marketing");
+})->name("marketing");
