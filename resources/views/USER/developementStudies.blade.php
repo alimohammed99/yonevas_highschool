@@ -40,13 +40,13 @@
                             <div class="feature-banner has-image">
                                 <div class="feature-banner__image">
                                     <picture>
-                                        <source srcset="assets/img/admission-banner.jpg?h=4da1fa98&amp;itok=yaN7h3BB 1x"
+                                        <source srcset="assets/img/admission-banner.jpeg?h=4da1fa98&amp;itok=yaN7h3BB 1x"
                                             media="screen and (min-width: 90em)" type="image/png" />
-                                        <source srcset="assets/img/admission-banner.jpg?h=4da1fa98&amp;itok=ODq8_SVs 1x"
+                                        <source srcset="assets/img/admission-banner.jpeg?h=4da1fa98&amp;itok=ODq8_SVs 1x"
                                             media="screen and (min-width: 64em)" type="image/png" />
-                                        <source srcset="assets/img/admission-banner.jpg?h=4da1fa98&amp;itok=kGzeO0oN 1x"
+                                        <source srcset="assets/img/admission-banner.jpeg?h=4da1fa98&amp;itok=kGzeO0oN 1x"
                                             media="(min-width: 0em)" type="image/png" />
-                                        <img src="assets/img/admission-banner.jpg?itok=mkYpVdvv" alt="Pixels Bench"
+                                        <img src="assets/img/admission-banner.jpeg?itok=mkYpVdvv" alt="Pixels Bench"
                                             title="pixel_bench_crop.png" typeof="foaf:Image" />
 
                                     </picture>
@@ -118,15 +118,15 @@
                 <p><strong>Capstone Project:</strong> In the final year of the program, students typically undertake a capstone project that allows them to apply their cumulative knowledge and skills to a specific development issue or problem. The capstone project may involve conducting independent research, analyzing data, and presenting findings and recommendations.
                 </p>
                 <p><b>Outcome:</b> Upon completion of the Development Studies B.Sc. program, graduates should be equipped with the following knowledge and skills:</p>
-                <ul>
-                    <li>Comprehensive understanding of development theories, policies, and practices.</li>
-                    <li>Ability to critically analyze and evaluate development issues from multidisciplinary perspectives.</li>
-                    <li>Strong research skills, including data collection, analysis, and interpretation.</li>
-                    <li>Knowledge of key social, economic, political, and environmental factors shaping development.</li>
-                    <li>Awareness of ethical considerations and social justice principles in development work.</li>
-                    <li>Proficiency in written and oral communication for effective presentation and dissemination of ideas.</li>
-                    <li>Ability to work collaboratively in diverse teams and adapt to changing development contexts.</li>
-                </ul>
+                <ol>
+                  <li>Comprehensive understanding of development theories, policies, and practices.</li>
+                  <li>Ability to critically analyze and evaluate development issues from multidisciplinary perspectives.</li>
+                  <li>Strong research skills, including data collection, analysis, and interpretation.</li>
+                  <li>Knowledge of key social, economic, political, and environmental factors shaping development.</li>
+                  <li>Awareness of ethical considerations and social justice principles in development work.</li>
+                  <li>Proficiency in written and oral communication for effective presentation and dissemination of ideas.</li>
+                  <li>Ability to work collaboratively in diverse teams and adapt to changing development contexts.</li>
+                </ol>
             </div>
 
             <div id="tab2" class="tab-content">
@@ -142,31 +142,17 @@
             </div>
 
             <div id="tab3" class="tab-content">
-              <h4>Career Opportunities for Public Administration B.Sc. Graduates:
+              <h4>Career Opportunities for Development Studies B.Sc. Graduates:
                 </h4>
               <ol>
-                <li><strong>Public Administration Officer:</strong> Graduates can work as public administration officers in government agencies at the local, regional, or national level. They can be involved in policy development, program management, budgeting, and overseeing the implementation of public services.
-                </li>
-                <li><strong>Policy Analyst:</strong> Graduates can pursue careers as policy analysts, working in government departments, think tanks, research institutes, or consulting firms. They can analyze existing policies, conduct research, and provide recommendations for improving public policies and programs.
-                </li>
-                <li><strong>Nonprofit Organization Manager:</strong> Graduates can work in nonprofit organizations, managing operations, fundraising, and program development. They can contribute to the strategic planning, financial management, and implementation of initiatives aimed at addressing social, environmental, or community development issues.
-                </li>
-                <li><strong>Government Relations Specialist:</strong> Graduates can work as government relations specialists in corporations, nonprofit organizations, or lobbying firms. They can monitor policy developments, advocate for their organization's interests, and facilitate communication and collaboration between the organization and government entities.
-                </li>
-                <li><strong>Public Sector Consultant:</strong> Graduates can work as consultants, providing expertise to public sector organizations on topics such as organizational development, process improvement, performance evaluation, and policy analysis. They can assist government agencies in enhancing efficiency, effectiveness, and transparency in their operations.
-                </li>
-                <li><strong>Program Manager:</strong> Graduates can pursue careers as program managers in government agencies, nonprofit organizations, or international development organizations. They can be responsible for planning, implementing, and evaluating programs that address social issues, public services, or community development.
-                </li>
-                <li><strong>Urban or Regional Planner:</strong> Graduates can work as urban or regional planners, collaborating with government agencies, private developers, and community stakeholders to develop plans and policies for sustainable urban or regional development. They can be involved in land use planning, transportation planning, and environmental management.
-                </li>
-                <li><strong>Human Resources Manager</strong>: Graduates can specialize in public sector human resources management, working in government agencies or public organizations. They can oversee recruitment, employee training and development, performance evaluation, and policy implementation related to personnel management.
-                </li>
-                <li><strong>Researcher:</strong> Graduates can pursue careers as researchers in academic institutions, think tanks, or research organizations, conducting studies on public administration, public policy, and governance issues. They can contribute to the advancement of knowledge in the field and inform evidence-based policy-making.
-                </li>
-                <li><strong>Public Affairs Specialist</strong>: Graduates can work as public affairs specialists, managing communication and public relations activities for government agencies, nonprofit organizations, or corporations. They can develop communication strategies, handle media relations, and engage with the public on policy matters.
-                </li>
-                <li><strong>International Development Consultant:</strong> Graduates can work in international development organizations or consulting firms, providing expertise on public administration and policy issues in developing countries. They can contribute to capacity building, governance reform, and sustainable development initiatives.
-                </li>
+                <li><strong>International Development Organizations:</strong> Graduates with a B.Sc. in Development Studies can find rewarding career opportunities in international development organizations such as the United Nations (UN), World Bank, International Monetary Fund (IMF), and non-governmental organizations (NGOs). They can work in various capacities, including program management, project coordination, policy analysis, and research, focusing on poverty reduction, sustainable development, social justice, and humanitarian aid.</li>
+                <li><strong>Government Agencies:</strong> Many government agencies, both at national and international levels, hire development studies graduates to work on policies and programs related to social and economic development. Graduates can pursue careers in government departments focused on international relations, foreign aid, community development, urban planning, rural development, and public policy.</li>
+                <li><strong>Research and Academia:</strong> Development studies graduates can pursue research-oriented careers in academic institutions, think tanks, and research organizations. They can contribute to the field by conducting studies, analyzing data, and publishing research papers on topics such as economic development, social inequality, governance, and environmental sustainability. Additionally, they can teach and mentor students in universities or colleges.</li>
+                <li><strong>Non-Profit and Non-Governmental Organizations (NGOs):</strong> NGOs play a crucial role in addressing social, economic, and environmental challenges globally. Development studies graduates can work in NGOs focused on human rights, education, healthcare, gender equality, environmental conservation, and community development. They can contribute to project implementation, program management, advocacy, and capacity building initiatives.</li>
+                <li><strong>Social Enterprises and Corporate Social Responsibility (CSR):</strong> With the growing emphasis on sustainable and socially responsible business practices, development studies graduates can explore career opportunities in social enterprises and companies with robust CSR initiatives. They can work in areas such as social entrepreneurship, impact investing, corporate sustainability, and community engagement, integrating development principles into business strategies.</li>
+                <li><strong>International Relations and Diplomacy:</strong> Graduates can pursue careers in international relations and diplomacy, representing their countries or international organizations in negotiations, policy-making, and diplomatic missions. They can work in diplomatic missions, foreign ministries, and international organizations, contributing to global development agendas, peacebuilding efforts, and diplomatic relations.</li>
+                <li><strong>Consulting and Evaluation:</strong> Development studies graduates with strong analytical and research skills can work as consultants or evaluators, providing expertise to organizations in designing and evaluating development programs and projects. They can assess the impact, effectiveness, and sustainability of interventions, providing recommendations for improvement and evidence-based decision-making.</li>
+                <li><strong>Social and Community Development:</strong> Graduates can work directly with communities and grassroots organizations, implementing and managing development projects at the local level. They can focus on areas such as community mobilization, participatory development, microfinance, social entrepreneurship, and capacity building, making a direct impact on improving the lives of marginalized populations.</li>
               </ol>
             </div>
 
@@ -200,23 +186,246 @@
         </div>
 
 
-        <div style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
+        <div class="program-requirements" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
             <h2>Program Requirements</h2>
             <div style="width: 80%;">
                 <h4 style="text-align:left; ">100 level</h4>
-                <p style="text-align:left; "><b>Total Unit: 17</b></p>
+                <table>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Course Title</th>
+                      <th>Unit</th>
+                    </tr>
+                    <tr>
+                      <td>GST 111</td>
+                      <td>Communication Skills in English</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>GST 112</td>
+                      <td>Nigerian Peoples and Culture</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 101</td>
+                      <td>Introduction to Development Studies</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 103</td>
+                      <td>Economics for Development Studies</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>POL 101</td>
+                      <td>Introduction to Political Science</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>SOC 101</td>
+                      <td>Sociology and Culture in Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 104</td>
+                      <td>Psychological Perspectives on Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>MGS 101</td>
+                      <td>Elements of Management</td>
+                      <td>2</td>
+                    </tr>
+                </table>
+                <p style="text-align:left; "><b>Total Unit: 16</b></p>
             </div>
             <div style="width: 80%;">
                 <h4 style="text-align:left; ">200 level</h4>
-                <p style="text-align:left; "><b>Total Unit: 13</b></p>
+                <table>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Course Title</th>
+                      <th>Unit</th>
+                    </tr>
+                    <tr>
+                      <td>GST 212</td>
+                      <td>Philosophy, Logic and Human Existence</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>ENT 211</td>
+                      <td>Entrepreneurship and Innovation</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>SSC 202</td>
+                      <td>Introduction to Computer and its Application</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>DES 201</td>
+                      <td>Development Theories and Practices</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>POL 203</td>
+                      <td>Nigerian Government and Politics (adopt synopsis for Pol. Sci.)</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>ACC 202</td>
+                      <td>Development budget and Financing</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 207</td>
+                      <td>Non-Governmental Organizations, Development and Change</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 202</td>
+                      <td>Applied Statistics for Development (adopt synopsis for Statistics)</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 204</td>
+                      <td>Basic Accounting (adopt synopsis for Accounting)</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>ECO 206</td>
+                      <td>History and Structure of Nigeria (Economy) (adopt synopsis for Economics)</td>
+                      <td>2</td>
+                    </tr>
+                </table>
+                <p style="text-align:left; "><b>Total Unit: 21</b></p>
             </div>
             <div style="width: 80%;">
                 <h4 style="text-align:left; ">300 level</h4>
-                <p style="text-align:left; "><b>Total Unit: 28</b></p>
+                <table>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Course Title</th>
+                      <th>Unit</th>
+                    </tr>
+                    <tr>
+                      <td>GST 312</td>
+                      <td>Peace and Conflict Resolution</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>ENT 312</td>
+                      <td>Venture Creation</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>SSC 301</td>
+                      <td>Innovation in the Social Sciences</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>SSC 302</td>
+                      <td>Research Method I</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>BUS 326</td>
+                      <td>Business Communication</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 303</td>
+                      <td>Development Policy and Planning</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 305</td>
+                      <td>Gender and Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 307</td>
+                      <td>Supervised Field attachment</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 302</td>
+                      <td>Research Methods</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 304</td>
+                      <td>Project Management, monitoring and evaluation</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 306</td>
+                      <td>Community and Rural Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 308</td>
+                      <td>Development Economics</td>
+                      <td>2</td>
+                    </tr>
+                </table>
+                <p style="text-align:left; "><b>Total Unit: 24</b></p>
             </div>
             <div style="width: 80%;">
                 <h4 style="text-align:left; ">400 level</h4>
-                <p style="text-align:left; "><b>Total Unit: 26</b></p>
+                <table>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Course Title</th>
+                      <th>Unit</th>
+                    </tr>
+                    <tr>
+                      <td>SSC 401</td>
+                      <td>Research Method II</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 401</td>
+                      <td>Research Project</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>DES 403</td>
+                      <td>Globalization and Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 405</td>
+                      <td>Ecology and Sustainable Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>SOC 409</td>
+                      <td>Sociology of Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 402</td>
+                      <td>Issues in Social Development</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>DES 404</td>
+                      <td>International Relations and Development</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>DES 407</td>
+                      <td>Informal Sector in Nigeria</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>POL 401</td>
+                      <td>Development Administration</td>
+                      <td>2</td>
+                    </tr>
+                </table>
+                <p style="text-align:left; "><b>Total Unit: 23</b></p>
             </div>
         </div>
         <div class="certificate-advert" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">

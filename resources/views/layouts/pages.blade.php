@@ -1861,8 +1861,8 @@
     <script src="assets/js/google_tag.script.js?rmv1i3" defer></script>
 
     <title>Yonevas Open University</title>
-    <link rel="stylesheet" media="all" href="assets/css/css_h4x8_UEc-szQlKuRP09rIi4bYkcHg0w6wIORP3fOqt8.css" />
-    <link rel="stylesheet" media="all" href="assets/css/css_x63AVUuowb7M9VtrtavyG0w1yBz88xxmHG7wLFVjWxg.css" />
+    <link rel="stylesheet" media="all" href="assets/css/css_h4x8_UEc-szQlKuRP09rIi4bYkcHg0w6wIORP3fOqt8.css?v=3" />
+    <link rel="stylesheet" media="all" href="assets/css/css_x63AVUuowb7M9VtrtavyG0w1yBz88xxmHG7wLFVjWxg.css?v=3" />
     <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css" />
 
     <script src="assets/js/modernizr.min.js?v=3.11.7"></script>
