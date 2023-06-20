@@ -40,13 +40,13 @@
                             <div class="feature-banner has-image">
                                 <div class="feature-banner__image">
                                     <picture>
-                                        <source srcset="assets/img/admission-banner.jpg?h=4da1fa98&amp;itok=yaN7h3BB 1x"
+                                        <source srcset="assets/img/admission-banner.jpeg?h=4da1fa98&amp;itok=yaN7h3BB 1x"
                                             media="screen and (min-width: 90em)" type="image/png" />
-                                        <source srcset="assets/img/admission-banner.jpg?h=4da1fa98&amp;itok=ODq8_SVs 1x"
+                                        <source srcset="assets/img/admission-banner.jpeg?h=4da1fa98&amp;itok=ODq8_SVs 1x"
                                             media="screen and (min-width: 64em)" type="image/png" />
-                                        <source srcset="assets/img/admission-banner.jpg?h=4da1fa98&amp;itok=kGzeO0oN 1x"
+                                        <source srcset="assets/img/admission-banner.jpeg?h=4da1fa98&amp;itok=kGzeO0oN 1x"
                                             media="(min-width: 0em)" type="image/png" />
-                                        <img src="assets/img/admission-banner.jpg?itok=mkYpVdvv" alt="Pixels Bench"
+                                        <img src="assets/img/admission-banner.jpeg?itok=mkYpVdvv" alt="Pixels Bench"
                                             title="pixel_bench_crop.png" typeof="foaf:Image" />
 
                                     </picture>
@@ -182,7 +182,7 @@
         </div>
 
 
-        <div style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
+        <div class="program-requirements" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
             <h2>Program Requirements</h2>
             <div style="width: 80%;">
               <h4 style="text-align:left; ">100 level</h4>
@@ -408,6 +408,115 @@
               </table>
               <p style="text-align:left; "><b>Total Unit: 19</b></p>
           </div>
+        </div>
+        <div class="certificate-advert" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
+            <h2>LOOKING FOR SOMETHING ELSE?</h2>
+            <p style="font-size: 15px; margin:5px;">Check out our 10 months  professional certificate programs</p>
+
+            <ol class="course-list desk" style="width: 90%; margin:10px 0;">
+                <li class="course-item">
+                    <a href="/register">
+                    Web Development
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Creative Writing
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Social Media Strategist
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Private Investigator
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Programming
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Networking
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Cyber Security
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    3D Motion Graphics
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Criminal Justice
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Graphic Design | Media Arts
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Human Resource Management
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Social Awareness
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Public Speaking
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Graphics Design
+                    </a>
+                </li>
+            </ol>
+            <ol class="course-list mobile" style="width: 90%; margin:10px 0;">
+                <li class="course-item">
+                    <a href="/register">
+                    Web Development
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Private Investigator
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Programming
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Cyber Security
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    3D Motion Graphics
+                    </a>
+                </li>
+                <li class="course-item">
+                    <a href="/register">
+                    Human Resource Management
+                    </a>
+                </li>
+            </ol>
         </div>
     </main>
     {{-- function for the tab --}}

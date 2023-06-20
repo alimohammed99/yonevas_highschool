@@ -202,3 +202,27 @@ Route::get('marketing', function () {
 Route::get('developementStudies', function () {
     return view("USER.developementStudies");
 })->name("developementStudies");
+
+Route::get('politicalScience', function () {
+    return view("USER.politicalScience");
+})->name("politicalScience");
+
+Route::get('psychology', function () {
+    return view("USER.psychology");
+})->name("psychology");
+
+Route::get('sociology', function () {
+    return view("USER.sociology");
+})->name("sociology");
+
+Route::get('statistics', function () {
+    return view("USER.statistics");
+})->name("statistics");
+
+Route::get('internationalRelation', function () {
+    return view("USER.internationalRelation");
+})->name("internationalRelation");
+
+Route::get('socialWork', function () {
+    return view("USER.socialWork");
+})->name("socialWork");

@@ -76,27 +76,27 @@
                                                                         class="blurb2" style="padding: 1rem" style="padding: 1rem">Demography and Social Statistics B.Sc.</span></a>
                                                             </li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('demograhpyandsocialstatistics') }}"><span class="blurb2" style="padding: 1rem">Political
+                                                                    href="{{ route('politicalScience') }}"><span class="blurb2" style="padding: 1rem">Political
                                                                         Science</span></a>
                                                             </li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('demograhpyandsocialstatistics') }}"><span
+                                                                    href="{{ route('psychology') }}"><span
                                                                         class="blurb2" style="padding: 1rem">Psychology</span></a></li>
                                                             <li class="fm">
                                                                 <a class="hvr-sweep-to-right ftiles"
                                                                     href="{{ route('developementStudies') }}"><span class="blurb2" style="padding: 1rem">Development Studies B.Sc.</span></a>
                                                             </li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('demograhpyandsocialstatistics') }}"><span
+                                                                    href="{{ route('internationalRelation') }}"><span
                                                                         class="blurb2" style="padding: 1rem">International Relations B.Sc.</span></a></li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('demograhpyandsocialstatistics') }}"><span class="blurb2" style="padding: 1rem">Social
+                                                                    href="{{ route('socialWork') }}"><span class="blurb2" style="padding: 1rem">Social
                                                                         Work</span></a></li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('demograhpyandsocialstatistics') }}"><span
+                                                                    href="{{ route('sociology') }}"><span
                                                                         class="blurb2" style="padding: 1rem">Sociology</span></a></li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('demograhpyandsocialstatistics') }}"><span
+                                                                    href="{{ route('statistics') }}"><span
                                                                         class="blurb2" style="padding: 1rem">Statistics</span></a></li>
                                                         </ul>
                                                     </div>

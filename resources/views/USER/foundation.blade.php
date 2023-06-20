@@ -50,7 +50,7 @@
                                         <div class="feature-banner__image">
                                             <picture>
 
-                                                <img src="assets/img/admission-banner.jpg?itok=0y0-xQbp" alt="computer screen" title="Home Classroom" typeof="foaf:Image" />
+                                                <img src="assets/img/admission-banner.jpeg?itok=0y0-xQbp" alt="computer screen" title="Home Classroom" typeof="foaf:Image" />
 
                                             </picture>
 
