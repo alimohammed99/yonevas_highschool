@@ -112,6 +112,15 @@ Route::get('human-resources-management', function () {
 Route::get('mass-communication', function () {
     return view("USER.mass-communication");
 })->name("mass-communication");
+Route::get('public-relations', function () {
+    return view("USER.public-relations");
+})->name("public-relations");
+Route::get('info-media', function () {
+    return view("USER.info-media");
+})->name("info-media");
+Route::get('journalism-media', function () {
+    return view("USER.journalism-media");
+})->name("journalism-media");
 Route::get('philosophy', function () {
     return view("USER.philosophy");
 })->name("philosophy");
@@ -202,3 +211,7 @@ Route::get('marketing', function () {
 Route::get('developementStudies', function () {
     return view("USER.developementStudies");
 })->name("developementStudies");
+
+Route::get('communication-studies', function () {
+    return view("USER.communicationstudies");
+})->name("communication-studies");
