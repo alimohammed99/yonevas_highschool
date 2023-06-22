@@ -2121,8 +2121,10 @@
                                                                     data-drupal-link-system-path="node/27">Education</a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a href="/"
-                                                                    data-drupal-link-system-path="node/27">Others|Maintenance</a>
+                                                                <a href="{{ route('communication-studies') }}" data-drupal-link-system-path="node/27">Communication Studies</a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a href="/" data-drupal-link-system-path="node/27">Others|Maintenance</a>
                                                             </li>
                                                         </ul>
                                                     </div>

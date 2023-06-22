@@ -114,6 +114,15 @@ Route::get('human-resources-management', function () {
 Route::get('mass-communication', function () {
     return view("USER.mass-communication");
 })->name("mass-communication");
+Route::get('public-relations', function () {
+    return view("USER.public-relations");
+})->name("public-relations");
+Route::get('info-media', function () {
+    return view("USER.info-media");
+})->name("info-media");
+Route::get('journalism-media', function () {
+    return view("USER.journalism-media");
+})->name("journalism-media");
 Route::get('philosophy', function () {
     return view("USER.philosophy");
 })->name("philosophy");
@@ -205,6 +214,11 @@ Route::get('developementStudies', function () {
     return view("USER.developementStudies");
 })->name("developementStudies");
 
+
+Route::get('communication-studies', function () {
+    return view("USER.communicationstudies");
+})->name("communication-studies");
+
 Route::get('politicalScience', function () {
     return view("USER.politicalScience");
 })->name("politicalScience");
@@ -228,7 +242,6 @@ Route::get('internationalRelation', function () {
 Route::get('socialWork', function () {
     return view("USER.socialWork");
 })->name("socialWork");
-
 Route::get('jurisprudence_international', function () {
     return view("USER.jurisprudence_international");
 })->name("jurisprudence_international");
@@ -268,5 +281,3 @@ Route::get('health_education_ed', function () {
 Route::get('human_kinetics_ed', function () {
     return view("USER.human_kinetics_ed");
 })->name("human_kinetics_ed");
-
-
