@@ -60,6 +60,8 @@ route::get('school-of-computer-studies', [HomeController::class, 'schoolcomputer
 
 route::get('school-of-communication', [HomeController::class, 'schoolCommunication'])->name('school-of-communication');
 
+route::get('faculty-of-education', [HomeController::class, 'facultyEducation'])->name('faculty-of-education');
+
 route::get('foundation', [HomeController::class, 'foundation'])->name('foundation');
 
 route::get('faq', [HomeController::class, 'faq'])->name('faq');
@@ -240,6 +242,45 @@ Route::get('internationalRelation', function () {
 Route::get('socialWork', function () {
     return view("USER.socialWork");
 })->name("socialWork");
+Route::get('jurisprudence_international', function () {
+    return view("USER.jurisprudence_international");
+})->name("jurisprudence_international");
+
+Route::get('private_property', function () {
+    return view("USER.private_property");
+})->name("private_property");
+
+Route::get('commercial_industrial', function () {
+    return view("USER.commercial_industrial");
+})->name("commercial_industrial");
+
+Route::get('public_law', function () {
+    return view("USER.public_law");
+})->name("public_law");
+
+Route::get('business_education_ed', function () {
+    return view("USER.business_education_ed");
+})->name("business_education_ed");
+
+Route::get('computer_science_ed', function () {
+    return view("USER.computer_science_ed");
+})->name("computer_science_ed");
+
+Route::get('edu_management_ed', function () {
+    return view("USER.edu_management_ed");
+})->name("edu_management_ed");
+
+Route::get('guidance_and_counselling_ed', function () {
+    return view("USER.guidance_and_counselling_ed");
+})->name("guidance_and_counselling_ed");
+
+Route::get('health_education_ed', function () {
+    return view("USER.health_education_ed");
+})->name("health_education_ed");
+
+Route::get('human_kinetics_ed', function () {
+    return view("USER.human_kinetics_ed");
+})->name("human_kinetics_ed");
 
 Route::get('cyberSecurity', function () {
     return view("USER.cyberSecurity");
