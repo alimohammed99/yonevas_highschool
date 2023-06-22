@@ -16,7 +16,7 @@
                                     <a href="/">Home</a>
                                 </li>
                                 <li>
-                                    School of Law
+                                    Faculty of Education
                                 </li>
                             </ol>
                         </nav>
@@ -63,7 +63,7 @@
                                             <div class="feature-banner__content-wrap">
                                                 <div class="container">
                                                     <div class="feature-banner__content text--center bg--black text--white">
-                                                        <h1 class="feature-banner__title">School of Law</h1>
+                                                        <h1 class="feature-banner__title">Faculty of Education</h1>
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,31 +74,37 @@
                                     <div id="highlights">
                                         <div class="block-stats bg--white text--dark">
                                             <div class="container">
-                                                <h1 class="block-stats__big-title text--center capitalize">School of Law
-                                                    Courses</h1>
+                                                <h1 class="block-stats__big-title text--center capitalize">Faculty of
+                                                    Education Courses</h1>
                                                 <div class="block-stats__inner">
                                                     <div class="block-stats__list">
                                                         <ul id="boxes-f">
                                                             <li class="fm">
                                                                 <a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('jurisprudence_international') }}"><span
-                                                                        class="blurb2">Jurisprudence and International
-                                                                        Law</span></a>
+                                                                    href="{{ route('business_education_ed') }}"><span
+                                                                        class="blurb2">Business Education</span></a>
                                                             </li>
                                                             <li class="fm">
                                                                 <a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('private_property') }}"><span
-                                                                        class="blurb2">Private and Property Law</span></a>
+                                                                    href="{{ route('computer_science_ed') }}"><span
+                                                                        class="blurb2">Computer Science</span></a>
                                                             </li>
                                                             <li class="fm">
                                                                 <a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('commercial_industrial') }}"><span
-                                                                        class="blurb2">Commercial and Industrial
-                                                                        Law</span></a>
+                                                                    href="{{ route('edu_management_ed') }}"><span
+                                                                        class="blurb2">Educational Management</span></a>
                                                             </li>
                                                             <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                                    href="{{ route('public_law') }}"><span
-                                                                        class="blurb2">Public Law </span></a>
+                                                                    href="{{ route('guidance_and_counselling_ed') }}"><span
+                                                                        class="blurb2">Guidance and Counseling </span></a>
+                                                            </li>
+                                                            <li class="fm"><a class="hvr-sweep-to-right ftiles"
+                                                                    href="{{ route('health_education_ed') }}"><span
+                                                                        class="blurb2">Health Education </span></a>
+                                                            </li>
+                                                            <li class="fm"><a class="hvr-sweep-to-right ftiles"
+                                                                    href="{{ url('human_kinetics_ed') }}"><span
+                                                                        class="blurb2">Human Kinetics/Physical Education </span></a>
                                                             </li>
                                                         </ul>
 
