@@ -19,7 +19,7 @@
                                     <a href="{{ url('programs') }}">Programs</a>
                                 </li>
                                 <li>
-                                  Mass Communication
+                                  Public Relations
                                 </li>
                             </ol>
                         </nav>
@@ -55,8 +55,7 @@
                                 <div class="feature-banner__content-wrap">
                                     <div class="container">
                                         <div class="feature-banner__content text--center bg--black text--white">
-                                            <h1 class="feature-banner__title">Mass Communication B.Sc
-                                            </h1>
+                                            <h1 class="feature-banner__title">Public Relations B.Sc                                            </h1>
 
                                         </div>
                                     </div>
@@ -87,39 +86,35 @@
             </div>
 
             <div id="tab1" class="tab-content">
-                <p>The Mass Communications B.Sc. program is designed to provide students with a comprehensive understanding of the dynamic field of mass media and communication. Through a blend of theoretical knowledge and practical skills, students will explore the various aspects of mass communication, including journalism, advertising, public relations, and media production. This program aims to equip students with the necessary tools to navigate the ever-evolving media landscape and contribute to the effective dissemination of information and messages in a globalized society.
+                <p>The Public Relations B.Sc. program is designed to provide students with a comprehensive understanding of the field of public relations and equip them with the necessary skills and knowledge to thrive in this dynamic and influential industry. Through a combination of theoretical foundations and practical applications, students will gain insights into the strategic communication techniques used to build and maintain positive relationships between organizations and their stakeholders. This program aims to develop competent and ethical public relations professionals who can effectively manage reputation, shape public perception, and navigate the evolving media landscape.
                 </p>
-                <p><strong>Aims and Objectives:</strong> The aims of the Mass Communications B.Sc. program are as follows:
+                <p><strong>Aims and Objectives:</strong> The aim of the Public Relations B.Sc. program is to prepare students for successful careers in the field of public relations by:
                 </p>
                 <ol>
-                  <li><strong>Develop a Broad Understanding of Mass Communication:</strong> The program aims to provide students with a comprehensive understanding of the theories, principles, and practices of mass communication. Students will explore the historical, social, cultural, and ethical dimensions of mass media, and develop a critical awareness of the impact of media on society.
+                  <li><strong>Providing a Solid Foundation:</strong> The program aims to provide students with a solid theoretical and conceptual foundation in public relations, encompassing key principles, theories, and models that form the basis of effective communication strategies.
                   </li>
-                  <li><strong>Cultivate Professional Skills:</strong> The program aims to equip students with the practical skills necessary for a successful career in mass communication. Students will develop strong writing and storytelling skills, learn to create compelling content for various media platforms, gain proficiency in media production tools and techniques, and understand the principles of effective communication and persuasion.
+                  <li><strong>Developing Practical Skills:</strong> The program aims to equip students with practical skills in various areas of public relations, including media relations, crisis communication, event management, digital marketing, and strategic planning. Students will gain hands-on experience through case studies, simulations, and real-world projects.
                   </li>
-                  <li><strong>Foster Media Literacy:</strong> The program aims to cultivate media literacy among students, enabling them to critically analyze and evaluate media messages, discern credible sources of information, and navigate the complexities of the digital media landscape. Students will develop the ability to engage with media in a responsible, ethical, and informed manner.
+                  <li><strong>Fostering Critical Thinking and Problem-Solving:</strong> The program aims to foster critical thinking skills and the ability to analyze complex communication challenges. Students will learn to identify stakeholder needs, anticipate potential issues, and develop strategic solutions to enhance organizational reputation and achieve communication objectives.
                   </li>
-                  <li><strong>Promote Cross-Cultural Communication:</strong> The program aims to foster an understanding of the diverse cultural, social, and linguistic contexts in which mass communication operates. Students will learn to communicate effectively across cultures, respect and appreciate different perspectives, and address communication challenges in a multicultural society.
+                  <li><strong>Cultivating Ethical Practices:</strong> The program aims to cultivate ethical values and professional standards among students, emphasizing the importance of integrity, transparency, and responsible communication. Students will explore ethical dilemmas in public relations and develop ethical decision-making skills.
+                  </li>
+                  <li><strong>Enhancing Digital Literacy:</strong> The program aims to enhance students' digital literacy skills, equipping them with the knowledge and tools to effectively navigate the digital landscape, engage with online audiences, and leverage digital platforms for strategic communication.
+                  </li>
+                  <li><strong>Promoting Collaboration and Teamwork:</strong> The program aims to develop students' collaboration and teamwork skills, recognizing the significance of working effectively with colleagues, clients, and stakeholders. Students will engage in group projects and presentations to enhance their interpersonal and communication skills.
                   </li>
                 </ol>
-                <p><b>Learning Outcomes:</b> By the end of the Mass Communications B.Sc. program, students will be able to:
+                <p><b>Learning Outcomes:</b> Upon completion of the Public Relations B.Sc. program, students will be able to:
                 </p>
                 <ol>
-                  <li>Demonstrate a comprehensive understanding of the theories, concepts, and models that underpin mass communication.
-                  </li>
-                  <li>Apply critical thinking and analytical skills to evaluate and interpret media content and its societal implications.
-                  </li>
-                  <li>Develop proficiency in various forms of media production, including writing, journalism, advertising, public relations, and digital media.
-                  </li>
-                  <li>Communicate effectively and persuasively in different media formats, adapting their communication style to various target audiences.
-                  </li>
-                  <li>Employ ethical principles and professional standards in their media practices, demonstrating a strong sense of social responsibility.
-                  </li>
-                  <li>Collaborate effectively in team environments, demonstrating strong interpersonal and communication skills.
-                  </li>
-                  <li>Adapt to technological advancements in the field of mass communication and stay abreast of emerging trends and industry developments.
-                  </li>
-                  <li>Apply research methodologies and tools to conduct media research, analyze data, and present findings in a coherent and persuasive manner.
-                  </li>
+                  <li>Demonstrate a comprehensive understanding of the principles, theories, and practices of public relations.</li>
+<li>Apply strategic communication techniques to build and maintain positive relationships between organizations and stakeholders.</li>
+<li>Utilize effective media relations strategies and techniques to enhance organizational reputation and influence public perception.</li>
+<li>Develop and execute comprehensive public relations campaigns, considering the needs of diverse audiences and utilizing a range of communication channels.</li>
+<li>Employ digital tools and platforms to engage with online audiences, monitor conversations, and measure the impact of communication efforts.</li>
+<li>Analyze and respond to crisis situations by developing proactive and effective communication strategies.</li>
+<li>Apply ethical frameworks and professional standards to make responsible and ethical decisions in public relations practice.</li>
+<li>Demonstrate effective teamwork, collaboration, and communication skills in a professional setting.</li>
                 </ol>
             </div>
 
@@ -136,28 +131,28 @@
             </div>
 
             <div id="tab3" class="tab-content">
-              <h4>Career Opportunities for Mass Communications B.Sc. Graduates:
+              <h4>Career Opportunities for Public Relations B.Sc. Graduates:
               </h4>
               <ol>
-                <li><strong></strong>Journalism: Graduates can pursue careers in journalism, working as reporters, news anchors, editors, or correspondents for newspapers, television networks, radio stations, or online media outlets. They can cover a wide range of topics, including politics, current affairs, sports, entertainment, or specialized areas like investigative journalism or feature writing.
+                <li><strong>Public Relations Specialist:</strong> Graduates can pursue careers as public relations specialists in various industries, including corporate, non-profit, government, and agency settings. They will be responsible for developing and implementing communication strategies, managing media relations, crafting press releases, organizing events, and maintaining positive relationships with stakeholders.
                 </li>
-                <li><strong></strong>Public Relations: Graduates can work in public relations agencies or in-house communication departments of organizations. They can develop and implement communication strategies, manage media relations, write press releases, organize events, and build positive relationships between organizations and their stakeholders.
+                <li><strong>Media Relations Manager:</strong> Graduates can work as media relations managers, representing organizations and managing their interactions with the media. They will be responsible for building relationships with journalists, coordinating interviews and press conferences, and ensuring positive media coverage to enhance the organization's reputation.
                 </li>
-                <li><strong></strong>Advertising: Graduates can work in advertising agencies, creating and executing advertising campaigns for clients. They can be involved in market research, creative concept development, copywriting, graphic design, media planning, and campaign management, helping clients promote their products or services effectively.
+                <li><strong>Corporate Communications Officer:</strong> Graduates can work in corporate communications departments, handling internal and external communications for organizations. They will be responsible for crafting messages, managing employee communications, developing content for websites and social media platforms, and maintaining consistent brand messaging.
                 </li>
-                <li><strong></strong>Digital Media: With the rise of digital platforms, graduates can explore opportunities in digital media companies, social media agencies, or content creation firms. They can specialize in content writing, social media management, video production, podcasting, or digital marketing, engaging audiences through various online channels.
+                <li><strong>Digital PR Specialist:</strong> With the increasing importance of digital platforms in communication, graduates can specialize in digital PR. They can work on developing and implementing digital strategies, managing online reputation, engaging with audiences through social media, and monitoring online conversations to enhance brand image and engagement.
                 </li>
-                <li><strong></strong>Corporate Communications: Graduates can work in corporate communication departments of companies, handling internal and external communication. They can develop communication strategies, manage corporate branding, write corporate publications, coordinate employee communications, and handle crisis communication situations.
+                <li><strong>Event Manager:</strong> Graduates can pursue careers as event managers, organizing and coordinating public relations events, conferences, and promotional activities. They will be responsible for planning logistics, managing budgets, coordinating with vendors, and ensuring successful execution of events to promote organizations and build relationships.
                 </li>
-                <li><strong></strong>Media Production: Graduates can pursue careers in media production, working in television or film production companies, online video platforms, or multimedia organizations. They can be involved in scriptwriting, directing, producing, cinematography, editing, or visual effects, contributing to the creation of engaging and high-quality media content.
+                <li><strong>Crisis Communication Specialist:</strong> Graduates can specialize in crisis communication, working with organizations to develop strategies and protocols to manage and mitigate crises. They will be responsible for rapid response, message development, stakeholder communication, and reputation repair during crisis situations.
                 </li>
-                <li><strong></strong>Market Research: Graduates can work in market research firms, conducting studies and analyzing data to help organizations understand consumer behavior, market trends, and preferences. They can design surveys, collect and interpret data, and provide insights to guide marketing strategies and decision-making processes.
+                <li><strong>Social Media Manager:</strong> With the growing influence of social media, graduates can work as social media managers, overseeing organizations' social media presence, creating engaging content, managing online communities, and monitoring brand sentiment. They will be responsible for developing social media strategies aligned with public relations objectives.
                 </li>
-                <li><strong></strong>Social Media Management: Graduates can specialize in social media management, working for companies or as independent consultants. They can develop social media strategies, create engaging content, manage online communities, analyze metrics, and implement digital marketing campaigns to enhance brand visibility and engagement.
+                <li><strong>Government Relations Specialist:</strong> Graduates can work in government relations, representing organizations' interests and building relationships with government entities. They will be responsible for monitoring policy developments, advocating for organizations' positions, and facilitating communication between organizations and government officials.
                 </li>
-                <li><strong></strong>Event Management: Graduates can pursue careers in event management, working for event planning agencies or in-house event departments of organizations. They can coordinate and manage various types of events, including conferences, exhibitions, product launches, and promotional campaigns, ensuring smooth execution and effective communication.
+                <li><strong>Non-Profit PR Manager:</strong> Graduates can work in non-profit organizations, managing public relations efforts to raise awareness, secure funding, and engage stakeholders. They will be responsible for crafting compelling stories, managing media relations, coordinating fundraising campaigns, and promoting the organization's mission and impact.
                 </li>
-                <li><strong></strong>Academic and Research Institutions: Graduates can choose to pursue higher education or research positions in academic institutions, think tanks, or research organizations. They can contribute to the field of mass communication by conducting research, teaching courses, mentoring students, and publishing scholarly work.
+                <li><strong>Communication Consultant:</strong> Graduates can work as communication consultants, providing strategic advice and services to clients from various industries. They will offer expertise in public relations, reputation management, crisis communication, and media relations, helping organizations enhance their communication strategies and achieve their goals.
                 </li>
               </ol>
             </div>
@@ -223,142 +218,79 @@
                     <td>2</td>
                   </tr>
                   <tr>
-                    <td>MCM 101</td>
-                    <td>Foundations of Broadcasting and Film</td>
-                    <td>3</td>
-                  </tr>
-                  <tr>
-                    <td>MCM 102</td>
-                    <td>Principles of Public Relations</td>
+                    <td>PRS 111</td>
+                    <td>Introduction to Public Relations</td>
                     <td>2</td>
                   </tr>
                   <tr>
-                    <td>MCM 103</td>
-                    <td>Introduction to Advertising</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>MCM 104</td>
-                    <td>Introduction to News Writing</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>MCM 105</td>
-                    <td>Introduction to Book Publishing</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>MCM 106</td>
-                    <td>African Communication Systems</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td>MCM 107</td>
-                    <td>Introduction to Photojournalism</td>
+                    <td>PRS 112</td>
+                    <td>History of Public Relations</td>
                     <td>2</td>
                   </tr>
               </table>
-              <p style="text-align:left; "><b>Total Unit: 23</b></p>
+              <p style="text-align:left; "><b>Total Unit: 12</b></p>
           </div>
             <div style="width: 80%;">
               <h4 style="text-align:left; ">200 level</h4>
-              <table><tr>
-                <td>GST 212</td>
-                <td>Philosophy, Logic and Human Existence</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>ENT 211</td>
-                <td>Entrepreneurship and Innovation</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>CMS 201</td>
-                <td>History of Nigerian Media</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 201</td>
-                <td>Critical and Reviewing Writing</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 202</td>
-                <td>Editing and Graphics of Communication</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>MCM 203</td>
-                <td>Feature Writing</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>MCM 204</td>
-                <td>Advanced and Specialized Reporting</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>MCM 205</td>
-                <td>Techniques in Book publishing</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 206</td>
-                <td>Manuscript Editing, Layout and Design in Book Publishing</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 207</td>
-                <td>Radio/TV News Reporting and production</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 208</td>
-                <td>Radio/Television Programme Writing</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 209</td>
-                <td>Drama, Film and Documentary Production</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 210</td>
-                <td>Presentation and Performance</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 211</td>
-                <td>Basics of Screenwriting and Film Animation</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 212</td>
-                <td>Marketing Foundations for Public Relations and Advertising</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 213</td>
-                <td>Writing for Public Relations</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 214</td>
-                <td>Advert Copy Writing</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 215</td>
-                <td>Advertising Media Planning</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>MCM 216</td>
-                <td>Fundamentals of Media Relations</td>
-                <td>2</td>
-              </tr>
+              <table>
+                <tr>
+                  <td>GST 212</td>
+                  <td>Philosophy, Logic and Human Existence</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>ENT 211</td>
+                  <td>Entrepreneurship and Innovation</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>CMS 201</td>
+                  <td>History of Nigerian Media</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 201</td>
+                  <td>Principle of Public Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 202</td>
+                  <td>Media Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 203</td>
+                  <td>Digital and Social Media for Public Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 204</td>
+                  <td>Writing for Public Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 205</td>
+                  <td>Public Relations for not-for-Profit sector</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 206</td>
+                  <td>Public Relations and the Society</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 207</td>
+                  <td>Marketing and Advertising in Public Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 209</td>
+                  <td>Public Relations in a Multi-cultural Society</td>
+                  <td>2</td>
+                </tr>
               </table>
-              <p style="text-align:left; "><b>Total Unit: 41</b></p>
+              
+              <p style="text-align:left; "><b>Total Unit: 22</b></p>
           </div>
             <div style="width: 80%;">
               <h4 style="text-align:left; ">300 level</h4>
@@ -370,7 +302,7 @@
                 </tr>
                 <tr>
                   <td>ENT 312</td>
-                  <td>Venture Creation</td>
+                  <td>Venture creation</td>
                   <td>2</td>
                 </tr>
                 <tr>
@@ -380,92 +312,66 @@
                 </tr>
                 <tr>
                   <td>CMS 302</td>
-                  <td>Foundation of Communication Research</td>
+                  <td>Foundation of Communication</td>
                   <td>2</td>
                 </tr>
                 <tr>
                   <td>CMS 303</td>
-                  <td>Data analysis in Communication Research</td>
+                  <td>Data Analysis in Communication Research</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 301</td>
-                  <td>Mass Communication and Politics</td>
+                  <td>PRS 301</td>
+                  <td>Public Relations Research</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 302</td>
-                  <td>Online Journalism</td>
+                  <td>PRS 303</td>
+                  <td>Brand Communication</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 303</td>
-                  <td>Gender and Communication</td>
+                  <td>PRS 304</td>
+                  <td>Corporate Social Responsibility</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 304</td>
-                  <td>Foreign Correspondence</td>
+                  <td>PRS 305</td>
+                  <td>Financial Public Relations</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 305</td>
-                  <td>Newspaper /Magazine Management and Production</td>
+                  <td>PRS 306</td>
+                  <td>Crisis Communication</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 306</td>
-                  <td>Investigative Journalism</td>
+                  <td>PRS 307</td>
+                  <td>SIWES</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>PRS 308</td>
+                  <td>PR for Business Organizations</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 307</td>
-                  <td>Photojournalism Research and Management</td>
+                  <td>PRS 309</td>
+                  <td>Stakeholders and Community Relations</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 308</td>
-                  <td>Broadcast Programming, Management and Operations</td>
+                  <td>PRS 310</td>
+                  <td>Political Communication</td>
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 309</td>
-                  <td>Commentary, Critical Writing and Public Affairs Broadcasting</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 310</td>
-                  <td>International and Foreign Broadcasting</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 311</td>
-                  <td>Film Production and Screen Directing</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 312</td>
-                  <td>Organization and Management of Advertising and PR Agencies</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 313</td>
-                  <td>Advertising and PR Research</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 314</td>
-                  <td>International Public Relations and Advertising</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 315</td>
-                  <td>Consumer Affairs</td>
+                  <td>PRS 311</td>
+                  <td>Media and Communication Planning and Strategy</td>
                   <td>2</td>
                 </tr>
               </table>
-              
-              <p style="text-align:left; "><b>Total Unit: 40</b></p>
+              <p style="text-align:left; "><b>Total Unit: 32</b></p>
           </div>
             <div style="width: 80%;">
               <h4 style="text-align:left; ">400 level</h4>
@@ -481,43 +387,47 @@
                   <td>2</td>
                 </tr>
                 <tr>
-                  <td>MCM 401 &amp; 402</td>
-                  <td>Original Research Project</td>
+                  <td>PRS 401</td>
+                  <td>Public Relations Campaign Planning and Execution</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 402</td>
+                  <td>International Public Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 403</td>
+                  <td>Ethics and Professionalism in PR</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 404</td>
+                  <td>Public Relations Production Techniques (Multimedia/Interactive)</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 405</td>
+                  <td>Entrepreneurship in Public Relations</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 409</td>
+                  <td>Comparative Public Relations Systems</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 410</td>
+                  <td>Public Relations Law</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>PRS 499</td>
+                  <td>Final Year Project</td>
                   <td>4</td>
                 </tr>
-                <tr>
-                  <td>MCM 403</td>
-                  <td>Media attachment</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 404</td>
-                  <td>Mass Media Ethics</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 405</td>
-                  <td>Mass Media Law</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 406</td>
-                  <td>Communication for Development</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 407</td>
-                  <td>Message Design for Development</td>
-                  <td>2</td>
-                </tr>
-                <tr>
-                  <td>MCM 408</td>
-                  <td>Community Media and Relations</td>
-                  <td>2</td>
-                </tr>
-              </table>
-              
-              <p style="text-align:left; "><b>Total Unit: 20</b></p>
+              </table>              
+              <p style="text-align:left; "><b>Total Unit: 22</b></p>
           </div>
         </div>
         <div class="certificate-advert" style="display: flex; flex-direction:column; align-items:center; justify-content:center;">
