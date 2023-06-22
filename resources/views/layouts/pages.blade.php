@@ -2124,6 +2124,9 @@
                                                                 <a href="{{ route('communication-studies') }}" data-drupal-link-system-path="node/27">Communication Studies</a>
                                                             </li>
                                                             <li class="menu-item">
+                                                                <a href="{{ route('school-of-computer') }}" data-drupal-link-system-path="node/27">Computer Science</a>
+                                                            </li>
+                                                            <li class="menu-item">
                                                                 <a href="/" data-drupal-link-system-path="node/27">Others|Maintenance</a>
                                                             </li>
                                                         </ul>
