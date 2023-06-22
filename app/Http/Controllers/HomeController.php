@@ -498,6 +498,11 @@ class HomeController extends Controller
         return view('USER.schoolCommunication');
     }
 
+    public function facultyEducation()
+    {
+        return view('USER.facultyEducation');
+    }
+
     public function foundation()
     {
         return view('USER.foundation');
