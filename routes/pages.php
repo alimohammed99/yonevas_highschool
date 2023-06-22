@@ -240,3 +240,19 @@ Route::get('internationalRelation', function () {
 Route::get('socialWork', function () {
     return view("USER.socialWork");
 })->name("socialWork");
+
+Route::get('cyberSecurity', function () {
+    return view("USER.cyberSecurity");
+})->name("cyberSecurity");
+
+Route::get('dataScience', function () {
+    return view("USER.dataScience");
+})->name("dataScience");
+
+Route::get('info-tech', function () {
+    return view("USER.info-tech");
+})->name("info-tech");
+
+Route::get('soft-engr', function () {
+    return view("USER.soft-engr");
+})->name("soft-engr");
