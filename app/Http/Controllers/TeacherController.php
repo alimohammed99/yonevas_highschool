@@ -93,8 +93,6 @@ class TeacherController extends Controller
 
 
   if($usertype == '2'){
-
-
       $data = User::where('users.id', $getCurrentUserId)->join('staff_details', 'users.id', '=', 'staff_details.staff_id')
       ->join('marital_statuses', 'staff_details.marital_status', '=', 'marital_statuses.id')
          ->join('religions', 'staff_details.religion', '=', 'religions.id')

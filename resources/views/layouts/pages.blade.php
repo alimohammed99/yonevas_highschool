@@ -2112,10 +2112,10 @@
                                                                     data-drupal-link-system-path="node/27">Business
                                                                     management</a>
                                                             </li>
-                                                            <li class="menu-item">
+                                                            {{-- <li class="menu-item">
                                                                 <a href="{{ route('school-of-law') }}"
                                                                     data-drupal-link-system-path="node/27">LAW</a>
-                                                            </li>
+                                                            </li> --}}
                                                               <li class="menu-item">
                                                                 <a href="{{ route('faculty-of-education') }}"
                                                                     data-drupal-link-system-path="node/27">Education</a>
@@ -2125,9 +2125,6 @@
                                                             </li>
                                                             <li class="menu-item">
                                                                 <a href="{{ route('school-of-computer') }}" data-drupal-link-system-path="node/27">Computer Science</a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a href="/" data-drupal-link-system-path="node/27">Others|Maintenance</a>
                                                             </li>
                                                         </ul>
                                                     </div>

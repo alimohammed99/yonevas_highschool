@@ -174,7 +174,7 @@
                             <input id="referral-email" class="input-here" type="email" name="referral_email" placeholder="agent email">
                         </div>
                         
-                      <button class="button-here" type="button" onclick="alert('Sorry, this is currently undergoing maintenance')">Sign up</button>
+                      <button class="button-here" type="submit" >Sign up</button>
 					</form>
 				</div>
 		</div>
