@@ -4,10 +4,6 @@
 </div>
 
 
-
-
-
-
 <div class="jumbotron jumbotron-fluid p-4">
     <div class="row">
         <div class="col-md-9">

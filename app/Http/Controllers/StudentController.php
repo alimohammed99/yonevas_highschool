@@ -116,13 +116,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
-
     public function upload_olevel_and_utme()
     {
 
@@ -139,14 +132,6 @@ class StudentController extends Controller
 
         return view("studentdashboard.upload_olevel_and_utme", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
     }
-
-
-
-
-
-
-
-
 
     public function store_olevel_and_utme(Request $request)
     {
@@ -511,12 +496,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
     public function student_admission_status()
     {
 
@@ -537,17 +516,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
     public function manage_student_profile()
     {
@@ -597,18 +565,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     public function edit_student_profile($id)
     {
@@ -666,16 +622,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
-
-
-
 
     public function update_student_profile(Request $request, $id)
     {
@@ -855,12 +801,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
     public function download_waco1(Request $request, $waco1)
     {
 
@@ -873,13 +813,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
 
     public function download_waco2(Request $request, $waco2)
     {
@@ -894,14 +827,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
-
-
     public function download_utme(Request $request, $utme)
     {
 
@@ -914,12 +839,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
 
     public function change_student_password()
     {
@@ -966,9 +885,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
     public function update_student_password(Request $request)
     {
 
@@ -1010,12 +926,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
 
     public function students_course_reg()
     {
@@ -1098,13 +1008,10 @@ class StudentController extends Controller
 
                 return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration');
         }
-    }else{
-            return redirect()->back()->with('error_message', 'Access denied!');
+        }else{
+                return redirect()->back()->with('error_message', 'Access denied!');
+        }
     }
-    }
-
-
-
 
     public function getDepartments(Request $request)
     {
@@ -1112,31 +1019,17 @@ class StudentController extends Controller
         return $states;
     }
 
-
-
-
-
-
-
-
     public function getDepartmentsForProgType(Request $request)
     {
         $states = Departments::whereProgrammeType($request->programme_type)->orderBy('department_name')->get();
         return $states;
     }
 
-
-
-
-
     public function getCourse(Request $request)
     {
         $course = Courses::whereDepartmentId($request->department_id)->orderBy('course_title')->get();
         return $course;
     }
-
-
-
 
     public function students_to_course_reg(Request $request)
     {
@@ -1214,25 +1107,16 @@ class StudentController extends Controller
         }
     }
 
-
-
-
     public function getStates(Request $request)
     {
         $states = States::whereCountryId($request->country_id)->orderBy('name_state')->get();
         return $states;
     }
 
-
-
-
     public function getCities(Request $request)
     {
         $cities = Cities::whereStateId($request->state_id)->orderBy('name_city')->get();
         return $cities;
     }
-
-
-
 
 }
