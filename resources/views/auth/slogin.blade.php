@@ -170,8 +170,8 @@
                                                             <x-jet-input id="email"
                                                                 style="border:none; background:inherit; padding:5px; font-size:22px; padding-left:17px; color:white; border-left:7px solid white; border-radius:20px; border-bottom:15px groove white; outline:none;"
                                                                 name="email" type="email" :value="old('email')"
-                                                                width="400%" class="pl-4" placeholder="Enter Email here now"
-                                                                required autofocus />
+                                                                width="400%" class="pl-4"
+                                                                placeholder="Enter Email here now" required autofocus />
                                                         </div> <br>
 
 

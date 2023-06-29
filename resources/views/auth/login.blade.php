@@ -1,5 +1,6 @@
 @extends('layouts.pages')
 @section('content')
+
 	<style>
 		.distance {
 			display: flex;
@@ -160,3 +161,4 @@
 		</div>
 	</div>
 @endsection
+
