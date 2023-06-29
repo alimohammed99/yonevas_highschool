@@ -1,5 +1,19 @@
 @extends('layouts.pages')
 @section('content')
+<?php
+function displayYearRange() {
+    $currentYear = date('Y');
+    $nextYear = date('Y', strtotime('+1 year'));
+    $lastYear = date('Y', strtotime('-1 year'));
+    $currentMonth = date('n');
+
+    if ($currentMonth >= 5) {
+        echo $currentYear . '-' . $nextYear;
+    } else {
+        echo $lastYear . '-' . $currentYear;
+    }
+}
+?>
     <main id="main" class="main">
         <a id="main-content" tabindex="-1"></a>
         <div class="region region-breadcrumb">
@@ -74,7 +88,7 @@
                                                 </h1>
                                                 <div class=" text--center">
                                                     <div>
-                                                        <p>THE 2022-2023 SCHOLARSHIP APPLICATION IS NOW OPEN.
+                                                        <p>THE <?php displayYearRange(); ?> SCHOLARSHIP APPLICATION IS NOW OPEN.
                                                             <!-- THE 2023-2024 SCHOLARSHIP APPLICATION WILL OPEN JANUARY 12, 2023 -->
                                                         </p>
 
@@ -103,7 +117,7 @@
                                                             <p>Students have many opportunities to gain money to pay for
                                                                 schooling! External scholarships are additional scholarships
                                                                 you can use at Yonevas Open University that are not funded by
-                                                                Yonevas Open University. <a href="javascript:void(0)" style="text-decoration: underline">Learn More </a>
+                                                                Yonevas Open University. <a href="https://zlasic.com" target="_blank" style="text-decoration: underline">Learn More </a>
                                                                 <br />
                                                                 The Yonevas Open University Foundation is proud to offer
                                                                 scholarship opportunities to all current and incoming
