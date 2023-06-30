@@ -15271,7 +15271,7 @@ body {
     border-radius: 5px;
     transition: 0.5s;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0.9;
 }
 
 .product-card:hover .card-btn {
@@ -16039,4 +16039,30 @@ box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
     padding: 10px 5px;
     background-color: #37383b;
     color: white;
+}
+/* virtual assistance */
+.v-a_card {
+    padding: 2rem 4rem ;
+    background: #fefedd;
+}
+.v-a_top-card {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem;
+}
+
+.v-a_picture {
+    height: 20rem;
+    width: 20rem;
+    margin: 0 1rem;
+}
+
+.v-a_picture img {
+    height: 100%;
+    width: 100%;
+}
+
+.v-a_desc {
+    width: 50%;
 }

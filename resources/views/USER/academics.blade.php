@@ -85,10 +85,10 @@
 
 
                                                 <div class="text-columns__item ">
-                                                    <h3 class="text-columns__title"><a href="http://yonevasdigitech.study/">Libraries</a> </h3>
+                                                    <h3 class="text-columns__title"><a href="/resource">Libraries</a> </h3>
                                                 </div>
                                                 <div class="text-columns__item ">
-                                                    <h3 class="text-columns__title"><a href="{{ route('registrar') }}">Academic Advising</a> </h3>
+                                                    <h3 class="text-columns__title"><a href="{{ route('academicAdviser') }}">Academic Advising</a> </h3>
                                                 </div>
 
 
@@ -159,7 +159,7 @@
                                                         <a href="#">
                                                             <div class="cards__image">
 
-                                                                <img src="assets/img/faculty.jpg" alt="Galapagos" title="Galapagos Islands" typeof="foaf:Image" />
+                                                                <img src="assets/img/Partnership.jpg" alt="Galapagos" title="Galapagos Islands" typeof="foaf:Image" />
 
 
 
@@ -212,7 +212,7 @@
                                                     </div>
                                                     <div class="product-card">
                                                         <div class="product-image">
-                                                            <img src="assets/img/tool1.png" class="product-thumb" alt="">
+                                                            <img src="assets/img/hover.jpg" class="product-thumb" alt="">
                                                             <a href="http://yonevasdigitech.study/"><button class="card-btn">Library Resources</button></a>
                                                         </div>
                                                     </div>

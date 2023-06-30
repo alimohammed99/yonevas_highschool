@@ -297,3 +297,11 @@ Route::get('info-tech', function () {
 Route::get('soft-engr', function () {
     return view("USER.soft-engr");
 })->name("soft-engr");
+
+Route::get('virtualAssistant', function () {
+    return view("USER.virtualAssistant");
+})->name("virtualAssistant");
+
+Route::get('academicAdviser', function () {
+    return view("USER.academicAdviser");
+})->name("academicAdviser");
