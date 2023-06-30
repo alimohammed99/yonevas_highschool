@@ -4,7 +4,7 @@
 <section class="v-a_card">
     <div class="v-a_top-card">
         <div class="v-a_picture">
-            <img src="/assets/newImages/staff-virtual.jpeg" alt="v-a picture">
+            <img src="/assets/newImages/staff-virtual-1.jpeg" alt="v-a picture">
         </div>
         <div class="v-a_desc">
             <h2>Oluchi Onuora</h2>
@@ -13,10 +13,10 @@
             <a href="https://calendly.com/meet_yonevas/30min"><button class="btn">Book Appointment</button></a>
             <hr>
             <p>Oluchi is a highly motivated and dedicated individual who is passionate about education and helping others succeed. She is a great team player who values collaboration and feedback, and is always willing to go above and beyond to ensure the success of her students and colleagues. Oluchi is also a lifelong learner who is constantly seeking to improve herself and her skills, and is always eager to take on new challenges.</p>
-            <p><strong>EDUCATION</strong>: Higher National Diploma (HND) in Mass Communication from Federal Polytechnic Oko</P>
         </div>
     </div>
     <div>
+        <p><strong>EDUCATION</strong>: Higher National Diploma (HND) in Mass Communication from Federal Polytechnic Oko</P>
         <p><strong>PROFESSIONAL EXPERIENCE</strong></p>
         <ol>
             <li>Teacher at EmmaEst Nursery and Primary School, Iba, Lagos in 2009, where she helped educate and shape young minds.</li>
