@@ -16,23 +16,23 @@ class CreateStudentsDetailsTable extends Migration
         Schema::create('students_details', function (Blueprint $table) {
             $table->id();
 
-            $table->string('student_id');  
-            $table->string('student_matric_number')->nullable(); 
-            $table->string('marital_status'); 
-            $table->string('date_of_birth'); 
-            $table->string('zip_code'); 
-            $table->string('gender'); 
-            $table->string('student_image'); 
-            $table->string('student_password'); 
-            $table->string('religion'); 
-            $table->string('country'); 
-            $table->string('state'); 
-            $table->string('city'); 
-            $table->string('address'); 
+            $table->string('student_id');
+            $table->string('student_matric_number')->nullable();
+            $table->string('marital_status');
+            $table->string('date_of_birth')->nullable();
+            $table->string('zip_code');
+            $table->string('gender');
+            $table->string('student_image');
+            $table->string('student_password');
+            $table->string('religion');
+            $table->string('country');
+            $table->string('state');
+            $table->string('city');
+            $table->string('address');
             $table->string('facebook_page')->nullable();
-            $table->string('twitter_page')->nullable(); 
-            $table->string('instagram_page')->nullable(); 
-            $table->string('linkedin_page')->nullable(); 
+            $table->string('twitter_page')->nullable();
+            $table->string('instagram_page')->nullable();
+            $table->string('linkedin_page')->nullable();
             $table->string('currently_studying');
             $table->string('name_of_current_institution')->nullable();
             $table->string('major')->nullable();
@@ -44,7 +44,7 @@ class CreateStudentsDetailsTable extends Migration
             $table->string('enrollment_period');
             $table->string('free_time');
             $table->string('residential_home');
-            $table->string('group_of_individual_or_organization');
+            $table->string('group_of_individual_or_organization')->nullable();
             $table->string('name_them')->nullable();
             $table->string('languages');
             $table->string('military_force');
@@ -55,7 +55,7 @@ class CreateStudentsDetailsTable extends Migration
             $table->string('next_of_kin_email');
             $table->string('next_of_kin_phone');
             $table->string('next_of_kin_address');
-            
+
             $table->string('academic_session');
             $table->string('programme_type');
             $table->string('level')->nullable();

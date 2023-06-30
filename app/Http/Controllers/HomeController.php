@@ -183,62 +183,146 @@ class HomeController extends Controller
 
         $data2->student_id =  Auth::user()->id;
 
-        $data2->marital_status = $request->marital_status;
 
-        $data2->date_of_birth = $request->date_of_birth;
+        if ($request->marital_status) {
+            $data2->marital_status = $request->marital_status;
+        } else {
+            $data2->marital_status = " ";
+        }
 
-        $data2->zip_code = $request->zip_code;
+        if ($request->date_of_birth) {
+            $data2->date_of_birth = $request->date_of_birth;
+        } else {
+            $data2->date_of_birth = " ";
+        }
 
-        $data2->gender = $request->gender;
+        if ($request->zip_code) {
+            $data2->zip_code = $request->zip_code;
+        } else {
+            $data2->zip_code = " ";
+        }
 
-        $data2->religion = $request->religion;
+        if ($request->gender) {
+            $data2->gender = $request->gender;
+        } else {
+            $data2->gender = " ";
+        }
 
-        $data2->student_password = $request->password;
 
+        if ($request->religion) {
+            $data2->religion = $request->religion;
+        } else {
+            $data2->religion = " ";
+        }
 
+        if ($request->student_password) {
+            $data2->student_password = $request->student_password;
+        } else {
+            $data2->student_password = " ";
+        }
 
 
         $image = $request->student_image;
 
-        $imagename = time() . '.' . $image->getClientOriginalExtension();
-        $request->student_image->move('StudentImages', $imagename);
+        if ($image) {
 
-        $data2->student_image = $imagename;
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $request->student_image->move('StudentImages', $imagename);
+
+            $data2->student_image = $imagename;
+        } else {
+            $data2->student_image = " ";
+        }
+
+        if ($request->country) {
+            $data2->country = $request->country;
+        } else {
+            $data2->country = " ";
+        }
+
+        if ($request->state) {
+            $data2->state = $request->state;
+        } else {
+            $data2->state = " ";
+        }
+
+        if ($request->city) {
+            $data2->city = $request->city;
+        } else {
+            $data2->city = " ";
+        }
+
+        if ($request->address) {
+            $data2->address = $request->address;
+        } else {
+            $data2->address = " ";
+        }
+
+        if ($request->facebook_page) {
+            $data2->facebook_page = $request->facebook_page;
+        } else {
+            $data2->facebook_page = " ";
+        }
 
 
-        $data2->country = $request->countries;
+        if ($request->twitter_page) {
+            $data2->twitter_page = $request->twitter_page;
+        } else {
+            $data2->twitter_page = " ";
+        }
 
-        $data2->state = $request->states;
+        if ($request->instagram_page) {
+            $data2->instagram_page = $request->instagram_page;
+        } else {
+            $data2->instagram_page = " ";
+        }
 
-        $data2->city = $request->cities;
-
-        $data2->address = $request->address;
-
-
-        $data2->facebook_page = $request->facebook_page;
-
-        $data2->twitter_page = $request->twitter_page;
-
-        $data2->instagram_page = $request->instagram_page;
-
-        $data2->linkedin_page = $request->linkedin_page;
+        if ($request->linkedin_page) {
+            $data2->linkedin_page = $request->linkedin_page;
+        } else {
+            $data2->linkedin_page = " ";
+        }
 
 
+        if ($request->next_of_kin_name) {
+            $data2->next_of_kin_name = $request->next_of_kin_name;
+        } else {
+            $data2->next_of_kin_name = " ";
+        }
+
+        if ($request->next_of_kin_email) {
+            $data2->next_of_kin_email = $request->next_of_kin_email;
+        } else {
+            $data2->next_of_kin_email = " ";
+        }
 
 
-        $data2->next_of_kin_name = $request->next_of_kin_name;
+        if ($request->next_of_kin_phone) {
+            $data2->next_of_kin_phone = $request->next_of_kin_phone;
+        } else {
+            $data2->next_of_kin_phone = " ";
+        }
 
-        $data2->next_of_kin_email = $request->next_of_kin_email;
-
-        $data2->next_of_kin_phone = $request->next_of_kin_phone;
-
-        $data2->next_of_kin_address = $request->next_of_kin_address;
-
+        if ($request->next_of_kin_address) {
+            $data2->next_of_kin_address = $request->next_of_kin_address;
+        } else {
+            $data2->next_of_kin_address = " ";
+        }
 
 
         $data2->currently_studying = $request->currently_studying;
 
+        if (!$data2->currently_studying) {
+            $data2->currently_studying = ' ';
+            $data2->name_of_current_institution = ' ';
+            $data2->major = ' ';
+            $data2->years_of_study = ' ';
+        }
+
+
         if ($data2->currently_studying == 'Yes') {
+
+            $data2->currently_studying = 'Yes';
 
             $data2->name_of_current_institution = $request->name_of_current_institution;
 
@@ -246,6 +330,8 @@ class HomeController extends Controller
 
             $data2->years_of_study = $request->years_of_study;
         } else {
+
+            $data2->currently_studying = 'Null';
 
             $data2->name_of_current_institution = 'null';
 
@@ -257,47 +343,92 @@ class HomeController extends Controller
 
         $data2->online_classes = $request->online_classes;
 
-        if ($data2->online_classes == 'Yes') {
+        if (!$data2->online_classes) {
+            $data2->online_classes = ' ';
+            $data2->how_long_for_online_classes = ' ';
+        }
 
+        if ($data2->online_classes == 'Yes') {
+            $data2->online_classes = 'Yes';
             $data2->how_long_for_online_classes = $request->how_long_for_online_classes;
         } else {
-
+            $data2->online_classes = 'null';
             $data2->how_long_for_online_classes = 'null';
         }
 
 
 
-        // $data2->what_do_you_want_to_study = $request->what_do_you_want_to_study;
+        if ($request->type_of_enrollment) {
+            $data2->type_of_enrollment = $request->type_of_enrollment;
+        } else {
+            $data2->type_of_enrollment = " ";
+        }
 
-        $data2->type_of_enrollment = $request->type_of_enrollment;
+        if ($request->enrollment_period) {
+            $data2->enrollment_period = $request->enrollment_period;
+        } else {
+            $data2->enrollment_period = " ";
+        }
 
-        $data2->enrollment_period = $request->enrollment_period;
+        if ($request->free_time) {
+            $data2->free_time = $request->free_time;
+        } else {
+            $data2->free_time = " ";
+        }
 
-        $data2->free_time = $request->free_time;
-
-        $data2->residential_home = $request->residential_home;
+        if ($request->residential_home) {
+            $data2->residential_home = $request->residential_home;
+        } else {
+            $data2->residential_home = " ";
+        }
 
 
         $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization;
 
-        if ($data2->group_of_individual_or_organization == 'Yes') {
+        if(!$data2->group_of_individual_or_organization){
+            $data2->group_of_individual_or_organization == ' ';
+            $data2->name_them = ' ';
+        }
 
+        if ($data2->group_of_individual_or_organization == 'Yes') {
+            $data2->group_of_individual_or_organization == 'Yes';
             $data2->name_them = $request->name_them;
         } else {
+            $data2->group_of_individual_or_organization == ' ';
+            $data2->name_them = ' ';
+        }
 
-            $data2->name_them = 'null';
+        if ($request->languages) {
+            $data2->languages = $request->languages;
+        } else {
+            $data2->languages = " ";
+        }
+
+        if ($request->military_force) {
+            $data2->military_force = $request->military_force;
+        } else {
+            $data2->military_force = " ";
+        }
+
+        if ($request->government_official) {
+            $data2->government_official = $request->government_official;
+        } else {
+            $data2->government_official = " ";
         }
 
 
-        $data2->languages = $request->languages;
+        if ($request->medical_conditions) {
+            $data2->medical_conditions = $request->medical_conditions;
+        } else {
+            $data2->medical_conditions = " ";
+        }
 
-        $data2->military_force = $request->military_force;
+        if ($request->academic_session) {
+            $data2->academic_session = $request->academic_session;
+        } else {
+            $data2->academic_session = " ";
+        }
 
-        $data2->government_official = $request->government_official;
-
-        $data2->medical_conditions = $request->medical_conditions;
-
-        $data2->academic_session = $request->academic_session;
 
         $data2->programme_type = $request->programme_type;
 
