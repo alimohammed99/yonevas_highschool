@@ -12,10 +12,10 @@
             <a href="https://calendly.com/meet_yonevas/30min"><button class="btn">Book Appointment</button></a>
             <hr>
             <p>Esther has excellent communication skills and is adept at managing client's needs and expectations. She possesses strong organizational skills, which enable her to coordinate and manage meetings effectively. Esther is also a great team player and works well under pressure to ensure that deadlines are met. She is proficient in using various software and tools that are necessary for her job role.</p>
-            <p><strong>EDUCATION</strong>: Bachelor's degree in Business and Finance from University of Port Harcourt</P>
         </div>
     </div>
     <div>
+        <p><strong>EDUCATION</strong>: Bachelor's degree in Business and Finance from University of Port Harcourt</P>
         <p><strong>PERSONAL ATTRIBUTES</strong></p>
         <p>Esther is a dedicated and goal-driven individual who takes pride in her work. She is passionate about providing quality service and has a positive attitude towards her work. Esther is empathetic and is always willing to lend an ear and support those around her. She is a quick learner and is always eager to take on new challenges.</p>
         <p><strong>PROFESSIONAL EXPERIENCE</strong></p>
