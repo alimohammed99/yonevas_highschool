@@ -579,6 +579,13 @@ route::get('/students_course_reg', [StudentController::class, 'students_course_r
 
 route::post('/students_to_course_reg', [StudentController::class, 'students_to_course_reg']);
 
+route::get('/services_and_links', [StudentController::class, 'services_and_links']);
+
+route::get('/forms', [StudentController::class, 'forms']);
+
+route::get('/course_feedback', [StudentController::class, 'course_feedback']);
+
+Route::post("/submit_course_feedback", [StudentController::class, "submit_course_feedback"]);
 
 
 

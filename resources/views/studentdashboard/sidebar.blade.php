@@ -44,8 +44,8 @@
     <br>
     <li class="nav-item ">
             <span>
-           
-                <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
+
+                <a href="{{url('update_student_profile')}}" target="_self" class="nav-link d-flex justify-content-between">
                     <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Update Profile<span style="font-size:25px; font-weight:bolder">!</span></span>
                 </a></span>
     </li>
@@ -86,8 +86,8 @@
 
     <li class="nav-item ">
             <span>
-          
-                <a href="javascript:;" target="_self" class="nav-link d-flex justify-content-between">
+
+                <a href="{{url('upload_olevel_and_utme')}}" target="_self" class="nav-link d-flex justify-content-between">
                     <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Upload Documents<span style="font-size:25px; font-weight:bolder">!</span>
                     </span>
                 </a></span>
@@ -171,7 +171,7 @@
 
 
     <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
+        <a href="{{ url('services_and_links') }}" target="_self" class="nav-link d-flex justify-content-between">
             <span class="sidebar-text">Services & Links</span>
         </a>
     </li>
@@ -186,7 +186,7 @@
 
 
     <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
+        <a href="{{ url('course_feedback') }}" target="_self" class="nav-link d-flex justify-content-between">
             <span class="sidebar-text">Course Feedback</span>
         </a>
     </li>
@@ -200,7 +200,7 @@
 
 
     <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
+        <a href="{{ url('forms') }}" target="_self" class="nav-link d-flex justify-content-between">
             <span class="sidebar-text">Forms</span>
         </a>
     </li>

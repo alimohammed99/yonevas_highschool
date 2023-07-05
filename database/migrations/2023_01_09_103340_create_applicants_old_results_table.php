@@ -34,7 +34,7 @@ class CreateApplicantsOldResultsTable extends Migration
             $table->string('birth_certificate_fileExtensionType')->nullable();
 
             $table->string('valid_form_of_id')->nullable();
-               $table->string('valid_form_of_id_fileExtensionType')->nullable();
+            $table->string('valid_form_of_id_fileExtensionType')->nullable();
 
             $table->string('letter_of_sponsorship')->nullable();
             $table->string('letter_of_sponsorship_fileExtensionType')->nullable();

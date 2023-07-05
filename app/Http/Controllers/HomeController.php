@@ -183,44 +183,15 @@ class HomeController extends Controller
 
         $data2->student_id =  Auth::user()->id;
 
+        $data2->marital_status = $request->marital_status;
 
-        if ($request->marital_status) {
-            $data2->marital_status = $request->marital_status;
-        } else {
-            $data2->marital_status = " ";
-        }
+        $data2->date_of_birth = $request->date_of_birth;
 
-        if ($request->date_of_birth) {
-            $data2->date_of_birth = $request->date_of_birth;
-        } else {
-            $data2->date_of_birth = " ";
-        }
+        $data2->zip_code = $request->zip_code;
 
-        if ($request->zip_code) {
-            $data2->zip_code = $request->zip_code;
-        } else {
-            $data2->zip_code = " ";
-        }
+        $data2->gender = $request->gender;
 
-        if ($request->gender) {
-            $data2->gender = $request->gender;
-        } else {
-            $data2->gender = " ";
-        }
-
-
-        if ($request->religion) {
-            $data2->religion = $request->religion;
-        } else {
-            $data2->religion = " ";
-        }
-
-        if ($request->student_password) {
-            $data2->student_password = $request->student_password;
-        } else {
-            $data2->student_password = " ";
-        }
-
+        $data2->religion = $request->religion;
 
         $image = $request->student_image;
 
@@ -234,29 +205,16 @@ class HomeController extends Controller
             $data2->student_image = " ";
         }
 
-        if ($request->country) {
-            $data2->country = $request->country;
-        } else {
-            $data2->country = " ";
-        }
 
-        if ($request->state) {
-            $data2->state = $request->state;
-        } else {
-            $data2->state = " ";
-        }
+        $data2->country = $request->countries;
 
-        if ($request->city) {
-            $data2->city = $request->city;
-        } else {
-            $data2->city = " ";
-        }
+        $data2->state = $request->states;
 
-        if ($request->address) {
-            $data2->address = $request->address;
-        } else {
-            $data2->address = " ";
-        }
+        $data2->city = $request->cities;
+
+        $data2->address = $request->address;
+
+
 
         if ($request->facebook_page) {
             $data2->facebook_page = $request->facebook_page;
@@ -382,13 +340,12 @@ class HomeController extends Controller
             $data2->residential_home = " ";
         }
 
-
-        $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization;
-
-        if(!$data2->group_of_individual_or_organization){
-            $data2->group_of_individual_or_organization == ' ';
-            $data2->name_them = ' ';
+        if($request->group_of_individual_or_organization){
+            $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization;
+        }else{
+            $data2->group_of_individual_or_organization = " ";
         }
+
 
         if ($data2->group_of_individual_or_organization == 'Yes') {
             $data2->group_of_individual_or_organization == 'Yes';
