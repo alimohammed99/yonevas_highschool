@@ -94,7 +94,7 @@
                                                         <div class="text-columns__body">
                                                             <div
                                                                 class="clearfix text-formatted field field--name-field-body-wysiwyg field--type-text-long field--label-hidden field__item">
-                                                                <p>Yonevas Open University is a four-year private college
+                                                                <p>Yonevas Open University is a four-year private institution
                                                                     offering a high-quality education in the liberal arts
                                                                     and professions to prepare students for a life that is
                                                                     successful both personally and professionally.
@@ -210,13 +210,13 @@
 
 
                                                     <div class="text-columns__item ">
-                                                        <h3 class="text-columns__title">College Governance
+                                                        <h3 class="text-columns__title">School Governance
                                                         </h3>
 
                                                         <div class="text-columns__body">
                                                             <div
                                                                 class="clearfix text-formatted field field--name-field-body-wysiwyg field--type-text-long field--label-hidden field__item">
-                                                                <p>Yonevas Digital Colleg is a member of the Yonevas Company
+                                                                <p>Yonevas Open University is a member of the Yonevas Company
                                                                     governed by a 15-member board of trustees. The Trustees
                                                                     are appointed by the Board Members of Yonevas Company.
                                                                     For more Information about Yonevas, visit our page at <a

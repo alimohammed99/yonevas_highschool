@@ -373,7 +373,7 @@
                             </div>
                             <div style="margin: auto; color:white; padding-left:5%;">
                                 <h2 style="padding-bottom: 3%;">General Inquiries:</h2>
-                                <h4 style="padding-bottom: 3%;">For general inquiries about Yonevas College, please email us at: <a href = "mailto: info@yonevas.institute" style="color: #e4d018">info@yonevas.institute</a>.</h4>
+                                <h4 style="padding-bottom: 3%;">For general inquiries about Yonevas Open University, please email us at: <a href = "mailto: info@yonevas.institute" style="color: #e4d018">info@yonevas.institute</a>.</h4>
                                 <h4>We strive to respond to inquiries within 12-24 hours.</h4>
                             </div>
                         </div>

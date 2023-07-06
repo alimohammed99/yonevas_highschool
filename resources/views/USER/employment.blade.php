@@ -73,10 +73,10 @@
                                                 <div class="feature-banner__content text--center bg--black text--white">
                                                     <h1 class="feature-banner__title">Employment Opportunity</h1>
                                                     <div class="feature-banner__subtitle">Yonevas Open University is a private,
-                                                        college of arts & sciences sponsored by the Yonevas Company, The
-                                                        College serves over 106 FT & PT undergrad students. A rigorous
+                                                        institute of arts & sciences sponsored by the Yonevas Company, The
+                                                        institute serves over 106 FT & PT undergrad students. A rigorous
                                                         core curriculum provides the foundation for all majors. The
-                                                        College is located in Nigeria with its main headquarter in Lagos
+                                                        school is located in Nigeria with its main headquarter in Lagos
                                                         , other branch offices for administrative works located in
                                                         Anambra state . Yonevas Company is committed to recruiting a
                                                         diverse work force and welcomes applications from persons of
