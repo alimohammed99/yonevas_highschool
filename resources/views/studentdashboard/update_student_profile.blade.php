@@ -49,8 +49,8 @@
 
 
                     <label for="inputPassword4" class="input__label">Marital Status</label>
-                    <select style="width:" name="marital_status" id="marital_status" class="form-control"
-                        required="required">
+                    <select style="width:" name="marital_status" id="marital_status" class="form-control" required="required"
+                    >
                         @foreach ($data1 as $data1)
                             <option value="{{ $data1->id }}" required="required">{{ $data1->status }}</option>
                         @endforeach
@@ -63,8 +63,8 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">Date of Birth</label>
-                        <input type="date" name="date_of_birth" class="form-control input-style" id=""
-                            placeholder="Email" required="required">
+                        <input type="date" name="date_of_birth" class="form-control input-style" id="" required="required"
+                            placeholder="Email">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">Zip Code</label>
@@ -88,14 +88,6 @@
                         </select>
                     </div>
 
-
-
-
-                    {{-- <div class="form-group col-md-6">
-                        <label for="" class="input__label">Student Password</label>
-                        <input type="text" name="password" class="form-control input-style" id=""
-                            placeholder="Enter the Password provided during registration" required="required">
-                    </div> --}}
                 </div>
 
 
@@ -106,17 +98,17 @@
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="" class="input__label">Gender</label> <br>
                         <label for="">Male</label>
-                        <input class="" type="radio" id="male" name="gender" value="Male"
-                            required="required"> &nbsp; &nbsp;
+                        <input class="" type="radio" id="male" name="gender" value="Male" required="required"
+                        > &nbsp; &nbsp;
                         <label for="">Female</label>
-                        <input class="" type="radio" id="female" name="gender" value="Female"
-                            required="required">
+                        <input class="" type="radio" id="female" name="gender" value="Female" required="required"
+                        >
                     </div>
 
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="inputAddress2" class="input__label">Student Image</label>
-                        <input type="file" name="student_image" class="form-control input-style" id=""
-                            required="required">
+                        <input type="file" name="student_image" class="form-control input-style" id="" required="required"
+                        >
                     </div>
 
                 </div>
@@ -127,7 +119,7 @@
                 <div class="form-group">
                     <label class="form-label"></label>
                     <select name="countries" id="countries" class="form-control" required="required">
-                        <option value="" required="required">Select Country</option>
+                        <option value="">Select Country</option>
                         @foreach (App\Models\Countries::orderBy('name_country')->get() as $key => $value)
                             <option value="{{ $value->id }}" required="required">{{ $value->name_country }}</option>
                         @endforeach
@@ -138,7 +130,7 @@
 
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <select name="states" id="states" class="form-control">
+                    <select name="states" id="states" class="form-control" required="required">
                         <option value="" required="required">Select State</option>
 
                     </select>
@@ -149,7 +141,7 @@
 
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <select name="cities" id="cities" class="form-control">
+                    <select name="cities" id="cities" class="form-control" required="required">
                         <option value="" required="required">Select City</option>
 
                     </select>
@@ -159,8 +151,8 @@
 
                 <div class="form-group">
                     <label for="inputAddress2" class="input__label">Address</label>
-                    <input type="text" name="address" class="form-control input-style" id="inputAddress2"
-                        placeholder="Enter address" required="required">
+                    <input type="text" name="address" class="form-control input-style" id="inputAddress2" required="required"
+                        placeholder="Enter address">
                 </div><br><br>
 
 
@@ -173,10 +165,10 @@
                         learning?</label> <br>
                     <label for="">Yes</label>
                     <input onclick="javascript:yesnoCheck();" class="" type="radio" id="yesCheck"
-                        name="currently_studying" value="Yes" required="required"> &nbsp; &nbsp;
+                        name="currently_studying" value="Yes"> &nbsp; &nbsp;
                     <label for="">No</label>
                     <input onclick="javascript:yesnoCheck();" class="" type="radio" id="noCheck"
-                        name="currently_studying" value="No" required="required">
+                        name="currently_studying" value="No">
                 </div>
 
                 <div id="ifYes" style="visibility:hidden">
@@ -209,10 +201,10 @@
                         <br>
                         <label for="">Yes</label>
                         <input onclick="javascript:yes_or_noCheck2();" class="" type="radio" id="yes_Check2"
-                            name="online_classes" value="Yes" required="required"> &nbsp; &nbsp;
+                            name="online_classes" value="Yes"> &nbsp; &nbsp;
                         <label for="">No</label>
                         <input onclick="javascript:yes_or_noCheck2();" class="" type="radio" id="no_Check2"
-                            name="online_classes" value="No" required="required">
+                            name="online_classes" value="No">
                     </div>
                     <div class="form-group col-md-6">
                         <div id="if_Yes2" style="visibility:hidden">
@@ -231,20 +223,20 @@
                         <label for="" class="input__label">What type of enrollment?</label> <br>
                         <label for="">Degree programme</label>
                         <input class="" type="radio" id="male" name="type_of_enrollment"
-                            value="Degree programme" required="required"> &nbsp; &nbsp;
+                            value="Degree programme"> &nbsp; &nbsp;
                         <label for="">Non-Degree programme</label>
                         <input class="" type="radio" id="female" name="type_of_enrollment"
-                            value="Non-Degree programme" required="required">
+                            value="Non-Degree programme">
                     </div>
 
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="" class="input__label">Enrollment period</label> <br>
                         <label for="">February intake</label>
                         <input class="" type="radio" id="male" name="enrollment_period"
-                            value="February intake" required="required"> &nbsp; &nbsp;
+                            value="February intake"> &nbsp; &nbsp;
                         <label for="">September intake</label>
                         <input class="" type="radio" id="female" name="enrollment_period"
-                            value="September intake" required="required">
+                            value="September intake">
                     </div>
 
                 </div><br><br>
@@ -254,13 +246,13 @@
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">What do you do in your free time?</label>
                         <input type="text" class="form-control input-style" id=""
-                            placeholder="Enter answer" name="free_time" required="required">
+                            placeholder="Enter answer" name="free_time">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">How often do you travel outside of your residential
                             home?</label>
                         <input type="text" class="form-control input-style" id=""
-                            name="residential_home" required="required">
+                            name="residential_home">
                     </div>
                 </div>
                 <div class="form-row">
@@ -269,11 +261,11 @@
                             organizations?</label> <br>
                         <label for="">Yes</label>
                         <input onclick="javascript:yes_or_noCheck();" class="" type="radio" id="yes_Check"
-                            name="group_of_individual_or_organization" value="Yes" required="required"> &nbsp;
+                            name="group_of_individual_or_organization" value="Yes"> &nbsp;
                         &nbsp;
                         <label for="">No</label>
                         <input onclick="javascript:yes_or_noCheck();" class="" type="radio" id="no_Check"
-                            name="group_of_individual_or_organization" value="No" required="required">
+                            name="group_of_individual_or_organization" value="No">
                     </div>
                     <div class="form-group col-md-6">
                         <div id="if_Yes" style="visibility:hidden">
@@ -288,15 +280,15 @@
                     <div class="form-group col-md-6">
                         <label for="inputEmail4" class="input__label">How many languages can you speak?</label>
                         <input type="number" class="form-control input-style" id="" name="languages"
-                            required="required">
+                        >
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4" class="input__label">Are you a member of Nigerian military
                             force?</label>
                         <select style="width:" name="military_force" id="" class="form-control"
-                            required="required">
+                        >
                             @foreach ($data3 as $data3)
-                                <option value="{{ $data3->id }}" required="required">{{ $data3->military_force }}
+                                <option value="{{ $data3->id }}">{{ $data3->military_force }}
                                 </option>
                             @endforeach
                         </select>
@@ -307,9 +299,9 @@
                         <label for="inputEmail4" class="input__label">Are you a government official or do you hold any
                             position in the federal government office?</label>
                         <select style="width:" name="government_official" id="" class="form-control"
-                            required="required">
+                        >
                             @foreach ($data4 as $data4)
-                                <option value="{{ $data4->id }}" required="required">
+                                <option value="{{ $data4->id }}">
                                     {{ $data4->government_official }}</option>
                             @endforeach
                         </select>
@@ -318,9 +310,9 @@
                         <label for="inputPassword4" class="input__label">Do you have any medical conditions that we
                             need to know of?</label>
                         <select style="width:" name="medical_conditions" id="" class="form-control"
-                            required="required">
+                        >
                             @foreach ($data5 as $data5)
-                                <option value="{{ $data5->id }}" required="required">
+                                <option value="{{ $data5->id }}">
                                     {{ $data5->medical_conditions }}</option>
                             @endforeach
                         </select>
@@ -368,13 +360,13 @@
                                 <label for="" class="input__label">Full Name</label>
                                 <input type="text" class="form-control input-style" id=""
                                     placeholder="Enter name of next of Kin" name="next_of_kin_name"
-                                    required="required">
+                                >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Email</label>
                                 <input type="email" placeholder="Enter email of next of Kin" type="text"
                                     class="form-control input-style" id="" name="next_of_kin_email"
-                                    required="required">
+                                >
                             </div>
 
                         </div>
@@ -384,13 +376,13 @@
                                 <label for="" class="input__label">Phone</label>
                                 <input type="number" class="form-control input-style" id=""
                                     placeholder="Enter phone number of next of Kin" name="next_of_kin_phone"
-                                    required="required">
+                                >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Address</label>
                                 <input type="text" placeholder="Enter address of next of Kin" type="text"
                                     class="form-control input-style" id="" name="next_of_kin_address"
-                                    required="required">
+                                >
                             </div>
                         </div><br><br>
 
@@ -404,9 +396,9 @@
                         <div class="form-group">
                             <label for="" class="input__label">Choose Academic Session</label>
                             <select style="width:" name="academic_session" id="states" class="form-control"
-                                required="required">
+                            >
                                 @foreach ($acad as $acad)
-                                    <option value="{{ $acad->id }}" required="required">
+                                    <option value="{{ $acad->id }}">
                                         {{ $acad->academic_session }}</option>
                                 @endforeach
 
@@ -417,7 +409,7 @@
                         <div class="form-group">
                             <label class="control-label" for="email">Programme Type:</label>
                             <select name="programme_type" id="myselection" class="myselection form-control"
-                                required="required">
+                            >
                                 <option value="">Select Programme Type</option>
                                 <option class="form-control" value="7">Bachelor's Degree</option>
                                 <option class="form-control" value="1">Diploma(ND)</option>

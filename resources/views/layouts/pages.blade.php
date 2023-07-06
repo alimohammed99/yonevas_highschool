@@ -2112,6 +2112,10 @@
                                                                     data-drupal-link-system-path="node/27">Business
                                                                     management</a>
                                                             </li>
+                                                            {{-- <li class="menu-item">
+                                                                <a href="{{ route('school-of-law') }}"
+                                                                    data-drupal-link-system-path="node/27">LAW</a>
+                                                            </li> --}}
                                                               <li class="menu-item">
                                                                 <a href="{{ route('faculty-of-education') }}"
                                                                     data-drupal-link-system-path="node/27">Education</a>

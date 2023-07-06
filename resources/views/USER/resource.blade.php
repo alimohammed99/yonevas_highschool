@@ -142,53 +142,6 @@
                                 <div class="field__item" tabindex="0">
 
                                     <div>
-
-                                        <div class="block-media media-right bg--blue text--gold ">
-                                            <div class="container">
-
-
-                                            </div>
-                                        </div>
-                                        <div class="block-media media-right bg--white text--dark ">
-                                            <div class="container">
-                                                <div class="block-media__group">
-                                                    <div class="block-media__media">
-                                                        <article class="media media--type-image media--view-mode-paragraph">
-
-                                                            <div class="field field--name-field-image field--type-image field--label-hidden field__item scholarship-img"
-                                                                style="display: flex; align-items:center; justify-content:center;">
-                                                                <img loading="lazy"
-                                                                    src="assets/newImages/staff-virtual.jpeg"
-                                                                    alt="girls computer" typeof="foaf:Image"
-                                                                    class="image-style-_60x540"
-                                                                    style="width:auto; height:100vh;" />
-
-
-                                                            </div>
-
-                                                        </article>
-                                                    </div>
-                                                    <div class="block-media__content bg--white text--dark">
-                                                        <div class="page-heading__description" style="color:black;">
-                                                            <h3>Contact Us</h3>
-                                                            <p>Live chat via Whatsapp <a
-                                                                    style="color:blue; text-decoration:underline"
-                                                                    href="http://wa.me/2347048778559">234-704 877 8559</a>
-                                                            </p>
-                                                            <p>Reach us through email/web form</p>
-                                                            <p>Online chat (available Library hours)</p>
-                                                            <p>Library FAQ</p>
-                                                            <p>Schedule virtual meeting with a staff </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="field__item" tabindex="0">
-
-                                    <div>
                                         <div class="text-columns  bg--blue text--gold ">
                                             <div class="container">
                                                 <h1 class="block-media__big-title text--center capitalize">Library Resource
@@ -279,7 +232,7 @@
                                                             <div
                                                                 class="field field--name-field-image field--type-image field--label-hidden
              field__item scholarship-img">
-                                                                <img loading="lazy" src="assets/img/resource2-img.png"
+                                                                <img loading="lazy" src="assets/img/resource-2-img.jpeg"
                                                                     alt="girls computer" typeof="foaf:Image"
                                                                     class="image-style-_60x540" />
 

@@ -82,6 +82,7 @@
                                                         <li>Coordination of all details related to annual Commencement
                                                             ceremonies</li>
                                                     </ol>
+                                                    <p style="font-weight: bold">Contact Registrar Office at <a style="color:#fff" href="mailto:registrar@yonevas.institute">registrar@yonevas.institute</a></p>
                                                 </div>
 
                                             </div>

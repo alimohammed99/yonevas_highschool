@@ -80,6 +80,8 @@ use App\Models\CoursesToDepartment;
 
 use App\Models\ApplicantsOldResults;
 
+use App\Models\CourseFeedback;
+
 use Illuminate\Support\Facades\Stroage;
 
 class StudentController extends Controller
@@ -101,13 +103,12 @@ class StudentController extends Controller
 
             if (Auth::user()->reg_complete == 1) {
 
-            $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+                $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
-            $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+                $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
 
-            return view("studentdashboard.pay_school_fees", compact('studentsCircularCount', 'studentsCircular'));
-
-            }else{
+                return view("studentdashboard.pay_school_fees", compact('studentsCircularCount', 'studentsCircular'));
+            } else {
                 return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration');
             }
         } else {
@@ -115,13 +116,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
 
     public function upload_olevel_and_utme()
     {
@@ -139,14 +133,6 @@ class StudentController extends Controller
 
         return view("studentdashboard.upload_olevel_and_utme", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
     }
-
-
-
-
-
-
-
-
 
     public function store_olevel_and_utme(Request $request)
     {
@@ -511,12 +497,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
     public function student_admission_status()
     {
 
@@ -537,17 +517,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
     public function manage_student_profile()
     {
@@ -597,18 +566,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     public function edit_student_profile($id)
     {
@@ -666,16 +623,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
-
-
-
 
     public function update_student_profile(Request $request, $id)
     {
@@ -855,12 +802,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
     public function download_waco1(Request $request, $waco1)
     {
 
@@ -873,13 +814,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
-
 
     public function download_waco2(Request $request, $waco2)
     {
@@ -894,14 +828,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
-
-
     public function download_utme(Request $request, $utme)
     {
 
@@ -914,12 +840,6 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
-
-
-
 
     public function change_student_password()
     {
@@ -957,17 +877,13 @@ class StudentController extends Controller
                 $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
 
                 return view("studentdashboard.change_student_password", compact('data', 'studentsCircularCount', 'studentsCircular'));
-
             } else {
                 return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration');
             }
-        }else{
+        } else {
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-
-
-
 
     public function update_student_password(Request $request)
     {
@@ -1011,12 +927,6 @@ class StudentController extends Controller
         }
     }
 
-
-
-
-
-
-
     public function students_course_reg()
     {
 
@@ -1031,80 +941,77 @@ class StudentController extends Controller
 
 
 
-            $data = User::where('users.id', $getStudentId)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                ->join('religions', 'students_details.religion', '=', 'religions.id')
-                ->join('countries', 'students_details.country', '=', 'countries.id')
-                ->join('states', 'students_details.state', '=', 'states.id')
-                ->join('cities', 'students_details.city', '=', 'cities.id')
-                ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
-                ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-                ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-                // ->join('levels', 'students_details.level', '=', 'levels.id')
-                // ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                // ->join('departments', 'students_details.department', '=', 'departments.id')
-                // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
+                $data = User::where('users.id', $getStudentId)->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
+                    ->join('religions', 'students_details.religion', '=', 'religions.id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
+                    ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
+                    ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    // ->join('levels', 'students_details.level', '=', 'levels.id')
+                    // ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                    // ->join('departments', 'students_details.department', '=', 'departments.id')
+                    // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
 
 
-                ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
+                    ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
 
-            $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+                $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
-            $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+                $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
 
-            $getStudentDepartment = StudentsDetails::where('students_details.student_id', $getStudentId)->join('departments', 'students_details.department', '=', 'departments.id')->first();
-
-
-
-            $getCurrentStudentInfo = StudentsDetails::where('student_id', '=', $getStudentId)->first();
+                $getStudentDepartment = StudentsDetails::where('students_details.student_id', $getStudentId)->join('departments', 'students_details.department', '=', 'departments.id')->first();
 
 
 
-            $getStudentsData1 = CoursesToDepartment::join('programme_types', 'courses_to_departments.programme_type', '=', 'programme_types.id')
-                ->join('courses', 'courses_to_departments.course_id', '=', 'courses.id')
-                ->join('courses_statuses', 'courses_to_departments.course_status', '=', 'courses_statuses.id')
-                ->join('semesters', 'courses_to_departments.semester_id', '=', 'semesters.id')
-                ->select('courses_to_departments.id', 'courses.course_code', 'courses.course_title', 'courses.course_unit', 'semesters.semester_name', 'courses_statuses.status')
-                ->where('courses_to_departments.department_id', '=', $getCurrentStudentInfo->department)
-                ->where('courses.programme_type', '=', $getCurrentStudentInfo->programme_type)
-                ->where('courses_to_departments.course_status', '=', '1')
-                ->get();
-
-            $getStudentsData2 = CoursesToDepartment::join('programme_types', 'courses_to_departments.programme_type', '=', 'programme_types.id')
-                ->join('courses', 'courses_to_departments.course_id', '=', 'courses.id')
-                ->join('courses_statuses', 'courses_to_departments.course_status', '=', 'courses_statuses.id')
-                ->join('semesters', 'courses_to_departments.semester_id', '=', 'semesters.id')
-                ->select('courses_to_departments.id', 'courses.course_code', 'courses.course_title', 'courses.course_unit', 'semesters.semester_name', 'courses_statuses.status')
-                ->where('courses_to_departments.department_id', '=', $getCurrentStudentInfo->department)
-                ->where('courses.programme_type', '=', $getCurrentStudentInfo->programme_type)
-                ->where('courses_to_departments.course_status', '=', '2')
-                ->get();
-
-
-            $getStudentsData = StudentsDetails::where('students_details.student_id', $getStudentId)->first()->department;
-            // $aaa = $getStudentsData->department;
-            // dd($getStudentsData);
-
-            //    $boom =  $getStudentsData1->course_unit->sum();
-            //    dd($boom);
+                $getCurrentStudentInfo = StudentsDetails::where('student_id', '=', $getStudentId)->first();
 
 
 
+                $getStudentsData1 = CoursesToDepartment::join('programme_types', 'courses_to_departments.programme_type', '=', 'programme_types.id')
+                    ->join('courses', 'courses_to_departments.course_id', '=', 'courses.id')
+                    ->join('courses_statuses', 'courses_to_departments.course_status', '=', 'courses_statuses.id')
+                    ->join('semesters', 'courses_to_departments.semester_id', '=', 'semesters.id')
+                    ->select('courses_to_departments.id', 'courses.course_code', 'courses.course_title', 'courses.course_unit', 'semesters.semester_name', 'courses_statuses.status')
+                    ->where('courses_to_departments.department_id', '=', $getCurrentStudentInfo->department)
+                    ->where('courses.programme_type', '=', $getCurrentStudentInfo->programme_type)
+                    ->where('courses_to_departments.course_status', '=', '1')
+                    ->get();
 
-            return view("studentdashboard.students_course_reg", compact("data", 'studentsCircularCount', 'studentsCircular', 'getStudentDepartment', 'getStudentsData1', 'getStudentsData2'));
-        } else {
+                $getStudentsData2 = CoursesToDepartment::join('programme_types', 'courses_to_departments.programme_type', '=', 'programme_types.id')
+                    ->join('courses', 'courses_to_departments.course_id', '=', 'courses.id')
+                    ->join('courses_statuses', 'courses_to_departments.course_status', '=', 'courses_statuses.id')
+                    ->join('semesters', 'courses_to_departments.semester_id', '=', 'semesters.id')
+                    ->select('courses_to_departments.id', 'courses.course_code', 'courses.course_title', 'courses.course_unit', 'semesters.semester_name', 'courses_statuses.status')
+                    ->where('courses_to_departments.department_id', '=', $getCurrentStudentInfo->department)
+                    ->where('courses.programme_type', '=', $getCurrentStudentInfo->programme_type)
+                    ->where('courses_to_departments.course_status', '=', '2')
+                    ->get();
+
+
+                $getStudentsData = StudentsDetails::where('students_details.student_id', $getStudentId)->first()->department;
+                // $aaa = $getStudentsData->department;
+                // dd($getStudentsData);
+
+                //    $boom =  $getStudentsData1->course_unit->sum();
+                //    dd($boom);
+
+
+
+
+                return view("studentdashboard.students_course_reg", compact("data", 'studentsCircularCount', 'studentsCircular', 'getStudentDepartment', 'getStudentsData1', 'getStudentsData2'));
+            } else {
 
                 return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration');
-        }
-    }else{
+            }
+        } else {
             return redirect()->back()->with('error_message', 'Access denied!');
+        }
     }
-    }
-
-
-
 
     public function getDepartments(Request $request)
     {
@@ -1112,31 +1019,17 @@ class StudentController extends Controller
         return $states;
     }
 
-
-
-
-
-
-
-
     public function getDepartmentsForProgType(Request $request)
     {
         $states = Departments::whereProgrammeType($request->programme_type)->orderBy('department_name')->get();
         return $states;
     }
 
-
-
-
-
     public function getCourse(Request $request)
     {
         $course = Courses::whereDepartmentId($request->department_id)->orderBy('course_title')->get();
         return $course;
     }
-
-
-
 
     public function students_to_course_reg(Request $request)
     {
@@ -1214,17 +1107,11 @@ class StudentController extends Controller
         }
     }
 
-
-
-
     public function getStates(Request $request)
     {
         $states = States::whereCountryId($request->country_id)->orderBy('name_state')->get();
         return $states;
     }
-
-
-
 
     public function getCities(Request $request)
     {
@@ -1235,4 +1122,100 @@ class StudentController extends Controller
 
 
 
+    public function services_and_links()
+    {
+
+        $data =  Auth::user();
+
+        $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+
+        $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+
+
+        return view("studentdashboard.services_and_links", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
+    }
+
+
+
+
+
+    public function forms()
+    {
+
+        $data =  Auth::user();
+
+        $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+
+        $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+
+
+        return view("studentdashboard.forms", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
+    }
+
+
+
+
+    public function course_feedback()
+    {
+
+        $data =  Auth::user();
+
+        $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+
+        $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+
+
+        return view("studentdashboard.course_feedback", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
+    }
+
+
+    public function submit_course_feedback(Request $request)
+    {
+
+        $usertype = Auth::user()->usertype;
+
+
+        if ($usertype == '3') {
+
+            $data = new CourseFeedback;
+
+            $data->email = $request->email;
+
+            $data->city = $request->city;
+
+            $data->student_or_not = $request->student_or_not;
+
+            $data->taken_online_classes_or_not = $request->taken_online_classes_or_not;
+
+            $data->academic_experience = $request->academic_experience;
+
+            $data->interested = $request->interested;
+
+            $data->familiar_with_yonevas = $request->familiar_with_yonevas;
+
+            $data->opportunity_to_participate = $request->opportunity_to_participate;
+
+            $data->age_range = $request->age_range;
+
+            $data->computer_knowledge = $request->computer_knowledge;
+
+            $data->class_schedule = $request->class_schedule;
+
+            $data->likely_area_of_study = $request->likely_area_of_study;
+
+            $data->scholarship = $request->scholarship;
+
+            $data->highest_level_of_education = $request->highest_level_of_education;
+
+            $data->phone = $request->phone;
+
+            $data->save();
+
+            return redirect()->back()->with('success_message', 'Feedback has been submitted. Thanks :)');
+
+        } else {
+
+            return redirect()->back()->with('error_message', 'Access denied!');
+        }
+    }
 }

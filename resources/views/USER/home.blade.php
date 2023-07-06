@@ -62,7 +62,7 @@
                                 <ul id="boxes">
                                     <li class="onscroll">
                                         <a href="{{ route('certificate') }}">
-                                            <span class="blurb"> Certificate</span>
+                                            <span class="blurb">  Non Degree</span>
                                             <span class="view">Apply for non degree certificate and
                                                 training program
                                             </span>
@@ -258,7 +258,7 @@
                                     <ul id="boxes-f">
                                         <li class="fm">
                                             <a class="hvr-sweep-to-right ftiles"
-                                                href="https://calendly.com/meet_yonevas/30min"><span
+                                                href="{{ route('virtualAssistant') }}"><span
                                                     class="blurb2">Meet virtually with an expert</span></a>
                                         </li>
                                         <li class="fm">
@@ -266,7 +266,7 @@
                                                     class="blurb2">Find a Program</span></a>
                                         </li>
                                         <li class="fm">
-                                            <a class="hvr-sweep-to-right ftiles" href="javascript:;"><span
+                                            <a class="hvr-sweep-to-right ftiles" href="{{ route('academicAdviser') }}"><span
                                                     class="blurb2">Visit admin office</span></a>
                                         </li>
                                         <li class="fm">
@@ -281,11 +281,11 @@
                                                 href="https://calendly.com/meet_yonevas/30min"><span
                                                     class="blurb2">Make appointment</span></a></li>
                                         <li class="fm">
-                                            <a class="hvr-sweep-to-right ftiles" href="{{ route('contactUs') }}"><span
-                                                    class="blurb2">Get a call</span></a>
+                                            <a class="hvr-sweep-to-right ftiles" href="{{ route('programs') }}"><span
+                                                    class="blurb2">Continuous/Adult Learning</span></a>
                                         </li>
                                         <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                href="{{ route('programs') }}"><span class="blurb2">Diploma</span></a>
+                                                href="{{ route('undergraduate') }}"><span class="blurb2">Bachelor</span></a>
                                         </li>
                                         <li class="fm"><a class="hvr-sweep-to-right ftiles"
                                                 href="{{ route('login') }}"><span class="blurb2">Returning
