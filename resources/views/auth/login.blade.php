@@ -143,20 +143,20 @@
 					style="color:red; font-weight:bold; margin:10px"
 					class="mb-5" />
 
-					{{-- <form method="POST" action="{{ route('login') }}">--}}
+					<form method="POST" action="{{ route('login') }}">
 					<div>
                       @csrf
                       <label for="chk" aria-hidden="true">Sign in</label>
                       <input class="input-here" type="email" name="email" placeholder="Email" required="">
                       <input class="input-here" type="password" name="password" placeholder="Password" required="">
-                      <button class="button-here" type="button" onclick="alert('Sorry, this is currently undergoing maintenance')">Sign in</button>
+                      <button class="button-here" type="submit">Sign in</button>
                       @if (Route::has('password.request'))
                         <a class="forgot-password" href="{{ route('password.request') }}">
                           {{ __('Forgot your password?') }}
                         </a>
                       @endif
                     </div>
-				{{-- </form> --}}
+				</form>
 				</div>
 		</div>
 	</div>

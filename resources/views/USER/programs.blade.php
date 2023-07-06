@@ -104,15 +104,16 @@
                                                     <div class="program-child">
                                                         <h3>LIST OF BACHELORS PROGRAMS</h3>
                                                         <div>
-                                                            <h4>Information and Media Studies B.Sc</h4>
+                                                            <h4>Communication Studies</h4>
                                                             <ol>
+                                                                <li>Information and Media Studies B.Sc</li>
                                                                 <li>Journalism and Media Studies B.Sc</li>
                                                                 <li>Mass Communications B.Sc</li>
                                                                 <li>Public Relations B.Sc</li>
                                                             </ol>
                                                         </div>
 
-                                                        <div>
+                                                        {{-- <div>
                                                             <h4>Law Programs</h4>
                                                             <ol>
                                                                 <li>Private and Property Law (PPL)</li>
@@ -120,7 +121,7 @@
                                                                 <li>Commercial and Industrial Law (CIL)</li>
                                                                 <li>Public Law (PUL)</li>
                                                             </ol>
-                                                        </div>
+                                                        </div> --}}
 
                                                         <div>
                                                             <h4>Business Programs</h4>
@@ -160,7 +161,7 @@
                                                         </div>
 
                                                         <div>
-                                                            <h4>Other Programs</h4>
+                                                            <h4>Social Science Programs</h4>
                                                             <ol>
                                                                 <li>Economics B.Sc.</li>
                                                                 <li>Demography and Social Statistics B.Sc.</li>
