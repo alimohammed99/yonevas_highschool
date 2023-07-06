@@ -144,19 +144,18 @@
                                                                 <li>Information Systems</li>
                                                                 <li>Information Technology</li>
                                                                 <li>Software Engineering</li>
-                                                                <li>Computer Science B. Sc. (Ed)</li>
                                                             </ol>
                                                         </div>
 
                                                         <div>
                                                             <h4>Education Programs</h4>
                                                             <ol>
-                                                                <li>Economics B. Sc. (Ed)</li>
-                                                                <li>Entrepreneurship Education B. Ed</li>
-                                                                <li>Environmental Education B. Sc. (Ed)</li>
-                                                                <li>Guidance and Counseling B. (Ed)</li>
-                                                                <li>Health Education B. (Ed)</li>
-                                                                <li>Human Kinetics/Physical Education B. Sc. (Ed)</li>
+                                                                <li>Business Education B.Ed</li>
+                                                                <li>Computer Science B.Ed</li>
+                                                                <li>Education Management B. Ed</li>
+                                                                <li>Guidance and Counseling B.Ed</li>
+                                                                <li>Health Education B.Ed</li>
+                                                                <li>Human Kinetics/Physical Education B.Ed</li>
                                                             </ol>
                                                         </div>
 
@@ -167,7 +166,8 @@
                                                                 <li>Demography and Social Statistics B.Sc.</li>
                                                                 <li>Political Science B.Sc.</li>
                                                                 <li>Psychology B.Sc.</li>
-                                                                <li>Social Standards B.Sc.</li>
+                                                                <li>Development Study B.Sc.</li>
+                                                                <li>International Relation B.Sc</li>
                                                                 <li>Social Work B.Sc.</li>
                                                                 <li>Sociology B.Sc.</li>
                                                                 <li>Statistics</li>
