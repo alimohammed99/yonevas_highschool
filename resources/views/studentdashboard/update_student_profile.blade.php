@@ -49,10 +49,10 @@
 
 
                     <label for="inputPassword4" class="input__label">Marital Status</label>
-                    <select style="width:" name="marital_status" id="marital_status" class="form-control"
+                    <select style="width:" name="marital_status" id="marital_status" class="form-control" required="required"
                     >
                         @foreach ($data1 as $data1)
-                            <option value="{{ $data1->id }}">{{ $data1->status }}</option>
+                            <option value="{{ $data1->id }}" required="required">{{ $data1->status }}</option>
                         @endforeach
                     </select>
 
@@ -63,13 +63,13 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">Date of Birth</label>
-                        <input type="date" name="date_of_birth" class="form-control input-style" id=""
+                        <input type="date" name="date_of_birth" class="form-control input-style" id="" required="required"
                             placeholder="Email">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">Zip Code</label>
                         <input type="number" name="zip_code" class="form-control input-style" id=""
-                            placeholder="Enter Zip code">
+                            placeholder="Enter Zip code" required="required">
                     </div>
                 </div>
 
@@ -80,22 +80,14 @@
 
                     <div class="form-group col-md-12">
                         <label for="" class="input__label">Religion</label>
-                        <select style="width:" name="religion" id="religion" class="form-control">
+                        <select style="width:" name="religion" id="religion" class="form-control" required="required">
                             @foreach ($data2 as $data2)
-                                <option value="{{ $data2->id }}">{{ $data2->religion_name }}
+                                <option value="{{ $data2->id }}" required="required">{{ $data2->religion_name }}
                                 </option>
                             @endforeach
                         </select>
                     </div>
 
-
-
-
-                    {{-- <div class="form-group col-md-6">
-                        <label for="" class="input__label">Student Password</label>
-                        <input type="text" name="password" class="form-control input-style" id=""
-                            placeholder="Enter the Password provided during registration">
-                    </div> --}}
                 </div>
 
 
@@ -106,16 +98,16 @@
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="" class="input__label">Gender</label> <br>
                         <label for="">Male</label>
-                        <input class="" type="radio" id="male" name="gender" value="Male"
+                        <input class="" type="radio" id="male" name="gender" value="Male" required="required"
                         > &nbsp; &nbsp;
                         <label for="">Female</label>
-                        <input class="" type="radio" id="female" name="gender" value="Female"
+                        <input class="" type="radio" id="female" name="gender" value="Female" required="required"
                         >
                     </div>
 
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="inputAddress2" class="input__label">Student Image</label>
-                        <input type="file" name="student_image" class="form-control input-style" id=""
+                        <input type="file" name="student_image" class="form-control input-style" id="" required="required"
                         >
                     </div>
 
@@ -126,10 +118,10 @@
 
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <select name="countries" id="countries" class="form-control">
+                    <select name="countries" id="countries" class="form-control" required="required">
                         <option value="">Select Country</option>
                         @foreach (App\Models\Countries::orderBy('name_country')->get() as $key => $value)
-                            <option value="{{ $value->id }}">{{ $value->name_country }}</option>
+                            <option value="{{ $value->id }}" required="required">{{ $value->name_country }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -138,8 +130,8 @@
 
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <select name="states" id="states" class="form-control">
-                        <option value="">Select State</option>
+                    <select name="states" id="states" class="form-control" required="required">
+                        <option value="" required="required">Select State</option>
 
                     </select>
                 </div>
@@ -149,8 +141,8 @@
 
                 <div class="form-group">
                     <label class="form-label"></label>
-                    <select name="cities" id="cities" class="form-control">
-                        <option value="">Select City</option>
+                    <select name="cities" id="cities" class="form-control" required="required">
+                        <option value="" required="required">Select City</option>
 
                     </select>
                 </div>
@@ -159,7 +151,7 @@
 
                 <div class="form-group">
                     <label for="inputAddress2" class="input__label">Address</label>
-                    <input type="text" name="address" class="form-control input-style" id="inputAddress2"
+                    <input type="text" name="address" class="form-control input-style" id="inputAddress2" required="required"
                         placeholder="Enter address">
                 </div><br><br>
 
