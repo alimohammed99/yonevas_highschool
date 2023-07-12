@@ -63,7 +63,7 @@
                     <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4 s_l">
                         <td class="p-4" style="border-right: 5px double black">
                             <a title="Click to download change of course form" class="btn btn-info s_l_l"
-                                href="javascript:void(0)" style="font-size:20px">
+                                href="{{ asset('assets/change_of_course_form.pdf') }}" download="change_of_course_form" style="font-size:20px">
                                 Change of Course form
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
                         </td>
@@ -72,7 +72,7 @@
                     <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4 s_l">
                         <td class="p-4" style="">
                             <a title="Click to download change of course form" class="btn btn-danger s_l_l"
-                                href="javascript:void(0)" style="font-size:20px">
+                                href="{{ asset('assets/financial_aid_application_form.pdf') }}" download="financial_aid_application_form" style="font-size:20px">
                                Financial Aid Application form
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
                         </td>
@@ -81,7 +81,7 @@
                     <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4 s_l">
                         <td class="p-4" style="border-left: 5px double black">
                             <a title="Click to download change of course form" class="btn btn-success s_l_l"
-                                href="javascript:void(0)" style="font-size:20px">
+                                href="{{ asset('assets/leave_of_absence-form.pdf') }}" download="leave_of_absence-form" style="font-size:20px">
                                Leave of absence Form
 
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
@@ -101,7 +101,7 @@
                     <div style="font-size:23px; text-align:center;" class="col-lg-6 p-4 s_l">
                         <td class="p-4" style="border-right: 5px double black">
                             <a title="Click to download change of course form" class="btn btn-warning s_l_l"
-                                href="javascript:void(0)" style="font-size:20px">
+                                href="{{ asset('assets/scholarship_application_form.pdf') }}" download="scholarship_application_form" style="font-size:20px">
                                 Scholarship Application form
 
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
@@ -111,7 +111,7 @@
                     <div style="font-size:23px; text-align:center;" class="col-lg-6 p-4 s_l">
                         <td class="p-4" style="border: 2px dotted black">
                             <a title="Click to download change of course form" class="btn btn-secondary s_l_l"
-                                href="javascript:void(0)" style="font-size:20px">
+                                href="{{ asset('assets/transcript_request_form.pdf') }}" download="transcript_request_form" style="font-size:20px">
                                Transcript Request form
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
                         </td>

@@ -88,7 +88,11 @@
                     <div class="box-icon ">
                     <div class="container">
                             <h1 class="box-icon__big-title text--center">
+<<<<<<< HEAD
+                              <div class="field field--name-field-title field--type-string field--label-hidden field__item capitalize">Tuition payment!</div>
+=======
                               <div class="field field--name-field-title field--type-string field--label-hidden field__item capitalize">How can I pay my tuition?</div>
+>>>>>>> fb332f1f4c09cb29a8ef6006aa6eb870ff365efe
                         </h1>
                                 <div class="box-icon__subtitle  ">Paying for tuition may sometimes become an obstacle to some students, our foundation and board members are working hard to ensure that all students are giving equal opportunity to learn and development themselves in their different fields of study by awarding scholarships to the majority who meet the minimum requirement , YOU board members during the last conference announced that all students will be given the opportunity to choose how they want to pay their tuition.
         Below is the schedule for tuition payment:
@@ -118,7 +122,7 @@
                                                                 <p> The mission of the Student Financial Aid Office is to
                                                                     provide fair, equitable, and unbiased service to
                                                                     students seeking financial support. This mission
-                                                                    supports the mission of the College by helping students
+                                                                    supports the mission of the institution by helping students
                                                                     find financial means that enable them to enroll in and
                                                                     complete their academic programs. The office guarantees
                                                                     delivery of financial assistance to students within
@@ -139,7 +143,7 @@
                                                         <div class="text-columns__body">
                                                             <div
                                                                 class="clearfix text-formatted field field--name-field-body-wysiwyg field--type-text-long field--label-hidden field__item">
-                                                                <h3><strong>How can I pay my tuition?</strong></h3>
+                                                                <h3><strong>Tuition payment</strong></h3>
 
                                                                 <p>Paying for tuition may sometimes become an obstacle to
                                                                     some students, our foundation and board members are
@@ -283,7 +287,7 @@
                                         <div class="container">
                                             <h1 class="text-columns__big-title text--center capitalize">Undergraduate
                                                 Programs</h1>
-                                            <p>Our undergraduate programs requires includes extensive training and
+                                            <p>Our undergraduate programs includes extensive training and
                                                 assessment by the education board, During this program, students will be
                                                 required to complete the core courses includes the electives that are
                                                 designed for each program within four years. Some programs may cost

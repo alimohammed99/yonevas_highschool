@@ -61,7 +61,7 @@
     </article>
   </div>
                       <div class="block-media__content">
-                                  <div class="page-heading__description">    <p> <b>Yonevas Open University</b>  provides recreational opportunities for wellness and fitness with several programs in sports and physical health , Both students and non-students gain access to utilize YOU facilities and infrastructure to engage themselves in different sports and wellness activities from, football , tracks, volleyball, etc. Students can gain scholarship opportunities through sports and non-students can gain opportunity to enroll into one of YOU programs. For more information on sports and wellness <a href="#">click here</a>
+                                  <div class="page-heading__description" style="color: white">    <p> <b>Yonevas Open University</b>  provides recreational opportunities for wellness and fitness with several programs in sports and physical health , Both students and non-students gain access to utilize YOU facilities and infrastructure to engage themselves in different sports and wellness activities from, football , tracks, volleyball, etc. Students can gain scholarship opportunities through sports and non-students can gain opportunity to enroll into one of YOU programs. For more information on sports and wellness <a href="#">click here</a>
                                 </p>
                                 <p>Our outdoor sports programs are held annually, with several number of teams in their respective activities compete with high commitment in the Yonevas Pro Sport League (Y-psl) Each competing team is selected through professional assessment to assure that each participant is medical and physical fit for the program, winners in each of the competition are rewarded greatly with Gold, Silver, And Bronze medals respectively , in conjunction with funds and other benefits .
                                 </p>
@@ -91,7 +91,7 @@
     </article>
   </div>
                       <div class="block-media__content">
-                                  <div class="page-heading__description">
+                                  <div class="page-heading__description" style="color: white">
                                     <h3>Yonevas Open University SOCCER PROGRAM</h3>    <p> Yonevas Pro Soccer Consulting LTD is the official sponsor of the Yonevas football club: Yonevas PSCL organizes annual soccer tryouts during its soccer recruitment program to promote wellnes, thisis to bring yonevas students and the community together and participate in this football event.</p>
                                 <p>Competition is organized and teams are constructed from among the applicants to form 11 vs 11 teams who would compete with each other for a Cup . Team that wins go home with gld medals, the cup, and cahs prize, second postion gets the silver medals with cash prize , and the third place get the bronze with cash prize also. check out the official Y-PSCL page for more information about registration and deadlines @ yonevas.com.
                                 </p>

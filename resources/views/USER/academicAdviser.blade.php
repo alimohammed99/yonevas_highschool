@@ -7,7 +7,7 @@
         </div>
         <div class="v-a_desc">
             <h2>Esther Odiaka</h2>
-            <h5>Role : Academic Adviser</h5>
+            <h5>Role : Virtual Support</h5>
             <h5>Contact: esther@yonevas.institute</h5>
             <a href="https://calendly.com/meet_yonevas/30min"><button class="btn">Book Appointment</button></a>
             <hr>

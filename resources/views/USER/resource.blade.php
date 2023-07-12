@@ -121,7 +121,7 @@
                                                                     help, the latter including office hour- live chat with a
                                                                     reference librarian; subject-specialist librarians who
                                                                     provide in-depth consultation and research support for
-                                                                    each academic program at the college and an
+                                                                    each academic program at the institution and an
                                                                     inter-library loan system for providing materials not
                                                                     readily available at Yonevas Open University. The
                                                                     Library actively supports the unique needs of active
@@ -232,11 +232,9 @@
                                                             <div
                                                                 class="field field--name-field-image field--type-image field--label-hidden
              field__item scholarship-img">
-                                                                <img loading="lazy" src="assets/img/resource-2-img.jpeg"
+                                                                <img loading="lazy" src="assets/img/resource-3-img.jpeg"
                                                                     alt="girls computer" typeof="foaf:Image"
                                                                     class="image-style-_60x540" />
-
-
                                                             </div>
 
                                                         </article>

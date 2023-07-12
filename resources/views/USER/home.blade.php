@@ -6,8 +6,6 @@
     type="video/mp4"></video>
             <img src="{{ asset('assets/img/slide4.jpeg') }}" class="slideImg" alt="" />
             <div class="wordings active">
-
-
             </div>
             <div class="wordings second-slide">
                 <div class="content second-slide-frame">
@@ -35,8 +33,7 @@
         </div>
 
 
-        <div
-            class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+        <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
 
             <div class="field__item" tabindex="0">
                 <div>
@@ -71,7 +68,7 @@
                                         </a>
                                     </li>
                                     <li class="onscroll">
-                                        <a href="{{ route('programs') }}">
+                                        <a href="{{ route('adultEducation') }}">
                                             <span class="blurb">Adult/Continuous Learning</span>
                                             <span class="view">Apply for continuous education</span>
                                             <img class="imgtile" alt="Students gather in the lobby of the business school"
@@ -281,11 +278,11 @@
                                                 href="https://calendly.com/meet_yonevas/30min"><span
                                                     class="blurb2">Make appointment</span></a></li>
                                         <li class="fm">
-                                            <a class="hvr-sweep-to-right ftiles" href="{{ route('programs') }}"><span
+                                            <a class="hvr-sweep-to-right ftiles" href="{{ route('adultEducation') }}"><span
                                                     class="blurb2">Continuous/Adult Learning</span></a>
                                         </li>
                                         <li class="fm"><a class="hvr-sweep-to-right ftiles"
-                                                href="{{ route('undergraduate') }}"><span class="blurb2">Bachelor</span></a>
+                                                href="{{ route('undergraduate') }}"><span class="blurb2">Bachelor's Program</span></a>
                                         </li>
                                         <li class="fm"><a class="hvr-sweep-to-right ftiles"
                                                 href="{{ route('login') }}"><span class="blurb2">Returning
@@ -335,6 +332,21 @@
         </div>
 
     </main>
+    <script>
+        var video = document.getElementById("myVideo");
+    
+        video.addEventListener('loadedmetadata', function() {
+            video.play();
+            setTimeout(function() {
+                video.muted = true; // Mute the video after 35 seconds
+            }, 30000);
+        });
+    
+        video.addEventListener('ended', function() {
+            video.currentTime = 0; // Reset the video to the beginning
+            video.muted = false; // Unmute the video for the loop
+        });
+    </script>
 @endsection
 @section('js')
     <script>
@@ -381,21 +393,5 @@
 
         // Start automatic navigation
         intervalId = setInterval(navigateSlider, 10000);
-    </script>
-    
-    <script>
-        var video = document.getElementById("myVideo");
-    
-        video.addEventListener('loadedmetadata', function() {
-        video.play();
-        setTimeout(function() {
-            video.muted = true; // Mute the video after 35 seconds
-        }, 30000);
-        });
-    
-        video.addEventListener('ended', function() {
-        video.currentTime = 0; // Reset the video to the beginning
-        video.muted = false; // Unmute the video for the loop
-        });
     </script>
 @endsection

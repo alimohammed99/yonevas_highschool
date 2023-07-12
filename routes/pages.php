@@ -305,3 +305,7 @@ Route::get('virtualAssistant', function () {
 Route::get('academicAdviser', function () {
     return view("USER.academicAdviser");
 })->name("academicAdviser");
+
+Route::get('adultEducation', function () {
+    return view("USER.adultEducation");
+})->name("adultEducation");

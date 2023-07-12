@@ -160,7 +160,7 @@
                                                         </div>
 
                                                         <div>
-                                                            <h4>Social Science Programs</h4>
+                                                            <h4>Social Sciences Programs</h4>
                                                             <ol>
                                                                 <li>Economics B.Sc.</li>
                                                                 <li>Demography and Social Statistics B.Sc.</li>
@@ -171,17 +171,6 @@
                                                                 <li>Social Work B.Sc.</li>
                                                                 <li>Sociology B.Sc.</li>
                                                                 <li>Statistics</li>
-                                                            </ol>
-                                                        </div>
-
-                                                        <div>
-                                                            <h4>Environmental Programs</h4>
-                                                            <ol>
-                                                                <li>Environmental Management B.Sc.</li>
-                                                                <li>Environmental Standards B.Sc.</li>
-                                                                <li>Estate Management B.Sc.</li>
-                                                                <li>Geography B.Sc.</li>
-                                                                <li>Urban and Regional Planning</li>
                                                             </ol>
                                                         </div>
 

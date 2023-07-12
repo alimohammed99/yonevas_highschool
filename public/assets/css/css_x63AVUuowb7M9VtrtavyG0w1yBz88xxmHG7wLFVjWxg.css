@@ -16066,3 +16066,27 @@ box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 .v-a_desc {
     width: 50%;
 }
+
+@media (max-width: 660px) {
+    .v-a_card {
+        padding: 0.5rem 1rem ;
+        background: #fefedd;
+    }
+    .v-a_top-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .v-a_picture {
+        height: 40vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    .v-a_desc {
+        width: 100%;
+    }
+}

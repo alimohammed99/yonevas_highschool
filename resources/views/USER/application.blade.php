@@ -57,6 +57,7 @@
                                                             <option value="event_director">Event Director</option>
                                                             <option value="academic_staff">Academic Staff</option>
                                                             <option value="tech_support">Tech Support</option>
+                                                            <option value="tech_support">Research</option>
                                                         </select>
 
                                                     </div>
@@ -265,23 +266,8 @@
                                                     <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-subject form-item-subject">
                                                         <label for="expiration" class="js-form-required form-required">Expiration Date:</label>
                                                         <input data-drupal-selector="expiration" type="text" id="expiration" name="expiration" value="" size="60" maxlength="255" class="form-text required" required="required" aria-required="true" />
-
                                                     </div>
                                                     <h4>E-SIGN: You may put your initials in the space provided and date below</h4>
-                                                    <div style="display:flex; flex-direction:row; justify-content:space-between">
-                                                        <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
-                                                            <label for="refrence_relationship3" class="js-form-required form-required">Relationship</label>
-                                                            <input data-drupal-selector="refrence_relationship3" type="text" id="refrence_relationship3" name="refrence_relationship3" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" />
-
-                                                        </div>
-                                                        <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
-                                                            <label for="reference_email3" class="js-form-required form-required">Email</label>
-                                                            <input data-drupal-selector="reference_email3" type="text" id="reference_email3" name="reference_email3" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" />
-
-                                                        </div>
-                                                    </div>
-                                                    <h4>Certifications and Licenses:</h4>
-                                                    <p>Please list any relevant certifications or licenses you hold:</p>
                                                     <div style="display:flex; flex-direction:row; justify-content:space-between">
                                                         <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
                                                             <label for="sign" class="js-form-required form-required">Sign:</label>

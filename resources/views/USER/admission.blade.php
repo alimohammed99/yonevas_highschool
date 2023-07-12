@@ -201,7 +201,7 @@
                                                             <p><span><span><span><span><span><span>All students must submit
                                                                                         either acceptable high school or
                                                                                         college transcripts to be considered
-                                                                                        for full admission into the College.
+                                                                                        for full admission into the University.
                                                                                         If students cannot meet the GPA
                                                                                         requirements with their transcripts
                                                                                         but have RAck’Up -GPA(2.5 minimum)
@@ -210,8 +210,8 @@
                                                                                         admission.</span></span></span></span></span></span>
                                                             </p>
                                                             <p><span><span><span><span><span><span>Applicants who seek
-                                                                                        opportunity into Yonevas Digital
-                                                                                        College are eligible for admission
+                                                                                        opportunity into Yonevas Open
+                                                                                        University are eligible for admission
                                                                                         upon meeting the following minimum
                                                                                         requirements:</span></span></span></span></span></span>
                                                             </p>
@@ -474,8 +474,8 @@
                     <div class="container">
                         <h1 class="text-columns__big-title text--center">Steps to Apply</h1>
 
-                        <div class="text-columns__subtitle padding-two-sides text--center">If you’ve decided that Yonevas
-                            College is a good fit for you, here’s how you can apply to join our school. The application
+                        <div class="text-columns__subtitle padding-two-sides text--center">If you’ve decided that Yonevas Open
+                            University is a good fit for you, here’s how you can apply to join our school. The application
                             process is the same for all students, regardless of enrollment status. </div>
 
 

@@ -23,7 +23,7 @@
                     <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                 </svg>
             </span>
-            <span class="sidebar-text">Dashboard</span>
+            <span class="sidebar-text">MY YONEVAS</span>
         </a>
     </li>
 
@@ -149,12 +149,6 @@
     </li>
 
 
-    <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
-            <span class="sidebar-text">Registration</span>
-        </a>
-    </li>
-
 
     <li class="nav-item ">
         <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
@@ -177,12 +171,6 @@
     </li>
 
 
-    <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
-            <span class="sidebar-text">Account Settings</span>
-        </a>
-    </li>
-
 
 
     <li class="nav-item ">
@@ -192,12 +180,6 @@
     </li>
 
 
-    <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
-            <span class="sidebar-text">Make Deposit</span>
-        </a>
-    </li>
-
 
     <li class="nav-item ">
         <a href="{{ url('forms') }}" target="_self" class="nav-link d-flex justify-content-between">
@@ -206,11 +188,6 @@
     </li>
 
 
-    <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
-            <span class="sidebar-text">D2L</span>
-        </a>
-    </li>
 
 
     <li class="nav-item ">

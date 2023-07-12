@@ -51,7 +51,7 @@
         <div class="row">
 
             <div style="font-size:23px; text-decoration:; cursor: ; border:15px groove tomato; text-align:center; border-top-right-radius:100px; border-bottom-left-radius:100px" class="col-lg-4 p-4 s_l">
-                <a class="s_l_l" href="https://calendly.com/ebubeyonevas/60mins?month=2023-03"> Calendar news </a>
+                <a class="s_l_l" href="https://ex.yonevas.institute"> News </a>
             </div>
 
             <div style="font-size:23px; text-decoration:; cursor: ; border:15px groove tomato; text-align:center; border-top-right-radius:100px; border-bottom-left-radius:100px" class="col-lg-4 p-4 s_l">
@@ -74,14 +74,14 @@
             </div>
 
             <div style="font-size:23px; text-decoration:; cursor: ; border:15px groove tomato; text-align:center; border-top-right-radius:100px; border-bottom-left-radius:100px" class="col-lg-4 p-4 s_l">
-                <a class="s_l_l" href="{{ url('/') }}"> My Yonevas </a>
+                <a class="s_l_l" href="https://yonevas.institute/academic-calender"> Calendar </a>
             </div>
         </div>
 
         <div class="row">
 
             <div style="font-size:23px; text-decoration:; cursor: ; border:15px groove tomato; text-align:center; border-top-right-radius:100px; border-bottom-left-radius:100px" class="col-lg-4 p-4 s_l">
-                <a class="s_l_l" href="javascript:void(o)"> Learning </a>
+                <a class="s_l_l" href="https://hetrynow.brightspace.com/d2l/login?sessionExpired=1&target=%2fd2l%2fhome"> Learning </a>
             </div>
         </div>
 

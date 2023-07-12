@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/8b0f1bd379.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         (window.NREUM || (NREUM = {})).init = {
             ajax: {
@@ -2244,9 +2245,9 @@
                     {{ session('status') }}
                 </div>
             @endif
-
+            
             @yield('content')
-
+            <!-- Footer -->
             <footer class="footer">
                 <section class="new-footer-section">
                     <div class="new-footer-block">
@@ -2272,6 +2273,10 @@
                                         <li class="menu-item">
                                             <a href="https://calendly.com/meet_yonevas/30min"
                                                 data-drupal-link-system-path="node/717">Virtual Assistance</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="/employment"
+                                                data-drupal-link-system-path="node/884">Employment Oppurtunity</a>
                                         </li>
                                         <li class="menu-item">
                                             <a href="{{ route('programs') }}"
@@ -2356,7 +2361,23 @@
                                 <ul>
                                     <li>
                                         <a class="facebook-follow" href="https://www.facebook.com/Yonevascollege"
-                                            title="Facebook">Follow us Facebook</a>
+                                            title="Facebook"> <i class="fab fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a class="facebook-follow" href="https://ng.linkedin.com/company/yonevas-digital-college"
+                                            title="Facebook"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="facebook-follow" href="https://twitter.com/yoneversity?t=plKZJ0vjHwGQPREFik6AVA&s=09"
+                                            title="Facebook"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="facebook-follow" href="https://instagram.com/yonevascollege?igshid=NTc4MTIwNjQ2YQ=="
+                                            title="Facebook"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="facebook-follow" href="https://www.youtube.com/@yonevas4604"
+                                            title="Facebook"><i class="fab fa-youtube"></i></a>
                                     </li>
                                 </ul>
                             </div>
