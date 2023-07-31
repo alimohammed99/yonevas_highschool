@@ -83,11 +83,20 @@ use App\Models\ApplicantsOldResults;
 use App\Models\CourseFeedback;
 
 use Illuminate\Support\Facades\Stroage;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Validator;
+
 
 class StudentController extends Controller
 {
-
-
+    
+public function __construct()
+{
+    // Your condition to determine whether to redirect or not
+    if (!Auth::check()) {
+        return redirect('/');
+    }
+}
 
     public function pay_school_fees()
     {
@@ -532,25 +541,33 @@ class StudentController extends Controller
 
 
             if (Auth::user()->reg_complete == 1) {
-
-
-                $data = User::where('users.id', $getCurrentUserId)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                    ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                    ->join('religions', 'students_details.religion', '=', 'religions.id')
-                    ->join('countries', 'students_details.country', '=', 'countries.id')
-                    ->join('states', 'students_details.state', '=', 'states.id')
-                    ->join('cities', 'students_details.city', '=', 'cities.id')
-                    ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                    ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                    ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
-                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-
-                    ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
-
-
-                $olevel_data = ApplicantsOldResults::where('student_id', '=', $getCurrentUserId)->select('applicants_old_results.utme as utme', 'applicants_old_results.waec_or_neco_1 as waco1', 'applicants_old_results.waec_or_neco_2 as waco2')->first();
-
+                
+$data = User::where('users.id', $getCurrentUserId)
+    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+    ->join('countries', 'students_details.country', '=', 'countries.id')
+    ->join('states', 'students_details.state', '=', 'states.id')
+    ->join('cities', 'students_details.city', '=', 'cities.id')
+    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+        ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+        ->join('departments', 'students_details.department', '=', 'departments.id')
+    ->select(
+        'users.id as id',
+        'users.*',
+        'students_details.*',
+        'countries.name_country',
+        'states.name_state',
+        'cities.name_city',
+        'academic_sessions.academic_session',
+        'programme_types.programme', 
+        'faculties.faculty_name as faculty', 
+        'departments.department_name as department'
+    )
+    ->first();
+    $exist = ApplicantsOldResults::where('student_id', auth()->user()->id);
+    if (!$exist)return redirect('/upload_olevel_and_utme')->with('error_message', 'Please Upload your documents first');
+                $olevel_data = $exist->select('applicants_old_results.utme as utme', 'applicants_old_results.waec_or_neco_1 as waco1', 'applicants_old_results.waec_or_neco_2 as waco2')->first();
+                
                 $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
                 $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
@@ -583,23 +600,18 @@ class StudentController extends Controller
         if ($usertype == '3') {
 
             $data = User::where('users.id', $getCurrentUserId)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                ->join('religions', 'students_details.religion', '=', 'religions.id')
                 ->join('countries', 'students_details.country', '=', 'countries.id')
                 ->join('states', 'students_details.state', '=', 'states.id')
                 ->join('cities', 'students_details.city', '=', 'cities.id')
-                ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
                 ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
                 ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
                 // ->join('levels', 'students_details.level', '=', 'levels.id')
-                // ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                // ->join('departments', 'students_details.department', '=', 'departments.id')
+                ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                ->join('departments', 'students_details.department', '=', 'departments.id')
                 // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
 
 
-                ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
+                ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'students_details.marital_status as status', 'students_details.date_of_birth', 'students_details.zip_code', 'students_details.religion', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'students_details.military_force', 'students_details.government_official', 'students_details.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
 
 
 
@@ -626,6 +638,17 @@ class StudentController extends Controller
 
     public function update_student_profile(Request $request, $id)
     {
+            $rules = [
+                'countries' => 'required',
+                'states' => 'required',
+                'cities' => 'required',
+            ];
+            
+        $validator = Validator::make($request->all(), $rules);
+        
+        if ($validator->fails()) {
+            return back()->with('error_message', '[countries,state,city] must be filled!');
+        }
 
         $usertype = Auth::user()->usertype;
 
@@ -648,27 +671,26 @@ class StudentController extends Controller
 
             $data->password = Hash::make($request->password);
 
-            // $data->reg_complete = '1';
-
 
 
             $data->save();
 
 
 
-            $data2 = StudentsDetails::where('student_id', $id)->first();
+            $data2 = StudentsDetails::where('student_id', auth()->user()->id)->first();
+        // dd($data2->country, $data2->state, $data2->city);
 
-            $data2->marital_status = $request->marital_status;
+            $data2->marital_status = $request->marital_status ?? $data2->marital_status;
 
             $data2->date_of_birth = $request->date_of_birth;
 
             $data2->zip_code = $request->zip_code;
 
-            $data2->gender = $request->gender;
+            $data2->gender = $request->gender ?? $data2->gender;
 
-            $data2->religion = $request->religion;
+            $data2->religion = $request->religion ?? $data2->religion;
 
-            $data2->student_password = $request->password;
+            // $data2->student_password = '';
 
 
 
@@ -682,14 +704,13 @@ class StudentController extends Controller
                 $data2->student_image = $imagename;
             }
 
+            $data2->country = $request->countries??$data2->country;
 
-            $data2->country = $request->countries;
+            $data2->state = $request->states??$data2->state;
 
-            $data2->state = $request->states;
+            $data2->city = $request->cities??$data2->city;
 
-            $data2->city = $request->cities;
-
-            $data2->address = $request->address;
+            $data2->address = $request->address ?? $data2->address;
 
             $data2->facebook_page = $request->facebook_page;
 
@@ -700,7 +721,7 @@ class StudentController extends Controller
             $data2->linkedin_page = $request->linkedin_page;
 
 
-            $data2->currently_studying = $request->currently_studying;
+            $data2->currently_studying = $request->currently_studying ?? $data2->currently_studying;
 
             if ($data2->currently_studying == 'Yes') {
 
@@ -719,7 +740,7 @@ class StudentController extends Controller
             }
 
 
-            $data2->online_classes = $request->online_classes;
+            $data2->online_classes = $request->online_classes ?? $data2->online_classes;
 
             if ($data2->online_classes == 'Yes') {
 
@@ -733,16 +754,16 @@ class StudentController extends Controller
 
             // $data2->what_do_you_want_to_study = $request->what_do_you_want_to_study;
 
-            $data2->type_of_enrollment = $request->type_of_enrollment;
+            $data2->type_of_enrollment = $request->type_of_enrollment ??  $data2->type_of_enrollment;
 
-            $data2->enrollment_period = $request->enrollment_period;
+            $data2->enrollment_period = $request->enrollment_period??$data2->enrollment_period;
 
-            $data2->free_time = $request->free_time;
+            $data2->free_time = $request->free_time??$data2->free_time;
 
-            $data2->residential_home = $request->residential_home;
+            $data2->residential_home = $request->residential_home ?? $data2->residential_home;
 
 
-            $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization;
+            $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization??$data2->group_of_individual_or_organization;
 
             if ($data2->group_of_individual_or_organization == 'Yes') {
 
@@ -755,37 +776,37 @@ class StudentController extends Controller
 
             $data2->languages = $request->languages;
 
-            $data2->military_force = $request->military_force;
+            $data2->military_force = $request->military_force ?? $data2->military_force;
 
-            $data2->government_official = $request->government_official;
+            $data2->government_official = $request->government_official ?? $data2->government_official;
+            if($request->medical_conditions){
+                $data2->medical_conditions = $request->medical_conditions;
+            }
 
-            $data2->medical_conditions = $request->medical_conditions;
+            if($request->academic_session) $data2->academic_session = $request->academic_session ;
 
-            // $data2->academic_session = $request->academic_session;
+            if($request->programme_type)$data2->programme_type = $request->programme_type;
 
-            // $data2->programme_type = $request->programme_type;
+            if($data2->programme_type == '1'){
+              if($request->de_faculty)$data2->faculty = $request->de_faculty;
 
-            // if($data2->programme_type == '1'){
+              if($request->de_department)$data2->department = $request->de_department;
 
-            //   $data2->level = $request->level;
+              if($request->de_level) $data2->level = $request->de_level;
 
-            //   $data2->faculty = $request->faculty;
+              $data2->name_of_certificate_course = 'null';
 
-            //   $data2->department = $request->department;
+            }elseif($data2->programme_type == '2'){
 
-            //   $data2->name_of_certificate_course = 'null';
+              $data2->level ='null';
 
-            // }elseif($data2->programme_type == '2'){
+              $data2->faculty ='null';
 
-            //   $data2->level ='null';
+              $data2->department ='null';
 
-            //   $data2->faculty ='null';
+              $data2->name_of_certificate_course = $request->name_of_certificate_course;
 
-            //   $data2->department ='null';
-
-            //   $data2->name_of_certificate_course = $request->name_of_certificate_course;
-
-            // }
+            }
 
 
             $get_student_id = $data->id;
@@ -796,7 +817,7 @@ class StudentController extends Controller
             $data2->save();
 
 
-            return redirect()->back()->with('success_message', 'Profile updated successfully     :)');
+            return redirect('/manage_student_profile')->with('success_message', 'Profile updated successfully     :)');
         } else {
             return redirect()->back()->with('error_message', 'Access denied!');
         }
@@ -942,23 +963,18 @@ class StudentController extends Controller
 
 
                 $data = User::where('users.id', $getStudentId)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                    ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                    ->join('religions', 'students_details.religion', '=', 'religions.id')
                     ->join('countries', 'students_details.country', '=', 'countries.id')
                     ->join('states', 'students_details.state', '=', 'states.id')
                     ->join('cities', 'students_details.city', '=', 'cities.id')
-                    ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                    ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                    ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
                     ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
                     ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
                     // ->join('levels', 'students_details.level', '=', 'levels.id')
-                    // ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                    // ->join('departments', 'students_details.department', '=', 'departments.id')
+                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                    ->join('departments', 'students_details.department', '=', 'departments.id')
                     // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
 
 
-                    ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
+                    ->select('users.id as id', 'users.*', 'students_details.*',  'countries.name_country', 'states.name_state', 'cities.name_city', 'academic_sessions.academic_session', 'programme_types.programme')->first();
 
                 $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
@@ -1013,9 +1029,10 @@ class StudentController extends Controller
         }
     }
 
-    public function getDepartments(Request $request)
+  
+      public function getDepartments(Request $request)
     {
-        $states = Departments::where('programme_type', '=', $request->programme_type)->where('faculty_id', '=', $request->faculty_id)->orderBy('department_name')->get();
+        $states = Departments::where('faculty_id', '=', $request->faculty_id)->orderBy('department_name')->get();
         return $states;
     }
 
@@ -1179,39 +1196,38 @@ class StudentController extends Controller
 
             $data = new CourseFeedback;
 
-            $data->email = $request->email;
+            $data->course_name = $request->course_name;
 
-            $data->city = $request->city;
+            $data->instructor_name = $request->instructor_name;
 
-            $data->student_or_not = $request->student_or_not;
+            $data->semester_year = $request->semester_year;
 
-            $data->taken_online_classes_or_not = $request->taken_online_classes_or_not;
+            $data->overall_satisfaction = $request->overall_satisfaction;
 
-            $data->academic_experience = $request->academic_experience;
+            $data->clarity_of_topics = $request->clarity_of_topics;
 
-            $data->interested = $request->interested;
+            $data->real_world_relevance = $request->real_world_relevance;
 
-            $data->familiar_with_yonevas = $request->familiar_with_yonevas;
+            $data->depth_and_breadth = $request->depth_and_breadth;
 
-            $data->opportunity_to_participate = $request->opportunity_to_participate;
+            $data->instructional_methods_effectiveness = $request->instructional_methods_effectiveness;
 
-            $data->age_range = $request->age_range;
+            $data->students_engagements = $request->students_engagements;
 
-            $data->computer_knowledge = $request->computer_knowledge;
+            $data->clarity_of_materials = $request->clarity_of_materials;
 
-            $data->class_schedule = $request->class_schedule;
+            $data->Course_materials_availability = $request->Course_materials_availability;
 
-            $data->likely_area_of_study = $request->likely_area_of_study;
+            $data->grading_criteria_clarity = $request->grading_criteria_clarity;
 
-            $data->scholarship = $request->scholarship;
+            $data->quality_of_instructor_feedback = $request->quality_of_instructor_feedback;
 
-            $data->highest_level_of_education = $request->highest_level_of_education;
+            $data->additional_comments = $request->additional_comments;
 
-            $data->phone = $request->phone;
 
             $data->save();
 
-            return redirect()->back()->with('success_message', 'Feedback has been submitted. Thanks :)');
+            return redirect()->back()->with('success_message', 'Feedback has been submitted. Thanks for your time. :)');
 
         } else {
 

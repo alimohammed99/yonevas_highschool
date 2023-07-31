@@ -46,9 +46,9 @@
                 <label class="control-label" for="email">Programme Type:</label>
                 <select name="programme_type" id="myselection" class="myselection form-control" required="required">
                     <option value="">Select Programme Type</option>
-                    <option class="form-control" value="7">Bachelor's Degree</option>
-                    <option class="form-control" value="1">Diploma(ND)</option>
-                    <option class="form-control" value="2">Certificate and Training</option>
+                    @foreach(App\Models\ProgrammeType::orderBy('programme')->get() as $key => $value)
+                                    <option value="{{ $value->id }}" >{{ $value->programme }}</option>
+                                @endforeach
                 </select>
             </div>
 
@@ -71,7 +71,9 @@
 
                     <select style="width:" name="di_department" id="department" class="form-control department">
                         <option value="">Select Department</option>
-
+                        @foreach (App\Models\Departments::orderBy('department_name')->get() as $key => $value1)
+                            <option value="{{ $value1->id }}">{{ $value1->department_name }}</option>
+                        @endforeach
                     </select>
 
                 </div>
@@ -79,11 +81,10 @@
                 <div class="form-group">
                     <label for="" class="input__label">Level:</label>
                     <select style="width:" name="di_level" id="states" class="form-control">
-                        <option value="">Select Level</option>
+                       <option value="">Select Level</option>
                         @foreach (App\Models\Level::where('programme_type', '=', 1)->orderBy('level_name')->get() as $key => $value)
                             <option value="{{ $value->id }}">{{ $value->level_name }}</option>
                         @endforeach
-
                     </select>
                 </div>
 
@@ -190,9 +191,10 @@
                     <label for="" class="input__label">Level:</label>
                     <select style="width:" name="de_level" id="states" class="form-control">
                         <option value="">Select Level</option>
-                        @foreach (App\Models\Level::where('programme_type', '=', 7)->orderBy('level_name')->get() as $key => $value)
-                            <option value="{{ $value->id }}">{{ $value->level_name }}</option>
-                        @endforeach
+                       <option value="1">100 level</option>
+                       <option value="2">200 level</option>
+                       <option value="3">300 level</option>
+                       <option value="4">400 level</option>
                     </select>
                 </div>
                 <div class="form-group">

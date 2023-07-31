@@ -49,11 +49,11 @@
                 </tr>
                 <tr>
                     <td>Minimum Credit Required:</td>
-                    <td>100</td>
+                    <td>00</td>
                 </tr>
                 <tr>
                     <td>Maximum Credit Required:</td>
-                    <td>100</td>
+                    <td>00</td>
                 </tr>
             </table>
         </div>
@@ -148,8 +148,8 @@
 
                 </div><br>
 
-                <input style="background-color:green; width:; padding-left:30px; padding-right:30px; text-align:center"
-                    type="submit" value="Save" class=" btn btn-success align-items-center">
+                <!--<input style="background-color:green; width:; padding-left:30px; padding-right:30px; text-align:center"-->
+                <!--    type="submit" value="Save" class=" btn btn-success align-items-center">-->
 
             </form>
 

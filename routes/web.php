@@ -152,6 +152,8 @@ Route::get('/edit_site_logo/{id}', [AdminController::class, 'edit_site_logo']);
 Route::post("/update_site_logo/{id}", [AdminController::class, "update_site_logo"]);
 
 
+route::get('/a_course', [AdminController::class, 'a_course']);
+Route::post('/ad-course', [AdminController::class, 'ad_course'])->name('ad_course');
 
 route::get('/add_courses', [AdminController::class, 'add_courses']);
 
@@ -667,3 +669,5 @@ route::get('application_forms', [AdminController::class, 'application_forms']);
 Route::get("/view_job_applicants", [AdminController::class, "view_job_applicants"]);
 
 route::post('/upload_application_form_pdf', [AdminController::class, 'upload_application_form_pdf']);
+
+Route::get("/students_course_feedback", [AdminController::class, "students_course_feedback"]);

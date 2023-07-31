@@ -77,6 +77,10 @@ use Mail;
 
 use App\Mail\ContactMail;
 
+use Illuminate\Http\RedirectResponse;
+
+use Illuminate\Support\Facades\Validator;
+
 
 class HomeController extends Controller
 {
@@ -93,7 +97,7 @@ class HomeController extends Controller
 
             $regNotCompleteQuery = User::where('reg_complete', '=', 0)->select('users.first_name', 'users.last_name', 'users.email', 'users.phone')->where('usertype', '!=', 1)->count();
 
-            $regCompleteQuery = User::where('reg_complete', '=', 1)->select('users.first_name', 'users.last_name', 'users.email', 'users.phone')->where('usertype', '!=', 1)->count();
+            $regCompleteQuery = DB::table('users')->join('students_details', 'users.id', '=', 'students_details.student_id')->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')->count();
             // dd($query);
 
             return view('ADMIN.home', compact('regNotCompleteQuery', 'regCompleteQuery'))->with(['data' => $data]);
@@ -174,6 +178,17 @@ class HomeController extends Controller
 
     public function upload_students_profile(Request $request)
     {
+        if($request->programme_type =="1"){
+            if ($request->de_faculty&&$request->countries&&$request->states&&$request->cities&&$request->academic_session&&$request->de_department) {
+                User::where('id', Auth::user()->id)->update(['reg_complete' => '1']);
+            }
+        }
+        
+        if($request->programme_type =="2"){
+            if ($request->countries&&$request->states&&$request->cities&&$request->academic_session) {
+                User::where('id', Auth::user()->id)->update(['reg_complete' => '1']);
+            }
+        }
 
         $usertype = Auth::user()->usertype;
 
@@ -391,21 +406,20 @@ class HomeController extends Controller
 
         if ($data2->programme_type == '1') {
 
-            $data2->level = $request->di_level;
-
-            $data2->faculty = $request->di_faculty;
-
-            $data2->department = $request->di_department;
-
-            $data2->name_of_certificate_course = 'null';
-        } elseif ($data2->programme_type == '7') {
-
-
             $data2->level = $request->de_level;
 
             $data2->faculty = $request->de_faculty;
 
             $data2->department = $request->de_department;
+
+            $data2->name_of_certificate_course = 'null';
+        } elseif ($data2->programme_type == '7') {
+
+            $data2->level = 'null';
+
+            $data2->faculty = 'null';
+
+            $data2->department = 'null';
 
             $data2->name_of_certificate_course = 'null';
         } else {
@@ -420,7 +434,6 @@ class HomeController extends Controller
 
 
 
-        User::where('id', Auth::user()->id)->update(['reg_complete' => '1']);
 
 
 
@@ -721,12 +734,13 @@ class HomeController extends Controller
     {
         $details = [
             'name' => $request->name,
+            'phone' => $request->phone,
             'email' => $request->email,
             'subject' => $request->subject,
             'message' => $request->message
         ];
 
-        Mail::to('inquires@yonevas.institute')->send(new ContactMail($details));
+        Mail::to('info@yonevas.institute')->send(new ContactMail($details));
 
         return back()->with('success_message', 'Email has been sent. We will get back shortly');
     }

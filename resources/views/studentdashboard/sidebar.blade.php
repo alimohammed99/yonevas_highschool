@@ -12,7 +12,7 @@
         <span class="sidebar-icon">
             <!-- <img src="../../assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo"> -->
         </span><br>
-        <span style="color:green; border:none; border-radius:20px; padding:12px; background:white" class="mt-5 ml-5 mb-4 ms-1 sidebar-text">Hi, {{$data->last_name}} </span><br><br>
+        <span style="color:green; border:none; border-radius:20px; padding:12px; background:white" class="mt-5 ml-5 mb-4 ms-1 sidebar-text">Hi, {{$data->last_name}}  </span><br><br>
 
     </li>
     <li class="nav-item  active ">
@@ -32,16 +32,16 @@
     @php
 
 
+    if(Auth::check()){
     $isRegComplete = Auth::user()->reg_complete;
-
-
-    if($isRegComplete == 0){
 
 
     @endphp
 
 
     <br>
+    
+    @if(!$isRegComplete == 1)
     <li class="nav-item ">
             <span>
 
@@ -49,6 +49,7 @@
                     <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Update Profile<span style="font-size:25px; font-weight:bolder">!</span></span>
                 </a></span>
     </li>
+    @endif
 
     @php
 
@@ -65,6 +66,12 @@
 
     @php
 
+
+    // if ((!empty($student_documents_status) && $student_documents_status->status != '1') || (!empty($student_documents_status) &&!$student_documents_status->status)) {
+
+    if (Auth::check()) {
+
+    
 
     $getCurrentUserId = Auth::user()->id;
 
@@ -73,17 +80,11 @@
 
     $student_documents_status = DB::table('applicants_old_results')->where('student_id', '=', $getCurrentUserId)->select('status')->first();
 
-    // if ((!empty($student_documents_status) && $student_documents_status->status != '1') || (!empty($student_documents_status) &&!$student_documents_status->status)) {
-
-    if (empty($student_documents_status)) {
-
-
-
 
 
     @endphp
 
-
+    @if(!$student_documents_status == 9)
     <li class="nav-item ">
             <span>
 
@@ -92,6 +93,7 @@
                     </span>
                 </a></span>
     </li>
+    @endif
 
     @php
 
@@ -114,6 +116,7 @@
 
 
     @php
+    if (Auth::check()) {
     $hasUserSubmittedDocs = DB::table('users')->where('users.id', '=', Auth::user()->id)->join('applicants_old_results', 'users.id', 'applicants_old_results.student_id')->first();
     // dd(Auth::user()->id);
     if($hasUserSubmittedDocs){
@@ -132,8 +135,8 @@
 
     @php
     }
+    }
     @endphp
-
 
 
 
@@ -198,9 +201,12 @@
                     <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
                 </svg> --}}
             </span>
-            <a href="{{url('change_student_password')}}" target="_self" class="nav-link d-flex justify-content-between">
+            <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
                 <span class="sidebar-text">Change Password</span>
             </a>
+            <!--<a href="{{url('change_student_password')}}" target="_self" class="nav-link d-flex justify-content-between">-->
+            <!--    <span class="sidebar-text">Change Password</span>-->
+            <!--</a>-->
     </li>
 
 
@@ -219,6 +225,9 @@
             <a href="{{url('students_course_reg')}}" target="_self" class="nav-link d-flex justify-content-between">
                 <span class="sidebar-text">Course Registration</span>
             </a>
+            <!--<a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">-->
+            <!--    <span class="sidebar-text">Course Registration</span>-->
+            <!--</a>-->
     </li>
 
 

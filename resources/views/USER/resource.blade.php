@@ -232,7 +232,7 @@
                                                             <div
                                                                 class="field field--name-field-image field--type-image field--label-hidden
              field__item scholarship-img">
-                                                                <img loading="lazy" src="assets/img/resource-3-img.jpeg"
+                                                                <img loading="lazy" src="assets/img/resource-3-img.png"
                                                                     alt="girls computer" typeof="foaf:Image"
                                                                     class="image-style-_60x540" />
                                                             </div>

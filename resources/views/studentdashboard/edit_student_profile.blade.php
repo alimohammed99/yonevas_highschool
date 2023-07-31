@@ -32,7 +32,7 @@
       <h1 style="color:#5e72e4; font-style:italic; font-family:broadway; font-size:32px; margin-top:30px; border-radius:70px 10px 70px 10px; background-color:white; padding:15px; margin-bottom:20px">EDIT PROFILE</h1>
 
 
-      <span style="color:red; font-size:22px">Fill all details carefully. Do not leave any field blank.</span>
+      <span style="color:red; font-size:22px">Fill all details carefully. Please all required fields.</span>
       <div class="card card_border mt-2 py-2 mb-4">
 
                 <div class="card-body" back>
@@ -46,11 +46,14 @@
 
                             <div class="form-group col-md-12">
                                 <label for="inputPassword4" class="input__label">Marital Status</label>
-                                <select style="width:" name="marital_status" id="marital_status" class="form-control" required="required">
-                                @foreach($data1 as $data1)
-                                <option value="{{$data1->id}}" required="required">{{$data1->status}}</option>
-                                @endforeach
-                             </select>
+                    <select style="width:" name="marital_status" id="marital_status" class="form-control"
+                        >
+                                <option value="">Select</option>
+                                <option value="married">Married</option>
+                                <option value="single">Single</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="widowed">Widowed</option>
+                    </select>
                             </div>
                         </div>
 
@@ -58,12 +61,12 @@
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4" class="input__label">Email</label>
                                 <input type="email" name="email" class="form-control input-style" id="inputEmail4"
-                                    value="{{$data->email}}" required="required">
+                                    value="{{$data->email}}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Phone Number</label>
                                 <input type="number" name="phone_number" class="form-control input-style" id=""
-                                    value="{{$data->phone}}" required="required">
+                                    value="{{$data->phone}}">
                             </div>
                         </div>
 
@@ -71,32 +74,33 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Date of Birth</label>
                                 <input type="date" name="date_of_birth" class="form-control input-style" id=""
-                                    value="{{$data->date_of_birth}}" required="required">
+                                    value="{{$data->date_of_birth}}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Zip Code</label>
                                 <input type="number" name="zip_code" class="form-control input-style" id=""
-                                    value="{{$data->zip_code}}" required="required">
+                                    value="{{$data->zip_code}}" >
                             </div>
                         </div>
                         <div class="form-row">
                         <div class="form-group col-md-6">
                                 <label for="" class="input__label">Religion</label>
-                                <select style="width:" name="religion" id="religion" class="form-control" required="required">
-                                @foreach($data2 as $data2)
-                                <option value="{{$data2->id}}" required="required">{{$data2->religion_name}}</option>
-                                @endforeach
-                             </select>
+                        <select style="width:" name="religion" id="religion" class="form-control" >
+                                <option value="">Select</option>
+                                <option value="Christian">Christian</option>
+                                <option value="Islam">Islam</option>
+                                <option value="other">Other</option>
+                        </select>
                             </div>
 
 
 
 
-                            <div class="form-group col-md-6">
-                                <label for="" class="input__label">Student Password</label>
-                                <input type="text" name="password" class="form-control input-style" id=""
-                                    value="{{$data->student_password}}" required="required">
-                            </div>
+                            <!--<div class="form-group col-md-6">-->
+                            <!--    <label for="" class="input__label">Student Password</label>-->
+                            <!--    <input type="text" name="password" class="form-control input-style" id=""-->
+                            <!--        value="{{$data->student_password}}" required="required">-->
+                            <!--</div>-->
                         </div>
 
 
@@ -107,9 +111,9 @@
                             <div class="form-group col-md-6"  style="border:1px solid grey">
                                 <label for="" class="input__label">Gender</label> <br>
                                 <label for="">Male</label>
-                                <input class="form-control input-style" type="radio" id="male" name="gender" value="Male" required="required">
+                                <input class="form-control input-style" type="radio" id="male" name="gender" value="Male" >
                                 <label for="">Female</label>
-                                <input class="form-control input-style"  type="radio" id="female" name="gender" value="Female" required="required">
+                                <input class="form-control input-style"  type="radio" id="female" name="gender" value="Female" >
                             </div>
 
 
@@ -135,8 +139,8 @@
 
                             <div class="form-group">
                             <label class="form-label"></label>
-                            <select name="countries" id="countries" class="form-control" required="required">
-                                <option value="" required="required">Select Country</option>
+                            <select name="countries" id="countries" class="form-control">
+                                <option value="">Select Country</option>
                                 @foreach(App\Models\Countries::orderBy('name_country')->get() as $key => $value)
                                     <option value="{{ $value->id }}" required="required">{{ $value->name_country }}</option>
                                 @endforeach
@@ -148,7 +152,7 @@
                         <div class="form-group">
                             <label class="form-label"></label>
                             <select name="states" id="states" class="form-control">
-                                <option value="" required="required">Select State</option>
+                                <option value="">Select State</option>
 
                             </select>
                         </div>
@@ -159,7 +163,7 @@
                         <div class="form-group">
                             <label class="form-label"></label>
                             <select name="cities" id="cities" class="form-control">
-                                <option value="" required="required">Select City</option>
+                                <option value="" >Select City</option>
 
                             </select>
                         </div>
@@ -169,7 +173,7 @@
                         <div class="form-group">
                             <label for="inputAddress2" class="input__label">Address</label>
                             <input type="text" name="address" class="form-control input-style" id="inputAddress2"
-                                placeholder="Enter address" required="required">
+                                placeholder="Enter address" >
                         </div><br><br>
 
 
@@ -179,9 +183,9 @@
                         <div class="form-group" style="border:1px solid grey; padding:10px">
                              <label for="" class="input__label">Are you currently studying at any institution of higher learning?</label> <br>
                                 <label for="">Yes</label>
-                                <input onclick="javascript:yesnoCheck();" class="form-control input-style" type="radio" id="yesCheck" name="currently_studying" value="Yes" required="required">  &nbsp; &nbsp;
+                                <input onclick="javascript:yesnoCheck();" class="form-control input-style" type="radio" id="yesCheck" name="currently_studying" value="Yes" >  &nbsp; &nbsp;
                                 <label for="">No</label>
-                                <input onclick="javascript:yesnoCheck();" class="form-control input-style"  type="radio" id="noCheck" name="currently_studying" value="No" required="required">
+                                <input onclick="javascript:yesnoCheck();" class="form-control input-style"  type="radio" id="noCheck" name="currently_studying" value="No" >
                         </div>
 
             <div id="ifYes" style="visibility:hidden">
@@ -211,9 +215,9 @@
                              <div class="form-group col-md-6"  style="border:1px solid grey">
                              <label for="" class="input__label">Have you taken online classes in the past?</label> <br>
                                 <label for="">Yes</label>
-                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style" type="radio" id="yes_Check2" name="online_classes" value="Yes" required="required"> &nbsp; &nbsp;
+                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style" type="radio" id="yes_Check2" name="online_classes" value="Yes" > &nbsp; &nbsp;
                                 <label for="">No</label>
-                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style"  type="radio" id="no_Check2" name="online_classes" value="No" required="required">
+                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style"  type="radio" id="no_Check2" name="online_classes" value="No" >
                             </div>
                             <div class="form-group col-md-6">
                             <div id="if_Yes2" style="visibility:hidden">
@@ -231,17 +235,17 @@
                             <div class="form-group col-md-6"  style="border:1px solid grey">
                                 <label for="" class="input__label">What type of enrollment?</label> <br>
                                 <label for="">Degree programme</label>
-                                <input class="form-control input-style" type="radio" id="male" name="type_of_enrollment" value="Degree programme" required="required">  &nbsp; &nbsp;
+                                <input class="form-control input-style" type="radio" id="male" name="type_of_enrollment" value="Degree programme" >  &nbsp; &nbsp;
                                 <label for="">Non-Degree programme</label>
-                                <input class="form-control input-style"  type="radio" id="female" name="type_of_enrollment" value="Non-Degree programme" required="required">
+                                <input class="form-control input-style"  type="radio" id="female" name="type_of_enrollment" value="Non-Degree programme">
                             </div>
 
                             <div class="form-group col-md-6"  style="border:1px solid grey">
                                 <label for="" class="input__label">Enrollment period</label> <br>
                                 <label for="">February intake</label>
-                                <input class="form-control input-style" type="radio" id="male" name="enrollment_period" value="February intake" required="required">  &nbsp; &nbsp;
+                                <input class="form-control input-style" type="radio" id="male" name="enrollment_period" value="February intake" >  &nbsp; &nbsp;
                                 <label for="">September intake</label>
-                                <input class="form-control input-style"  type="radio" id="female" name="enrollment_period" value="September intake" required="required">
+                                <input class="form-control input-style"  type="radio" id="female" name="enrollment_period" value="September intake" >
                             </div>
 
                         </div><br><br>
@@ -251,21 +255,26 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">What do you do in your free time?</label>
                                 <input type="text" class="form-control input-style" id=""
-                                    value="{{$data->free_time}}" name="free_time" required="required">
+                                    value="{{$data->free_time}}" name="free_time" >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">How often do you travel outside of your residential home?</label>
-                                <input type="text" class="form-control input-style" id="" name="residential_home"
-                                    required="required" value="{{$data->residential_home}}">
+                        <select style="width:" name="residential_home" id="" class="form-control">
+                                <option value="">select</option>
+                                <option value="Not at all">Not at all</option>
+                                <option value="Not so often">Not so often</option>
+                                <option value="Often">Often</option>
+                                <option value="Very often">Very often</option>
+                        </select>
                             </div>
                         </div>
                         <div class="form-row">
                              <div class="form-group col-md-6"  style="border:1px solid grey">
                              <label for="" class="input__label">Do you belong to any group of individuals or organizations?</label> <br>
                                 <label for="">Yes</label>
-                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style" type="radio" id="yes_Check" name="group_of_individual_or_organization" value="Yes" required="required"> &nbsp; &nbsp;
+                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style" type="radio" id="yes_Check" name="group_of_individual_or_organization" value="Yes" > &nbsp; &nbsp;
                                 <label for="">No</label>
-                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style"  type="radio" id="no_Check" name="group_of_individual_or_organization" value="No" required="required">
+                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style"  type="radio" id="no_Check" name="group_of_individual_or_organization" value="No" >
                             </div>
                             <div class="form-group col-md-6">
                             <div id="if_Yes" style="visibility:hidden">
@@ -280,35 +289,37 @@
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4" class="input__label">How many languages can you speak?</label>
                                 <input type="number" class="form-control input-style" id="" name="languages"
-                                    required="required" value="{{$data->languages}}">
+                                     value="{{$data->languages}}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Are you a member of Nigerian military force?</label>
-                                <select style="width:" name="military_force" id="" class="form-control" required="required">
-                                @foreach($data3 as $data3)
-                                <option value="{{$data3->id}}" required="required">{{$data3->military_force}}</option>
-                                @endforeach
-                             </select>
+                        <select style="width:" name="military_force" id="" class="form-control">
+                                <option value="">select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                        </select>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4" class="input__label">Are you a government official or do you hold any position in the federal government office?</label>
-                                <select style="width:" name="government_official" id="" class="form-control" required="required">
-                                @foreach($data4 as $data4)
-                                <option value="{{$data4->id}}" required="required">{{$data4->government_official}}</option>
-                                @endforeach
-                             </select>
+                        <select style="width:" name="government_official" id="" class="form-control">
+                                <option value="">select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                        </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Do you have any medical conditions that we need to know of?</label>
-                                <select style="width:" name="medical_conditions" id="" class="form-control" required="required">
-                                @foreach($data5 as $data5)
-                                <option value="{{$data5->id}}" required="required">{{$data5->medical_conditions}}</option>
-                                @endforeach
-                             </select>
+                        <select style="width:" name="medical_conditions" id="" class="form-control">
+                                <option value="">select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                                <option value="no">Rather Not Say</option>
+                        </select>
                             </div>
                         </div>
+                        <input type="hidden" style="display:none" value="edit_profile" name="edit_profile" />
 
 
 

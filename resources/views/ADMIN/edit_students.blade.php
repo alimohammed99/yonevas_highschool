@@ -45,7 +45,7 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">First Name</label>
                                 <input type="text" name="first_name"  class="form-control input-style @error('first_name') is-invalid @enderror" id=""
-                                    value="{{$data->first_name}}" required="required">
+                                    value="{{$data->first_name}}" >
                                     @error('first_name')
                                     <div class="invalid-feedback">
                                         {{$message}}
@@ -55,7 +55,7 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Surname</label>
                                 <input type="text" name="surname" class="form-control input-style" id=""
-                                value="{{$data->last_name}}" required="required">
+                                value="{{$data->last_name}}" >
                             </div>
                         </div>
                         <div class="form-row">
@@ -68,9 +68,9 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Marital Status</label>
-                                <select style="width:" name="marital_status" id="marital_status" class="form-control" required="required">
+                                <select style="width:" name="marital_status" id="marital_status" class="form-control" >
                                 @foreach($data1 as $data1)
-                                <option value="{{$data1->id}}" required="required">{{$data1->status}}</option>
+                                <option value="{{$data1->id}}" >{{$data1->status}}</option>
                                 @endforeach
                              </select>
                             </div>
@@ -80,12 +80,12 @@
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4" class="input__label">Email</label>
                                 <input type="email" name="email" class="form-control input-style" id="inputEmail4"
-                                    value="{{$data->email}}" required="required">
+                                    value="{{$data->email}}" >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Phone Number</label>
                                 <input type="number" name="phone_number" class="form-control input-style" id=""
-                                    value="{{$data->phone}}" required="required">
+                                    value="{{$data->phone}}" >
                             </div>
                         </div>
 
@@ -93,20 +93,20 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Date of Birth</label>
                                 <input type="date" name="date_of_birth" class="form-control input-style" id=""
-                                    value="{{$data->date_of_birth}}" required="required">
+                                    value="{{$data->date_of_birth}}" >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Zip Code</label>
                                 <input type="number" name="zip_code" class="form-control input-style" id=""
-                                    value="{{$data->zip_code}}" required="required">
+                                    value="{{$data->zip_code}}" >
                             </div>
                         </div>
                         <div class="form-row">
                         <div class="form-group col-md-6">
                                 <label for="" class="input__label">Religion</label>
-                                <select style="width:" name="religion" id="religion" class="form-control" required="required">
+                                <select style="width:" name="religion" id="religion" class="form-control" >
                                 @foreach($data2 as $data2)
-                                <option value="{{$data2->id}}" required="required">{{$data2->religion_name}}</option>
+                                <option value="{{$data2->id}}" >{{$data2->religion_name}}</option>
                                 @endforeach
                              </select>
                             </div>
@@ -114,11 +114,11 @@
 
 
 
-                            <div class="form-group col-md-6">
-                                <label for="" class="input__label">Student Password</label>
-                                <input type="text" name="password" class="form-control input-style" id=""
-                                    value="{{$data->student_password}}" required="required">
-                            </div>
+                            <!--<div class="form-group col-md-6">-->
+                            <!--    <label for="" class="input__label">Student Password</label>-->
+                            <!--    <input type="text" name="password" class="form-control input-style" id=""-->
+                            <!--        value="{{$data->student_password}}" >-->
+                            <!--</div>-->
                         </div>
 
 
@@ -129,9 +129,9 @@
                             <div class="form-group col-md-6"  style="border:1px solid grey">
                                 <label for="" class="input__label">Gender</label> <br>
                                 <label for="">Male</label>
-                                <input class="form-control input-style" type="radio" id="male" name="gender" value="Male" required="required">
+                                <input class="form-control input-style" type="radio" id="male" name="gender" value="Male" >
                                 <label for="">Female</label>
-                                <input class="form-control input-style"  type="radio" id="female" name="gender" value="Female" required="required">
+                                <input class="form-control input-style"  type="radio" id="female" name="gender" value="Female" >
                             </div>
 
 
@@ -157,10 +157,10 @@
 
                             <div class="form-group">
                             <label class="form-label"></label>
-                            <select name="countries" id="countries" class="form-control" required="required">
-                                <option value="" required="required">Select Country</option>
+                            <select name="countries" id="countries" class="form-control" >
+                                <option value="" >Select Country</option>
                                 @foreach(App\Models\Countries::orderBy('name_country')->get() as $key => $value)
-                                    <option value="{{ $value->id }}" required="required">{{ $value->name_country }}</option>
+                                    <option value="{{ $value->id }}" >{{ $value->name_country }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -170,7 +170,7 @@
                         <div class="form-group">
                             <label class="form-label"></label>
                             <select name="states" id="states" class="form-control">
-                                <option value="" required="required">Select State</option>
+                                <option value="" >Select State</option>
 
                             </select>
                         </div>
@@ -181,7 +181,7 @@
                         <div class="form-group">
                             <label class="form-label"></label>
                             <select name="cities" id="cities" class="form-control">
-                                <option value="" required="required">Select City</option>
+                                <option value="" >Select City</option>
 
                             </select>
                         </div>
@@ -191,7 +191,7 @@
                         <div class="form-group">
                             <label for="inputAddress2" class="input__label">Address</label>
                             <input type="text" name="address" class="form-control input-style" id="inputAddress2"
-                                placeholder="Enter address" required="required">
+                                placeholder="Enter address" >
                         </div><br><br>
 
 
@@ -201,9 +201,9 @@
                         <div class="form-group" style="border:1px solid grey; padding:10px">
                              <label for="" class="input__label">Are you currently studying at any institution of higher learning?</label> <br>
                                 <label for="">Yes</label>
-                                <input onclick="javascript:yesnoCheck();" class="form-control input-style" type="radio" id="yesCheck" name="currently_studying" value="Yes" required="required">  &nbsp; &nbsp;
+                                <input onclick="javascript:yesnoCheck();" class="form-control input-style" type="radio" id="yesCheck" name="currently_studying" value="Yes" >  &nbsp; &nbsp;
                                 <label for="">No</label>
-                                <input onclick="javascript:yesnoCheck();" class="form-control input-style"  type="radio" id="noCheck" name="currently_studying" value="No" required="required">
+                                <input onclick="javascript:yesnoCheck();" class="form-control input-style"  type="radio" id="noCheck" name="currently_studying" value="No" >
                         </div>
 
             <div id="ifYes" style="visibility:hidden">
@@ -233,9 +233,9 @@
                              <div class="form-group col-md-6"  style="border:1px solid grey">
                              <label for="" class="input__label">Have you taken online classes in the past?</label> <br>
                                 <label for="">Yes</label>
-                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style" type="radio" id="yes_Check2" name="online_classes" value="Yes" required="required"> &nbsp; &nbsp;
+                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style" type="radio" id="yes_Check2" name="online_classes" value="Yes" > &nbsp; &nbsp;
                                 <label for="">No</label>
-                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style"  type="radio" id="no_Check2" name="online_classes" value="No" required="required">
+                                <input onclick="javascript:yes_or_noCheck2();" class="form-control input-style"  type="radio" id="no_Check2" name="online_classes" value="No" >
                             </div>
                             <div class="form-group col-md-6">
                             <div id="if_Yes2" style="visibility:hidden">
@@ -253,17 +253,17 @@
                             <div class="form-group col-md-6"  style="border:1px solid grey">
                                 <label for="" class="input__label">What type of enrollment?</label> <br>
                                 <label for="">Degree programme</label>
-                                <input class="form-control input-style" type="radio" id="male" name="type_of_enrollment" value="Degree programme" required="required">  &nbsp; &nbsp;
+                                <input class="form-control input-style" type="radio" id="male" name="type_of_enrollment" value="Degree programme" >  &nbsp; &nbsp;
                                 <label for="">Non-Degree programme</label>
-                                <input class="form-control input-style"  type="radio" id="female" name="type_of_enrollment" value="Non-Degree programme" required="required">
+                                <input class="form-control input-style"  type="radio" id="female" name="type_of_enrollment" value="Non-Degree programme" >
                             </div>
 
                             <div class="form-group col-md-6"  style="border:1px solid grey">
                                 <label for="" class="input__label">Enrollment period</label> <br>
                                 <label for="">February intake</label>
-                                <input class="form-control input-style" type="radio" id="male" name="enrollment_period" value="February intake" required="required">  &nbsp; &nbsp;
+                                <input class="form-control input-style" type="radio" id="male" name="enrollment_period" value="February intake" >  &nbsp; &nbsp;
                                 <label for="">September intake</label>
-                                <input class="form-control input-style"  type="radio" id="female" name="enrollment_period" value="September intake" required="required">
+                                <input class="form-control input-style"  type="radio" id="female" name="enrollment_period" value="September intake" >
                             </div>
 
                         </div><br><br>
@@ -273,21 +273,21 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">What do you do in your free time?</label>
                                 <input type="text" class="form-control input-style" id=""
-                                    value="{{$data->free_time}}" name="free_time" required="required">
+                                    value="{{$data->free_time}}" name="free_time" >
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">How often do you travel outside of your residential home?</label>
                                 <input type="text" class="form-control input-style" id="" name="residential_home"
-                                    required="required" value="{{$data->residential_home}}">
+                                     value="{{$data->residential_home}}">
                             </div>
                         </div>
                         <div class="form-row">
                              <div class="form-group col-md-6"  style="border:1px solid grey">
                              <label for="" class="input__label">Do you belong to any group of individuals or organizations?</label> <br>
                                 <label for="">Yes</label>
-                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style" type="radio" id="yes_Check" name="group_of_individual_or_organization" value="Yes" required="required"> &nbsp; &nbsp;
+                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style" type="radio" id="yes_Check" name="group_of_individual_or_organization" value="Yes" > &nbsp; &nbsp;
                                 <label for="">No</label>
-                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style"  type="radio" id="no_Check" name="group_of_individual_or_organization" value="No" required="required">
+                                <input onclick="javascript:yes_or_noCheck();" class="form-control input-style"  type="radio" id="no_Check" name="group_of_individual_or_organization" value="No" >
                             </div>
                             <div class="form-group col-md-6">
                             <div id="if_Yes" style="visibility:hidden">
@@ -302,13 +302,13 @@
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4" class="input__label">How many languages can you speak?</label>
                                 <input type="number" class="form-control input-style" id="" name="languages"
-                                    required="required" value="{{$data->languages}}">
+                                     value="{{$data->languages}}">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Are you a member of Nigerian military force?</label>
-                                <select style="width:" name="military_force" id="" class="form-control" required="required">
+                                <select style="width:" name="military_force" id="" class="form-control" >
                                 @foreach($data3 as $data3)
-                                <option value="{{$data3->id}}" required="required">{{$data3->military_force}}</option>
+                                <option value="{{$data3->id}}" >{{$data3->military_force}}</option>
                                 @endforeach
                              </select>
                             </div>
@@ -316,17 +316,17 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4" class="input__label">Are you a government official or do you hold any position in the federal government office?</label>
-                                <select style="width:" name="government_official" id="" class="form-control" required="required">
+                                <select style="width:" name="government_official" id="" class="form-control" >
                                 @foreach($data4 as $data4)
-                                <option value="{{$data4->id}}" required="required">{{$data4->government_official}}</option>
+                                <option value="{{$data4->id}}" >{{$data4->government_official}}</option>
                                 @endforeach
                              </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4" class="input__label">Do you have any medical conditions that we need to know of?</label>
-                                <select style="width:" name="medical_conditions" id="" class="form-control" required="required">
+                                <select style="width:" name="medical_conditions" id="" class="form-control" >
                                 @foreach($data5 as $data5)
-                                <option value="{{$data5->id}}" required="required">{{$data5->medical_conditions}}</option>
+                                <option value="{{$data5->id}}" >{{$data5->medical_conditions}}</option>
                                 @endforeach
                              </select>
                             </div>
@@ -340,9 +340,9 @@
 
 <div class="form-group">
     <label for="" class="input__label">Choose Academic Session</label>
-    <select style="width:" name="academic_session" id="states" class="form-control" required="required">
+    <select style="width:" name="academic_session" id="states" class="form-control" >
     @foreach($acad as $acad)
-                <option value="{{$acad->id}}" required="required">{{$acad->academic_session}}</option>
+                <option value="{{$acad->id}}" >{{$acad->academic_session}}</option>
     @endforeach
 
     </select>
@@ -352,9 +352,9 @@
 <div class="form-group col-md-12"  style="border:1px solid grey">
      <label style="color:red; font-size:22px" for="" class="input__label">Choose Programme type*</label> <br>
         <label for="">Diploma</label>
-        <input onclick="javascript:dip_or_cert();" class="form-control input-style" type="radio" id="dipcert1" name="programme_type" value="1" required="required"> &nbsp; &nbsp;
+        <input onclick="javascript:dip_or_cert();" class="form-control input-style" type="radio" id="dipcert1" name="programme_type" value="1" > &nbsp; &nbsp;
         <label for="">Certificate & Training</label>
-        <input onclick="javascript:dip_or_cert();" class="form-control input-style"  type="radio" id="dipcert2" name="programme_type" value="2" required="required">
+        <input onclick="javascript:dip_or_cert();" class="form-control input-style"  type="radio" id="dipcert2" name="programme_type" value="2" >
     </div>
 
 

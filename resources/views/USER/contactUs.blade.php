@@ -428,9 +428,9 @@
                                                                         class="formbold-form-input" required ></textarea>
                                                                     <label for="message" class="formbold-form-label"> Message </label>
                                                                 </div>
-                                                                <div>
-                                                                    <input type="checkbox" class="formbold-form-input" required/><p>I consent to the collection and processing of my data</p>
-                                                                </div>
+                                                                <!--<div>-->
+                                                                <!--    <input type="checkbox" class="formbold-form-input" required/><p>I consent to the collection and processing of my data</p>-->
+                                                                <!--</div>-->
                                                                 <button class="formbold-btn">
                                                                     Send Message
                                                                 </button>
@@ -444,7 +444,7 @@
                                             </div>
                                             <div class="content-right contact-img " style="position: relative">
                                         
-                                                <img src="{{ asset('assets/newImages/Y-03.png') }}" alt="yonevas logo" style="position: absolute; top:0; left:0; width:100%; height:auto; z-index: 20;" />
+                                                <!--<img src="{{ asset('assets/newImages/Y-03.png') }}" alt="yonevas logo" style="position: absolute; top:0; left:0; width:100%; height:auto; z-index: 20;" />-->
                                                 <img src="{{ asset('assets/newImages/contact.png') }}" alt="computer system" />
                                                 <img src="{{ asset('assets/newImages/Y-04.png') }}" alt="yonevas logo" style="position: absolute; bottom:0; left:0; width:100%; height:auto; z-index: 20;" />
                                             </div>
@@ -493,7 +493,7 @@
                           </div>
                           <div class="responsive-two-column-grid" style="background-color: #795548 !important;">
                             <div>
-                                <img src="{{ asset('assets/newImages/DSC_7741.jpg') }}" alt="computer system" />
+                                <img src="{{ asset('assets/newImages/DSC_7741.JPG') }}" alt="computer system" />
                             </div>
                             <div style="margin: auto; color:white; padding-left:5%;">
                                 <h2 style="padding-bottom: 3%;">ACADEMIC FACULTIES:</h2>
@@ -517,22 +517,19 @@
                                 <p>Visit our <a href="#" style="color: #e4d018">Faculty and Staff Directory</a> to find contact information for specific individuals.</p>
                             </div>
                         </div>
-                        <div class="right-sidebar" style="background-color:#ddddff;">
+                        <div class="" style="background-color:#ddddff;">
                             <div>    
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63423.10865598365!2d3.278095974547719!3d6.528720603338735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8fec0b49b669%3A0x319744c1775084f2!2sYonevas%20Open%20University!5e0!3m2!1sen!2sng!4v1688059601015!5m2!1sen!2sng" width="100%" height="300" style="border:0; marging-left:-10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                 
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d149953.9009810134!2d7.271273235034534!3d9.018934884815893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAirport%20Rd%20by%20Piwoyi%2C%20FCT%2C%20Abuja.!5e0!3m2!1sen!2sng!4v1689414222183!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                 
                             </div>
-                            <div style="padding-top:5%;">
-                            <p style="font-size: 2.5em;">Contact Information</p>
-                                        <ul style="font-size: 1.1em;">
-                                                <li><i class="icon-home"></i> Block 223 low cost H/Estate Isolo-lagos</li>
-                                                <li><i class="icon-phone"></i> Telephone: (+234)7048778559</li>
-                                                <li><i class="icon-envelope"></i> Email: <a href="info@yonevas.institute">info@yonevas.institute</a></li>
-                                            </ul>  
-                                            <a href="https://www.facebook.com/Yonevascollege"><i class='fab fa-facebook-square' style='font-size:48px;color:blue'></i></a>
+                            <!--<div style="padding-top:5%;">-->
+                            <!--<p style="font-size: 2.5em;">Contact Information</p>-->
+                            <!--            <ul style="font-size: 1.1em;">-->
+                            <!--                    <li><i class="icon-home"></i> Block 223 low cost H/Estate Isolo-lagos</li>-->
+                            <!--                    <li><i class="icon-phone"></i> Telephone: (+234)7048778559</li>-->
+                            <!--                    <li><i class="icon-envelope"></i> Email: <a href="info@yonevas.institute">info@yonevas.institute</a></li>-->
+                            <!--                </ul>  -->
                                             
-                                            <a href="https://www.youtube.com/channel/UC7--ERLy6wd7UjvDqepxReA"><i class="fab fa-youtube"></i></a>
-                                            
-                            </div>
+                            <!--</div>-->
                         </div>
                     </article>
 

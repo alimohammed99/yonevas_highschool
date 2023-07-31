@@ -44,7 +44,7 @@
                                     <a href="/">Home</a>
                                 </li>
                                 <li>
-                                    Sign In
+                                    Create Account
                                 </li>
                             </ol>
                         </nav>

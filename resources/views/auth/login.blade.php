@@ -145,10 +145,10 @@
 
 						<form method="POST" action="{{ route('login') }}">
 						@csrf
-						<label for="chk" aria-hidden="true">Sign in</label>
+						<label for="chk" aria-hidden="true">Login</label>
 						<input class="input-here" type="email" name="email" placeholder="Email" required="">
 						<input class="input-here" type="password" name="password" placeholder="Password" required="">
-						<button class="button-here" type="submit">Sign in</button>
+						<button class="button-here" type="submit">Login</button>
 						@if (Route::has('password.request'))
 							<a class="forgot-password" href="{{ route('password.request') }}">
 							{{ __('Forgot your password?') }}

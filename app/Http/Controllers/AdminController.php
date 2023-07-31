@@ -84,6 +84,8 @@ use App\Models\EmployeeApplication;
 
 use App\Models\EmploymentAndFinancialAidFormPdf;
 
+use App\Models\CourseFeedback;
+
 use Illuminate\Support\Facades\Stroage;
 
 
@@ -431,7 +433,39 @@ class AdminController extends Controller
 
 
 
+public function a_course(Request $request)
+    {
+        $usertype = Auth::user()->usertype;
+        $data_stat = CoursesStatuses::all();
+        if ($usertype == '1') {
 
+            return view("ADMIN.a_course", compact('data_stat'));
+        } else {
+            return redirect()->back()->with('error_message', 'Access denied!');
+    }
+    }
+    public function ad_course(Request $request){
+        $usertype = Auth::user()->usertype;
+        if ($usertype == '1') {
+            $data = new Courses;
+            $data->programme_type = $request->programme_type;
+            $data->faculty_id = $request->faculty;
+            $data->department_id = $request->department;
+            $data->level = $request->level;
+            $data->semester = $request->input('semester');
+            $data->course_code = $request->course_code;
+            $data->course_title = $request->course_title;
+            $data->course_description = $request->course_description;
+            $data->course_status = $request->course_status;
+            $data->course_unit = $request->course_unit;
+            $data->image = $request->course_image;
+        
+            $data->save();
+            return redirect()->back()->with('success', 'Form data saved successfully!');  
+        } else {
+            return redirect()->back()->with('error_message', 'Access denied!');
+        }  
+    }
 
 
 
@@ -3137,25 +3171,20 @@ class AdminController extends Controller
 
 
             $data = User::where('users.id', $id)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                ->join('religions', 'students_details.religion', '=', 'religions.id')
                 ->join('countries', 'students_details.country', '=', 'countries.id')
                 ->join('states', 'students_details.state', '=', 'states.id')
                 ->join('cities', 'students_details.city', '=', 'cities.id')
-                ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
                 ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
                 ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
                 // ->join('levels', 'students_details.level', '=', 'levels.id')
-                // ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                // ->join('departments', 'students_details.department', '=', 'departments.id')
+                ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                ->join('departments', 'students_details.department', '=', 'departments.id')
                 // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
 
 
 
 
-                ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
+                ->select('users.id as id', 'users.*', 'students_details.*',  'countries.name_country', 'states.name_state', 'cities.name_city', 'programme_types.programme', 'academic_sessions.academic_session', 'departments.department_name as department', 'faculties.faculty_name as faculty')->first();
 
 
             // dd($data);
@@ -3184,29 +3213,24 @@ class AdminController extends Controller
     public function edit_students($id)
     {
 
-
         $usertype = Auth::user()->usertype;
-
-
 
         if ($usertype == '1') {
 
-
-            $data = User::where('users.id', $id)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                ->join('religions', 'students_details.religion', '=', 'religions.id')
+            $data = User::where('users.id', $id)
+            ->join('students_details', 'users.id', '=', 'students_details.student_id')
                 ->join('countries', 'students_details.country', '=', 'countries.id')
                 ->join('states', 'students_details.state', '=', 'states.id')
                 ->join('cities', 'students_details.city', '=', 'cities.id')
-                ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
 
+                ->select('users.id as id',
+                'users.*' ,
+                'students_details.*'
+                ,'countries.name_country', 
+                'states.name_state', 
+                'cities.name_city'
+                )->first();
 
-
-                ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period')->first();
-
-            // dd($data);
 
             $data1 = MaritalStatus::all();
             $data2 = Religion::all();
@@ -3246,6 +3270,7 @@ class AdminController extends Controller
 
     public function update_students(Request $request, $id)
     {
+            return back()->with('error_message', 'Currently under maintenance');
 
         $usertype = Auth::user()->usertype;
 
@@ -5146,6 +5171,21 @@ class AdminController extends Controller
             // $data->save();
 
             return redirect()->back()->with('success_message', 'You have successfully added Application Form(s)        ');
+        } else {
+            return redirect()->back()->with('error_message', 'Access denied!');
+        }
+    }
+    
+      public function students_course_feedback()
+    {
+        $usertype = Auth::user()->usertype;
+
+
+        if ($usertype == '1') {
+
+            $data = CourseFeedback::all();
+
+            return view("ADMIN.students_course_feedback", compact('data'));
         } else {
             return redirect()->back()->with('error_message', 'Access denied!');
         }

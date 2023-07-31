@@ -172,7 +172,7 @@
                             <a href="{{ url('view_job_applicants') }}">
                                 <h2 style="font-size:20px" class="fw-extrabold h5">Job Applicants</h2>
                             </a><br>
-                            <h3 style="border-bottom: 5px double tomato; padding:5px" class="mb-1">99</h3>
+                            <h3 style="border-bottom: 5px double tomato; padding:5px" class="mb-1">00</h3>
                         </div>
                     </div>
                     <div class="col-12 col-xl-7 px-xl-0">
@@ -180,7 +180,7 @@
                             <a href="{{ url('view_job_applicants') }}">
                                 <h2 style="font-size:20px" class="h6 text-gray-400 mb-0"> Job Applicants</h2>
                             </a><br>
-                            <h3 style="border-bottom: 5px double tomato; padding:5px" class="fw-extrabold mb-2">99</h3>
+                            <h3 style="border-bottom: 5px double tomato; padding:5px" class="fw-extrabold mb-2">00</h3>
                         </div>
 
                     </div>

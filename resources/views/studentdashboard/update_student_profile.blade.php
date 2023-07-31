@@ -35,7 +35,7 @@
 
     <span style="color:red; font-size:22px">Fill all details carefully. Do not leave any field blank.</span>
     <div class="card card_border mt-2 py-2 mb-4">
-
+        Religion
         <div class="card-body" back>
 
             <form class="form-horizontal" action="{{ url('upload_students_profile') }}" method="post"
@@ -49,11 +49,13 @@
 
 
                     <label for="inputPassword4" class="input__label">Marital Status</label>
-                    <select style="width:" name="marital_status" id="marital_status" class="form-control" required="required"
-                    >
-                        @foreach ($data1 as $data1)
-                            <option value="{{ $data1->id }}" required="required">{{ $data1->status }}</option>
-                        @endforeach
+                    <select style="width:" name="marital_status" id="marital_status" class="form-control"
+                        required="required">
+                        <option value="">Select</option>
+                        <option value="married">Married</option>
+                        <option value="single">Single</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
                     </select>
 
                 </div>
@@ -63,8 +65,8 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">Date of Birth</label>
-                        <input type="date" name="date_of_birth" class="form-control input-style" id="" required="required"
-                            placeholder="Email">
+                        <input type="date" name="date_of_birth" class="form-control input-style" id=""
+                            required="required" placeholder="Email">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">Zip Code</label>
@@ -81,10 +83,10 @@
                     <div class="form-group col-md-12">
                         <label for="" class="input__label">Religion</label>
                         <select style="width:" name="religion" id="religion" class="form-control" required="required">
-                            @foreach ($data2 as $data2)
-                                <option value="{{ $data2->id }}" required="required">{{ $data2->religion_name }}
-                                </option>
-                            @endforeach
+                            <option value="">Select</option>
+                            <option value="Christian">Christian</option>
+                            <option value="Islam">Islam</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
 
@@ -98,17 +100,16 @@
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="" class="input__label">Gender</label> <br>
                         <label for="">Male</label>
-                        <input class="" type="radio" id="male" name="gender" value="Male" required="required"
-                        > &nbsp; &nbsp;
+                        <input class="" type="radio" id="male" name="gender" value="Male"
+                            required="required"> &nbsp; &nbsp;
                         <label for="">Female</label>
-                        <input class="" type="radio" id="female" name="gender" value="Female" required="required"
-                        >
+                        <input class="" type="radio" id="female" name="gender" value="Female"
+                            required="required">
                     </div>
 
                     <div class="form-group col-md-6" style="border:1px solid grey">
                         <label for="inputAddress2" class="input__label">Student Image</label>
-                        <input type="file" name="student_image" class="form-control input-style" id="" required="required"
-                        >
+                        <input type="file" name="student_image" class="form-control input-style" id="">
                     </div>
 
                 </div>
@@ -117,7 +118,7 @@
 
 
                 <div class="form-group">
-                    <label class="form-label"></label>
+                    <label class="form-label">Country</label>
                     <select name="countries" id="countries" class="form-control" required="required">
                         <option value="">Select Country</option>
                         @foreach (App\Models\Countries::orderBy('name_country')->get() as $key => $value)
@@ -151,7 +152,7 @@
 
                 <div class="form-group">
                     <label for="inputAddress2" class="input__label">Address</label>
-                    <input type="text" name="address" class="form-control input-style" id="inputAddress2" required="required"
+                    <input type="text" name="address" class="form-control input-style" id="inputAddress2"
                         placeholder="Enter address">
                 </div><br><br>
 
@@ -251,8 +252,16 @@
                     <div class="form-group col-md-6">
                         <label for="" class="input__label">How often do you travel outside of your residential
                             home?</label>
-                        <input type="text" class="form-control input-style" id=""
-                            name="residential_home">
+                        <!--<input type="text" class="form-control input-style" id=""-->
+                        <!--    name="residential_home">-->
+                        <select style="width:" name="residential_home" id="" class="form-control">
+                            <option value="">select</option>
+                            <option value="Not at all">Not at all</option>
+                            <option value="Not so often">Not so often</option>
+                            <option value="Often">Often</option>
+                            <option value="Very often">Very often</option>
+                        </select>
+
                     </div>
                 </div>
                 <div class="form-row">
@@ -279,18 +288,15 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4" class="input__label">How many languages can you speak?</label>
-                        <input type="number" class="form-control input-style" id="" name="languages"
-                        >
+                        <input type="number" class="form-control input-style" id="" name="languages">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4" class="input__label">Are you a member of Nigerian military
                             force?</label>
-                        <select style="width:" name="military_force" id="" class="form-control"
-                        >
-                            @foreach ($data3 as $data3)
-                                <option value="{{ $data3->id }}">{{ $data3->military_force }}
-                                </option>
-                            @endforeach
+                        <select style="width:" name="military_force" id="" class="form-control">
+                            <option value="">select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
                     </div>
                 </div>
@@ -298,23 +304,20 @@
                     <div class="form-group col-md-6">
                         <label for="inputEmail4" class="input__label">Are you a government official or do you hold any
                             position in the federal government office?</label>
-                        <select style="width:" name="government_official" id="" class="form-control"
-                        >
-                            @foreach ($data4 as $data4)
-                                <option value="{{ $data4->id }}">
-                                    {{ $data4->government_official }}</option>
-                            @endforeach
+                        <select style="width:" name="government_official" id="" class="form-control">
+                            <option value="">select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4" class="input__label">Do you have any medical conditions that we
                             need to know of?</label>
-                        <select style="width:" name="medical_conditions" id="" class="form-control"
-                        >
-                            @foreach ($data5 as $data5)
-                                <option value="{{ $data5->id }}">
-                                    {{ $data5->medical_conditions }}</option>
-                            @endforeach
+                        <select style="width:" name="medical_conditions" id="" class="form-control">
+                            <option value="">select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="no">Rather Not Say</option>
                         </select>
                     </div>
                 </div><br><br>
@@ -359,14 +362,12 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Full Name</label>
                                 <input type="text" class="form-control input-style" id=""
-                                    placeholder="Enter name of next of Kin" name="next_of_kin_name"
-                                >
+                                    placeholder="Enter name of next of Kin" name="next_of_kin_name">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Email</label>
                                 <input type="email" placeholder="Enter email of next of Kin" type="text"
-                                    class="form-control input-style" id="" name="next_of_kin_email"
-                                >
+                                    class="form-control input-style" id="" name="next_of_kin_email">
                             </div>
 
                         </div>
@@ -375,14 +376,12 @@
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Phone</label>
                                 <input type="number" class="form-control input-style" id=""
-                                    placeholder="Enter phone number of next of Kin" name="next_of_kin_phone"
-                                >
+                                    placeholder="Enter phone number of next of Kin" name="next_of_kin_phone">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="" class="input__label">Address</label>
                                 <input type="text" placeholder="Enter address of next of Kin" type="text"
-                                    class="form-control input-style" id="" name="next_of_kin_address"
-                                >
+                                    class="form-control input-style" id="" name="next_of_kin_address">
                             </div>
                         </div><br><br>
 
@@ -395,8 +394,8 @@
 
                         <div class="form-group">
                             <label for="" class="input__label">Choose Academic Session</label>
-                            <select style="width:" name="academic_session" id="states" class="form-control"
-                            >
+                            <select required="required" style="width:" name="academic_session" id="states"
+                                class="form-control">
                                 @foreach ($acad as $acad)
                                     <option value="{{ $acad->id }}">
                                         {{ $acad->academic_session }}</option>
@@ -405,19 +404,20 @@
                             </select>
                         </div>
 
-
+  <label style="color:red; font-size:20px" class="control-label" for="">Registration is fully completed for Bachelors Programmes. <br> <span style="color:indigo">Other Programme types are undergoing maintenance.</span></label>
                         <div class="form-group">
                             <label class="control-label" for="email">Programme Type:</label>
-                            <select name="programme_type" id="myselection" class="myselection form-control"
-                            >
+                            <select required="required" name="programme_type" id="myselection"
+                                class="myselection form-control">
                                 <option value="">Select Programme Type</option>
-                                <option class="form-control" value="7">Bachelor's Degree</option>
-                                <option class="form-control" value="1">Diploma(ND)</option>
-                                <option class="form-control" value="2">Certificate and Training</option>
+                                <option class="form-control" value="1">BACHELORS DEGREE</option>
+                                <!--<option class="form-control" value="2">PROFESSIONAL CERTIFICATE/NON-DEGREE-->
+                                <!--</option>-->
+                                <!--<option class="form-control" value="3">CONTINOUS LEARNING EDUCATION</option>-->
                             </select>
                         </div>
 
-                        <div style="display:none" id="show1" class="diploma-display myDiv show1 myDiv1">
+                        {{-- <div style="display:none" id="show1" class="diploma-display myDiv show1 myDiv1">
 
                             <div class="form-group">
                                 <label class="control-label" for="email">Faculty:</label>
@@ -426,7 +426,7 @@
                                     class="faculty form-control">
                                     <option value="">Select Faculty</option>
                                     @foreach (App\Models\Faculty::orderBy('faculty_name')->get() as $key => $value)
-                                        <option value="{{ $value->id }}">{{ $value->faculty_name }}</option>
+                                        <option value="{{ $value->faculty_name }}">{{ $value->faculty_name }}</option>
                                     @endforeach
                                 </select>
 
@@ -448,14 +448,14 @@
                                 <select style="width:" name="di_level" id="states" class="form-control">
                                     <option value="">Select Level</option>
                                     @foreach (App\Models\Level::where('programme_type', '=', 1)->orderBy('level_name')->limit(1)->get() as $key => $value)
-                                        <option value="{{ $value->id }}">{{ $value->level_name }}</option>
+                                        <option value="{{ $value->level_name }}">{{ $value->level_name }}</option>
                                     @endforeach
 
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div style="display:none" id="show7" class="degree-display myDiv show7 myDiv7">
+                        <div style="display:none" id="show1" class="degree-display myDiv show1 myDiv7">
 
 
                             <div class="form-group">
@@ -475,7 +475,7 @@
                             <div class="form-group">
                                 <label class="control-label" for="pwd">Department:</label>
 
-                                <select style="width:" name="de_department" id="department"
+                                <select style="width:" name="de_department" id="department7"
                                     class="form-control department">
                                     <option value="">Select Department</option>
 
@@ -487,8 +487,8 @@
                                 <label for="" class="input__label">Level:</label>
                                 <select style="width:" name="de_level" id="states" class="form-control">
                                     <option value="">Select Level</option>
-                                    @foreach (App\Models\Level::where('programme_type', '=', 7)->orderBy('level_name')->limit(1)->get() as $key => $value)
-                                        <option value="{{ $value->id }}">{{ $value->level_name }}</option>
+                                    @foreach (App\Models\Level::where('programme_type', '=', 1)->orderBy('level_name')->limit(1)->get() as $key => $value)
+                                        <option value="{{ $value->level_name }}">{{ $value->level_name }}</option>
                                     @endforeach
 
                                 </select>
@@ -507,10 +507,87 @@
 
                                 <select style="width:" name="name_of_certificate_course" id=""
                                     class="form-control">
-                                    @foreach ($cert_courses as $cert_courses)
-                                        <option value="{{ $cert_courses->id }}">{{ $cert_courses->course_title }}
-                                        </option>
-                                    @endforeach
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Creative Leadership">Creative Leadership</option>
+                                    <option value="Creative Writing">Creative Writing</option>
+                                    <option value="Case Report">Case Report</option>
+                                    <option value="Social Media Strategist">Social Media Strategist</option>
+                                    <option value="Private Investigator">Private Investigator</option>
+                                    <option value="Programming">Programming</option>
+                                    <option value="Networking">Networking</option>
+                                    <option value="Cyber Security">Cyber Security</option>
+                                    <option value="Visual Presentation">Visual Presentation</option>
+                                    <option value="3D Motion Graphics">3D Motion Graphics</option>
+                                    <option value="Social Awareness">Social Awareness</option>
+                                    <option value="Digital Learning">Digital Learning</option>
+                                    <option value="Public Speaking">Public Speaking</option>
+                                    <option value="Graphics Design">Graphics Design</option>
+                                    <option value="Animations and 3D Motion">Animations and 3D Motion</option>
+                                    <option value="Criminal Justice">Criminal Justice</option>
+                                    <option value="Graphic Design | Media Arts">Graphic Design | Media Arts</option>
+                                    <option value="Physical and Health Education">Physical and Health Education
+                                    </option>
+                                    <option value="Social Work">Social Work</option>
+                                    <option value="Forensic Accounting & Fraud Investigation">Forensic Accounting &
+                                        Fraud Investigation</option>
+                                    <option value="Human Resource Management">Human Resource Management</option>
+                                    <option value="Event and Meeting Management">Event and Meeting Management</option>
+                                    <option value="Early Childhood Special Education">Early Childhood Special Education
+                                    </option>
+                                </select>
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="show2" class="myDiv show3" style="display:none">
+
+                            <div class="form-group">
+                                     <label class="control-label" for="pwd">Continous Learning programmes:</label>
+
+                                <select style="width:" name="name_of_continous_learning_course" id=""
+                                    class="form-control">
+                                    <option value="Digital Marketing and Social Media Strategy">Digital Marketing and
+                                        Social Media Strategy</option>
+                                    <option value="Personal Finance and Investment Planning">Personal Finance and
+                                        Investment Planning</option>
+                                    <option value="Brand Development and Marketing in the Creative Industries">Brand
+                                        Development and Marketing in the Creative Industries</option>
+                                    <option
+                                        value="Virtual Collaboration: Navigating Challenges and Maximizing Opportunities">
+                                        Virtual Collaboration: Navigating Challenges and Maximizing Opportunities
+                                    </option>
+                                    <option value="Sustainable Business Practices and Environmental Responsibility">
+                                        Sustainable Business Practices and Environmental Responsibility</option>
+                                    <option value="Introduction to Artificial Intelligence and Machine Learning">
+                                        Introduction to Artificial Intelligence and Machine Learning</option>
+                                    <option value="The Importance of Play in Child Development and Behavior">The
+                                        Importance of Play in Child Development and Behavior</option>
+                                    <option
+                                        value="Protecting Yourself from Internet Fraud: Safeguarding Your Online Presence">
+                                        Protecting Yourself from Internet Fraud: Safeguarding Your Online Presence
+                                    </option>
+                                    <option value="Digital Storytelling and Content Creation">Digital Storytelling and
+                                        Content Creation</option>
+                                    <option value="Creative Leadership and Team Management">Creative Leadership and
+                                        Team Management</option>
+                                    <option value="Sustainable Transportation: Innovations and Challenges">Sustainable
+                                        Transportation: Innovations and Challenges</option>
+                                    <option value="Mastering Temperament: The Art of Emotional Control">Mastering
+                                        Temperament: The Art of Emotional Control</option>
+                                    <option value="Design Thinking for Innovation in the Creative Industries">Design
+                                        Thinking for Innovation in the Creative Industries</option>
+                                    <option
+                                        value="Developmental Psychology: Nurturing Resilience and Academic Success from Childhood to Adulthood">
+                                        Developmental Psychology: Nurturing Resilience and Academic Success from
+                                        Childhood to Adulthood</option>
+                                    <option value="Emotional Intelligence and Communication Skills">Emotional
+                                        Intelligence and Communication Skills</option>
+                                    <option value="The Impact of Nature and Nurture on Child Behavior">The Impact of
+                                        Nature and Nurture on Child Behavior</option>
+
+
                                 </select>
 
                             </div>
@@ -539,8 +616,35 @@
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> --}}
 
 
-
 <script type="text/javascript">
+    $('#faculty7').on('change', function() {
+        get_dept_by_fac_and_prog_type();
+    });
+
+
+    function get_dept_by_fac_and_prog_type() {
+        var faculty_id = $('#faculty7').val();
+        $.post('{{ route('getDepartments') }}', {
+            _token: '{{ csrf_token() }}',
+            faculty_id: faculty_id
+        }, function(data) {
+            $('#department7').html(null);
+            $('#department7').append($('<option value="{{ $value->id }}">Select Department</option>', {
+
+            }));
+            // alert('here')
+            for (var i = 0; i < data.length; i++) {
+                $('#department7').append($('<option>', {
+                    value: data[i].id,
+                    text: data[i].department_name
+                }));
+
+            }
+        });
+    }
+</script>
+
+{{-- <script type="text/javascript">
     $(document).ready(function() {
 
         $('.myselection').on('change', function() {
@@ -566,15 +670,15 @@
 
     });
 
-    function get_dept_by_fac_and_prog_type(index) {
+    function get_dept_by_fac_and_prog_type() {
 
-        var programme_type = $('.myselection').val();
+        // var programme_type = $('.myselection').val();
         var faculty_id = $('#faculty' + index).val();
         console.log(faculty_id);
 
         $.post('{{ route('getDepartments') }}', {
             _token: '{{ csrf_token() }}',
-            programme_type: programme_type,
+            // programme_type: programme_type,
             faculty_id: faculty_id
         }, function(data) {
             $('.department').html(null);
@@ -593,7 +697,7 @@
             }
         });
     }
-</script>
+</script> --}}
 
 
 <script>
@@ -603,7 +707,7 @@
             // $("div.myDiv").hide();
             $(".show1").hide();
             $(".show2").hide();
-            $(".show7").hide();
+            $(".show3").hide();
             $(".show" + demovalue).show();
 
         });
