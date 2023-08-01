@@ -126,7 +126,12 @@
 
 
       <div class=" container col-lg-12" style="overflow:scroll;" class="image-responsive">
-            <iframe style="overflow:scroll" src="/students_waec_or_neco_1/{{$olevel_data->waco1}}" height="600" width="3000px" frameborder="0"></iframe>
+          @if($olevel_data && $olevel_data->waco1)
+    <iframe style="overflow:scroll" src="/students_waec_or_neco_1/{{$olevel_data->waco1}}" height="600" width="3000px" frameborder="0"></iframe>
+@else 
+    <img src="https://cdn.pixabay.com/photo/2016/01/03/00/43/upload-1118929_960_720.png" alt="Admin" class="rounded-circle" style="border-radius:100px" width="200" height="300">
+@endif
+
             <!-- <iframe style="overflow:scroll" src="/staffcv/{{$data->staff_cv}}" height="700" width="1000" frameborder="0"></iframe> -->
       </div>
  
@@ -167,8 +172,14 @@
 
 
       <div class=" container col-lg-12" style="overflow:scroll;" class="image-responsive">
+          
+          @if($olevel_data && $olevel_data->waco2)
+    
             <!-- <iframe style="overflow:scroll" src="/students_utme/{{$olevel_data->utme}}" height="600" width="3000px" frameborder="0"></iframe> -->
             <iframe style="overflow:scroll" src="/students_waec_or_neco_1/{{$olevel_data->waco2}}" height="600" width="3000px" frameborder="0"></iframe>
+@else 
+    <img src="https://cdn.pixabay.com/photo/2016/01/03/00/43/upload-1118929_960_720.png" alt="Admin" class="rounded-circle" style="border-radius:100px" width="200" height="300">
+@endif
       </div>
 
 
@@ -210,8 +221,13 @@
 
 
       <div class=" container col-lg-12" style="overflow:scroll;" class="image-responsive">
+            
+          @if($olevel_data && $olevel_data->utme)
             <!-- <iframe style="overflow:scroll" src="/students_utme/{{$data->utme_file}}" height="600" width="3000px" frameborder="0"></iframe> -->
             <iframe style="overflow:scroll" src="/students_utme/{{$olevel_data->utme}}" height="600" width="3000px" frameborder="0"></iframe>
+@else 
+    <img src="https://cdn.pixabay.com/photo/2016/01/03/00/43/upload-1118929_960_720.png" alt="Admin" class="rounded-circle" style="border-radius:100px" width="200" height="300">
+@endif
       </div>
 
 
@@ -672,7 +688,7 @@ if(!empty($olevel_data->utme)){
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0">                Marital Status:</h6>
-                    <span class="text-secondary">~{{$data->status}}</span>
+                    <span class="text-secondary">~{{$data->marital_status}}</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0">                D.O.B.:</h6>
@@ -686,7 +702,7 @@ if(!empty($olevel_data->utme)){
 
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0">                Religion:</h6>
-                    <span class="text-secondary">~{{$data->religion_name}}</span>
+                    <span class="text-secondary">~{{$data->religion}}</span>
                   </li>
 
 
@@ -895,25 +911,18 @@ if(!empty($olevel_data->utme)){
                   </li>
 
                                      @if(empty($data->name_of_certificate_course) || $data->name_of_certificate_course=="null")
-                                                @php
-                                                 
-                                                  $getlevel = DB::table('levels')->where('id', '=', $data->level)->first();
-                                                  $getfaculty = DB::table('faculties')->where('id', '=', $data->faculty)->first();
-                                                  $getdepartment = DB::table('departments')->where('id', '=', $data->department)->first();
-
-                                                @endphp
 
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0">        Level:</h6>
-                    <span class="text-secondary">~{{$getlevel->level_name}}</span>
+                    <span class="text-secondary">~{{$data->level}}</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0">             Faculty:</h6>
-                    <span class="text-secondary">~{{$getfaculty->faculty_name}}</span>
+                    <span class="text-secondary">~{{$data->faculty}}</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 class="mb-0">           Department:</h6>
-                    <span class="text-secondary">~{{$getdepartment->department_name}}</span>
+                    <span class="text-secondary">~{{$data->department}}</span>
                   </li>
 
 

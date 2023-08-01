@@ -1,7 +1,7 @@
 <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
     <a class="navbar-brand me-lg-5" href="../../index.html">
-        <img class="navbar-brand-dark" src="../../assets/img/brand/logo2.png" alt="School logo" /> <img
-            class="navbar-brand-light" src="../../assets/img/brand/logo2.png" alt="School logo" />
+        <img class="navbar-brand-dark" src="http:http://www.yonevas.institute/assets/newImages/Y-06.png" alt="School logo" /> <img
+            class="navbar-brand-light" src="http://www.yonevas.institute/assets/newImages/Y-06.png" alt="School badge logo" />
     </a>
     <div class="d-flex align-items-center">
         <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
@@ -57,87 +57,87 @@
                                 <!-- / Search form -->
                             </div>
                             <!-- Navbar links -->
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link text-dark notification-bell dropdown-toggle"
-                                        style="width:%; background-color:; padding:; border-radius:20px;  border-top:20px groove tomato"
-                                        data-unread-notifications="flase" href="#" role="button"
-                                        data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"><span
-                                            class="badge badge-danger">
+                            <!--<ul class="navbar-nav align-items-center">-->
+                            <!--    <li class="nav-item dropdown">-->
+                            <!--        <a class="nav-link text-dark notification-bell dropdown-toggle"-->
+                            <!--            style="width:%; background-color:; padding:; border-radius:20px;  border-top:20px groove tomato"-->
+                            <!--            data-unread-notifications="flase" href="#" role="button"-->
+                            <!--            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"><span-->
+                            <!--                class="badge badge-danger">-->
 
 
 
-                                            {{ $studentsCircularCount }}
+                            <!--                {{ $studentsCircularCount }}-->
 
 
 
-                                        </span>
-                                        <svg style="font-size:30px" xmlns="http://www.w3.org/2000/svg" width="16"
-                                            height="16" fill="currentColor" class="bi bi-envelope pl-1"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                                        </svg>
-                                    </a>
-                                    <div style="width:100%"
-                                        class="dropdown-menu dropdown-menu-lg dropdown-menu-center mt-2 py-0">
-                                        <div class="list-group list-group-flush">
-                                            <a href="#"
-                                                class="text-center text-primary fw-bold border-bottom border-light py-3">Notifications</a>
-                                            <div class="list-group-item list-group-item-action border-bottom">
-                                                <div class="row align-items-center">
-                                                    <div class="col-auto">
+                            <!--            </span>-->
+                            <!--            <svg style="font-size:30px" xmlns="http://www.w3.org/2000/svg" width="16"-->
+                            <!--                height="16" fill="currentColor" class="bi bi-envelope pl-1"-->
+                            <!--                viewBox="0 0 16 16">-->
+                            <!--                <path-->
+                            <!--                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />-->
+                            <!--            </svg>-->
+                            <!--        </a>-->
+                            <!--        <div style="width:100%"-->
+                            <!--            class="dropdown-menu dropdown-menu-lg dropdown-menu-center mt-2 py-0">-->
+                            <!--            <div class="list-group list-group-flush">-->
+                            <!--                <a href="#"-->
+                            <!--                    class="text-center text-primary fw-bold border-bottom border-light py-3">Notifications</a>-->
+                            <!--                <div class="list-group-item list-group-item-action border-bottom">-->
+                            <!--                    <div class="row align-items-center">-->
+                            <!--                        <div class="col-auto">-->
 
-                                                        {{-- <img alt="Image placeholder" src="../../assets/img/team/profile-picture-1.jpg" class="avatar-md rounded"> --}}
-                                                    </div>
+                            <!--                            {{-- <img alt="Image placeholder" src="../../assets/img/team/profile-picture-1.jpg" class="avatar-md rounded"> --}}-->
+                            <!--                        </div>-->
 
-                                                    @foreach ($studentsCircular as $studentsCircular)
-                                                        <div style="border-bottom:2px solid grey"
-                                                            class="col-12 ps-0 ms-2">
-                                                            <h2 class="text-success pt-2">{{ $studentsCircular->title }}
-                                                            </h2>
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center">
-                                                                <div>
-                                                                    {{-- <h4 class="h6 mb-0 text-small">Jose Leos</h4> --}}
-                                                                </div>
-                                                                <div class="text-end">
-                                                                    {{-- <small class="text-danger">a few moments ago</small> --}}
-                                                                    {{-- <h3>Title</h3> --}}
-                                                                </div>
-                                                                {{-- <h3 class="font-smal">Added you to an event "h3roject stand-up" tomorrow at 12:30 AM.  </h3> --}}
-                                                                <p class="font-small mt-3 mb-0">
-                                                                    {{ $studentsCircular->content }} </p>
+                            <!--                        @foreach ($studentsCircular as $studentsCircular)-->
+                            <!--                            <div style="border-bottom:2px solid grey"-->
+                            <!--                                class="col-12 ps-0 ms-2">-->
+                            <!--                                <h2 class="text-success pt-2">{{ $studentsCircular->title }}-->
+                            <!--                                </h2>-->
+                            <!--                                <div-->
+                            <!--                                    class="d-flex justify-content-between align-items-center">-->
+                            <!--                                    <div>-->
+                            <!--                                        {{-- <h4 class="h6 mb-0 text-small">Jose Leos</h4> --}}-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="text-end">-->
+                            <!--                                        {{-- <small class="text-danger">a few moments ago</small> --}}-->
+                            <!--                                        {{-- <h3>Title</h3> --}}-->
+                            <!--                                    </div>-->
+                            <!--                                    {{-- <h3 class="font-smal">Added you to an event "h3roject stand-up" tomorrow at 12:30 AM.  </h3> --}}-->
+                            <!--                                    <p class="font-small mt-3 mb-0">-->
+                            <!--                                        {{ $studentsCircular->content }} </p>-->
 
-                                                            </div>
-                                                            <a href="{{ route('read', $studentsCircular->id) }}"
-                                                                class="btn btn-success">Mark as read</a> <br><br>
-
-
+                            <!--                                </div>-->
+                            <!--                                <a href="{{ route('read', $studentsCircular->id) }}"-->
+                            <!--                                    class="btn btn-success">Mark as read</a> <br><br>-->
 
 
-                                                        </div>
-                                                        {{-- <hr/> --}}
-                                                    @endforeach
-                                                </div>
-                                            </div>
 
 
-                                            <a href="#"
-                                                class="dropdown-item text-center fw-bold rounded-bottom py-3">
-                                                <svg class="icon icon-xxs text-gray-400 me-1" fill="currentColor"
-                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                                                    <path fill-rule="evenodd"
-                                                        d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                                        clip-rule="evenodd"></path>
-                                                </svg>
-                                                View all
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                            <!--                            </div>-->
+                            <!--                            {{-- <hr/> --}}-->
+                            <!--                        @endforeach-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+
+
+                            <!--                <a href="#"-->
+                            <!--                    class="dropdown-item text-center fw-bold rounded-bottom py-3">-->
+                            <!--                    <svg class="icon icon-xxs text-gray-400 me-1" fill="currentColor"-->
+                            <!--                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
+                            <!--                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>-->
+                            <!--                        <path fill-rule="evenodd"-->
+                            <!--                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"-->
+                            <!--                            clip-rule="evenodd"></path>-->
+                            <!--                    </svg>-->
+                            <!--                    View all-->
+                            <!--                </a>-->
+                            <!--            </div>-->
+                            <!--        </div>-->
+                            <!--    </li>-->
+                            <!--</ul>-->
 
 
 

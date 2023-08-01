@@ -158,7 +158,7 @@
 
 					<form method="POST" action="{{ route('register') }}">
 						@csrf
-						<label for="chk" aria-hidden="true">Sign up</label>
+						<label for="chk" aria-hidden="true">Create Account</label>
                         <div class="form-4-grid">
                             <input style="grid-column: span 2" class="input-here" type="text" name="first_name" placeholder="First name" required="">
                             <input class="input-here" type="text" name="last_name" placeholder="Last name" required="">
@@ -168,13 +168,13 @@
                             <input class="input-here" type="password" name="password" placeholder="Password" required="">
                             <input class="input-here" type="password" name="password_confirmation" placeholder="Confirm password" required="">
                         </div>
-                        <input class="input-here" type="checkbox" name="referral" id="referral" /><label for="referral" style="color:#E4D035;">Referral</label>
-                        <div id="div" style="display: none; align-items:center;">
-                            <input id="referral-name" class="input-here" type="text" name="referral_name" placeholder="referred by">
-                            <input id="referral-email" class="input-here" type="email" name="referral_email" placeholder="agent email">
+                        <input value="" style="display:none" class="input-here" type="hidden" name="referral" id="referral" /><label for="referral" style="display:none">Referral</label>
+                        <div style="display:none" id="div" style="display: none; align-items:center;">
+                            <input value="" id="referral-name" class="input-here" type="hidden" name="referral_name" placeholder="referred by">
+                            <input value="" id="referral-email" class="input-here" type="hidden" name="referral_email" placeholder="agent email">
                         </div>
                         
-                      <button class="button-here" type="submit" >Sign up</button>
+                      <button class="button-here" type="submit" >Create Account</button>
 					</form>
 				</div>
 		</div>

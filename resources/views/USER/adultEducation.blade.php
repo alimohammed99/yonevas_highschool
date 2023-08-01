@@ -39,15 +39,15 @@
                                 <div class="feature-banner__image">
                                     <picture>
                                         <source
-                                            srcset="assets/newImages/adult-learning.jpeg?h=4da1fa98&amp;itok=yaN7h3BB 1x"
+                                            srcset="assets/newImages/adult-learning.png?h=4da1fa98&amp;itok=yaN7h3BB 1x"
                                             media="screen and (min-width: 90em)" type="image/png" />
                                         <source
-                                            srcset="assets/newImages/adult-learning.jpeg?h=4da1fa98&amp;itok=ODq8_SVs 1x"
+                                            srcset="assets/newImages/adult-learning.png?h=4da1fa98&amp;itok=ODq8_SVs 1x"
                                             media="screen and (min-width: 64em)" type="image/png" />
                                         <source
-                                            srcset="assets/newImages/adult-learning.jpeg?h=4da1fa98&amp;itok=kGzeO0oN 1x"
+                                            srcset="assets/newImages/adult-learning.png?h=4da1fa98&amp;itok=kGzeO0oN 1x"
                                             media="(min-width: 0em)" type="image/png" />
-                                        <img src="assets/newImages/adult-learning.jpeg?itok=mkYpVdvv" alt="Pixels Bench"
+                                        <img src="assets/newImages/adult-learning.png?itok=mkYpVdvv" alt="Pixels Bench"
                                             title="pixel_bench_crop.png" typeof="foaf:Image" />
 
                                     </picture>
@@ -242,7 +242,6 @@
                         <p>Week 4</p>
                         <ol>
                             <li>Retirement planning and pension schemes</li>
-                            <li>401(k) plans and Individual Retirement Accounts (IRAs)</li>
                             <li>Strategies for maximizing retirement savings</li>
                         </ol>
 

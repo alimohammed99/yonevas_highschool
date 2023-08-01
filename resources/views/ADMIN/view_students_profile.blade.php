@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                   <a href="{{url('edit_students', $data->id)}}" class="btn btn-success">Edit Profile</a>
+                   <a href="{{url('edit_students', $data->student_id)}}" class="btn btn-success">Edit Profile</a>
                     </div>
                 </div>
                 <div class="row">
@@ -651,25 +651,6 @@
                                             </div>
                                         </div>
 
-
-
-
-
-
-
-
-
-
-
-                                        @if(empty($data->name_of_certificate_course) || $data->name_of_certificate_course=="null")
-                                                @php
-
-                                                  $getlevel = DB::table('levels')->where('id', '=', $data->level)->first();
-                                                  $getfaculty = DB::table('faculties')->where('id', '=', $data->faculty)->first();
-                                                  $getdepartment = DB::table('departments')->where('id', '=', $data->department)->first();
-
-                                                @endphp
-
                                             <div class="row">
                                                 <div class="col-md-6">
                                                 <label style="font-size:22px">Level:</label>
@@ -677,7 +658,7 @@
 
                                                 <div class="col-md-6">
 
-                                                <p style="font-size:20px">{{$getlevel->level_name}}</p>
+                                                <p style="font-size:20px">{{$data->level}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -685,7 +666,7 @@
                                                     <label style="font-size:22px">Faculty:</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                  <p style="font-size:20px">{{$getfaculty->faculty_name}}</p>
+                                                  <p style="font-size:20px">{{$data->faculty}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -693,10 +674,9 @@
                                                 <label style="font-size:22px">Department:</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                  <p style="font-size:20px">{{$getdepartment->department_name}}</p>
+                                                  <p style="font-size:20px">{{$data->department}}</p>
                                                 </div>
                                             </div>
-                                        @endif
 
 
                                         @if(!empty($data->name_of_certificate_course) && $data->name_of_certificate_course != "null")
