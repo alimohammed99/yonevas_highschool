@@ -20,6 +20,7 @@
             color: white;
             transition: 0.7s;
         }
+
     </style>
 </head>
 
@@ -30,25 +31,24 @@
     @include('studentdashboard.navbar')
 
     @if (session()->has('success_message'))
-        <div class="alert alert-success alert-dismissible">
-            <button class="close" type="button" data-dismiss="alert">x</button>
-            {{ session()->get('success_message') }}
-        </div>
+    <div class="alert alert-success alert-dismissible">
+        <button class="close" type="button" data-dismiss="alert">x</button>
+        {{ session()->get('success_message') }}
+    </div>
     @endif
 
 
     @if (session()->has('error_message'))
-        <div class="alert alert-danger alert-dismissible">
-            <button class="close" type="button" data-dismiss="alert">x</button>
-            {{ session()->get('error_message') }}
-        </div>
+    <div class="alert alert-danger alert-dismissible">
+        <button class="close" type="button" data-dismiss="alert">x</button>
+        {{ session()->get('error_message') }}
+    </div>
     @endif
 
     <div class="container mb-5">
 
 
-        <h1
-            style="text-transform:uppercase; color:#5e72e4; font-style:italic; font-family:broadway; font-size:30px; margin-top:0px; border-radius:70px 10px 70px 10px; background-color:white; padding:15px; margin-bottom:">
+        <h1 style="text-transform:uppercase; color:#5e72e4; font-style:italic; font-family:broadway; font-size:30px; margin-top:0px; border-radius:70px 10px 70px 10px; background-color:white; padding:15px; margin-bottom:">
             You can downlaod the forms below:</h1>
 
 
@@ -62,8 +62,7 @@
 
                     <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4 s_l">
                         <td class="p-4" style="border-right: 5px double black">
-                            <a title="Click to download change of course form" class="btn btn-info s_l_l"
-                                href="{{ asset('assets/change_of_course_form.pdf') }}" download="change_of_course_form" style="font-size:20px">
+                            <a title="Click to download change of course form" class="btn btn-info s_l_l" href="{{ asset('assets/change_of_course_form.pdf') }}" download="change_of_course_form" style="font-size:20px">
                                 Change of Course form
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
                         </td>
@@ -71,18 +70,16 @@
 
                     <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4 s_l">
                         <td class="p-4" style="">
-                            <a title="Click to download change of course form" class="btn btn-danger s_l_l"
-                                href="{{ asset('assets/financial_aid_application_form.pdf') }}" download="financial_aid_application_form" style="font-size:20px">
-                               Financial Aid Application form
+                            <a title="Click to download change of course form" class="btn btn-danger s_l_l" href="{{ asset('assets/financial_aid_application_form.pdf') }}" download="financial_aid_application_form" style="font-size:20px">
+                                Financial Aid Application form
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
                         </td>
                     </div>
 
                     <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4 s_l">
                         <td class="p-4" style="border-left: 5px double black">
-                            <a title="Click to download change of course form" class="btn btn-success s_l_l"
-                                href="{{ asset('assets/leave_of_absence-form.pdf') }}" download="leave_of_absence-form" style="font-size:20px">
-                               Leave of absence Form
+                            <a title="Click to download change of course form" class="btn btn-success s_l_l" href="{{ asset('assets/leave_of_absence-form.pdf') }}" download="leave_of_absence-form" style="font-size:20px">
+                                Leave of absence Form
 
                                 <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
                         </td>
@@ -94,29 +91,27 @@
 
         <div class="row table-responsive"">
 
-            <table style="border: 2px solid green">
-                <tr style="text-align: center; align:center">
+            <table style=" border: 2px solid green">
+            <tr style="text-align: center; align:center">
 
 
-                    <div style="font-size:23px; text-align:center;" class="col-lg-6 p-4 s_l">
-                        <td class="p-4" style="border-right: 5px double black">
-                            <a title="Click to download change of course form" class="btn btn-warning s_l_l"
-                                href="{{ asset('assets/scholarship_application_form.pdf') }}" download="scholarship_application_form" style="font-size:20px">
-                                Scholarship Application form
+                <div style="font-size:23px; text-align:center;" class="col-lg-6 p-4 s_l">
+                    <td class="p-4" style="border-right: 5px double black">
+                        <a title="Click to download change of course form" class="btn btn-warning s_l_l" href="{{ asset('assets/scholarship_application_form.pdf') }}" download="scholarship_application_form" style="font-size:20px">
+                            Scholarship Application form
 
-                                <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
-                        </td>
-                    </div>
+                            <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
+                    </td>
+                </div>
 
-                    <div style="font-size:23px; text-align:center;" class="col-lg-6 p-4 s_l">
-                        <td class="p-4" style="border: 2px dotted black">
-                            <a title="Click to download change of course form" class="btn btn-secondary s_l_l"
-                                href="{{ asset('assets/transcript_request_form.pdf') }}" download="transcript_request_form" style="font-size:20px">
-                               Transcript Request form
-                                <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
-                        </td>
-                    </div>
-                </tr>
+                <div style="font-size:23px; text-align:center;" class="col-lg-6 p-4 s_l">
+                    <td class="p-4" style="border: 2px dotted black">
+                        <a title="Click to download change of course form" class="btn btn-secondary s_l_l" href="{{ asset('assets/transcript_request_form.pdf') }}" download="transcript_request_form" style="font-size:20px">
+                            Transcript Request form
+                            <i style="font-size:30px" class="bi bi-arrow-down-circle"></i> </a>
+                    </td>
+                </div>
+            </tr>
             </table>
 
         </div>

@@ -40,7 +40,7 @@
 
 
     <br>
-    
+
     @if(!$isRegComplete == 1)
     <li class="nav-item ">
             <span>
@@ -71,7 +71,7 @@
 
     if (Auth::check()) {
 
-    
+
 
     $getCurrentUserId = Auth::user()->id;
 
@@ -154,7 +154,7 @@
 
 
     <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
+        <a href="tuition_and_fees" target="_self" class="nav-link d-flex justify-content-between">
             <span class="sidebar-text">Tuition & Fees</span>
         </a>
     </li>

@@ -585,7 +585,11 @@ route::get('/services_and_links', [StudentController::class, 'services_and_links
 
 route::get('/forms', [StudentController::class, 'forms']);
 
+route::get('/tuition_and_fees', [StudentController::class, 'tuition_and_fees']);
+
 route::get('/course_feedback', [StudentController::class, 'course_feedback']);
+
+
 
 Route::post("/submit_course_feedback", [StudentController::class, "submit_course_feedback"]);
 

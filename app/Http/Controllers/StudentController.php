@@ -89,14 +89,14 @@ use Illuminate\Support\Facades\Validator;
 
 class StudentController extends Controller
 {
-    
-public function __construct()
-{
-    // Your condition to determine whether to redirect or not
-    if (!Auth::check()) {
-        return redirect('/');
+
+    public function __construct()
+    {
+        // Your condition to determine whether to redirect or not
+        if (!Auth::check()) {
+            return redirect('/');
+        }
     }
-}
 
     public function pay_school_fees()
     {
@@ -541,33 +541,33 @@ public function __construct()
 
 
             if (Auth::user()->reg_complete == 1) {
-                
-$data = User::where('users.id', $getCurrentUserId)
-    ->join('students_details', 'users.id', '=', 'students_details.student_id')
-    ->join('countries', 'students_details.country', '=', 'countries.id')
-    ->join('states', 'students_details.state', '=', 'states.id')
-    ->join('cities', 'students_details.city', '=', 'cities.id')
-    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-        ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-        ->join('departments', 'students_details.department', '=', 'departments.id')
-    ->select(
-        'users.id as id',
-        'users.*',
-        'students_details.*',
-        'countries.name_country',
-        'states.name_state',
-        'cities.name_city',
-        'academic_sessions.academic_session',
-        'programme_types.programme', 
-        'faculties.faculty_name as faculty', 
-        'departments.department_name as department'
-    )
-    ->first();
-    $exist = ApplicantsOldResults::where('student_id', auth()->user()->id);
-    if (!$exist)return redirect('/upload_olevel_and_utme')->with('error_message', 'Please Upload your documents first');
+
+                $data = User::where('users.id', $getCurrentUserId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                    ->join('departments', 'students_details.department', '=', 'departments.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme',
+                        'faculties.faculty_name as faculty',
+                        'departments.department_name as department'
+                    )
+                    ->first();
+                $exist = ApplicantsOldResults::where('student_id', auth()->user()->id);
+                if (!$exist) return redirect('/upload_olevel_and_utme')->with('error_message', 'Please Upload your documents first');
                 $olevel_data = $exist->select('applicants_old_results.utme as utme', 'applicants_old_results.waec_or_neco_1 as waco1', 'applicants_old_results.waec_or_neco_2 as waco2')->first();
-                
+
                 $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
                 $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
@@ -638,14 +638,14 @@ $data = User::where('users.id', $getCurrentUserId)
 
     public function update_student_profile(Request $request, $id)
     {
-            $rules = [
-                'countries' => 'required',
-                'states' => 'required',
-                'cities' => 'required',
-            ];
-            
+        $rules = [
+            'countries' => 'required',
+            'states' => 'required',
+            'cities' => 'required',
+        ];
+
         $validator = Validator::make($request->all(), $rules);
-        
+
         if ($validator->fails()) {
             return back()->with('error_message', '[countries,state,city] must be filled!');
         }
@@ -678,7 +678,7 @@ $data = User::where('users.id', $getCurrentUserId)
 
 
             $data2 = StudentsDetails::where('student_id', auth()->user()->id)->first();
-        // dd($data2->country, $data2->state, $data2->city);
+            // dd($data2->country, $data2->state, $data2->city);
 
             $data2->marital_status = $request->marital_status ?? $data2->marital_status;
 
@@ -704,11 +704,11 @@ $data = User::where('users.id', $getCurrentUserId)
                 $data2->student_image = $imagename;
             }
 
-            $data2->country = $request->countries??$data2->country;
+            $data2->country = $request->countries ?? $data2->country;
 
-            $data2->state = $request->states??$data2->state;
+            $data2->state = $request->states ?? $data2->state;
 
-            $data2->city = $request->cities??$data2->city;
+            $data2->city = $request->cities ?? $data2->city;
 
             $data2->address = $request->address ?? $data2->address;
 
@@ -756,14 +756,14 @@ $data = User::where('users.id', $getCurrentUserId)
 
             $data2->type_of_enrollment = $request->type_of_enrollment ??  $data2->type_of_enrollment;
 
-            $data2->enrollment_period = $request->enrollment_period??$data2->enrollment_period;
+            $data2->enrollment_period = $request->enrollment_period ?? $data2->enrollment_period;
 
-            $data2->free_time = $request->free_time??$data2->free_time;
+            $data2->free_time = $request->free_time ?? $data2->free_time;
 
             $data2->residential_home = $request->residential_home ?? $data2->residential_home;
 
 
-            $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization??$data2->group_of_individual_or_organization;
+            $data2->group_of_individual_or_organization = $request->group_of_individual_or_organization ?? $data2->group_of_individual_or_organization;
 
             if ($data2->group_of_individual_or_organization == 'Yes') {
 
@@ -779,33 +779,31 @@ $data = User::where('users.id', $getCurrentUserId)
             $data2->military_force = $request->military_force ?? $data2->military_force;
 
             $data2->government_official = $request->government_official ?? $data2->government_official;
-            if($request->medical_conditions){
+            if ($request->medical_conditions) {
                 $data2->medical_conditions = $request->medical_conditions;
             }
 
-            if($request->academic_session) $data2->academic_session = $request->academic_session ;
+            if ($request->academic_session) $data2->academic_session = $request->academic_session;
 
-            if($request->programme_type)$data2->programme_type = $request->programme_type;
+            if ($request->programme_type) $data2->programme_type = $request->programme_type;
 
-            if($data2->programme_type == '1'){
-              if($request->de_faculty)$data2->faculty = $request->de_faculty;
+            if ($data2->programme_type == '1') {
+                if ($request->de_faculty) $data2->faculty = $request->de_faculty;
 
-              if($request->de_department)$data2->department = $request->de_department;
+                if ($request->de_department) $data2->department = $request->de_department;
 
-              if($request->de_level) $data2->level = $request->de_level;
+                if ($request->de_level) $data2->level = $request->de_level;
 
-              $data2->name_of_certificate_course = 'null';
+                $data2->name_of_certificate_course = 'null';
+            } elseif ($data2->programme_type == '2') {
 
-            }elseif($data2->programme_type == '2'){
+                $data2->level = 'null';
 
-              $data2->level ='null';
+                $data2->faculty = 'null';
 
-              $data2->faculty ='null';
+                $data2->department = 'null';
 
-              $data2->department ='null';
-
-              $data2->name_of_certificate_course = $request->name_of_certificate_course;
-
+                $data2->name_of_certificate_course = $request->name_of_certificate_course;
             }
 
 
@@ -1029,8 +1027,8 @@ $data = User::where('users.id', $getCurrentUserId)
         }
     }
 
-  
-      public function getDepartments(Request $request)
+
+    public function getDepartments(Request $request)
     {
         $states = Departments::where('faculty_id', '=', $request->faculty_id)->orderBy('department_name')->get();
         return $states;
@@ -1228,10 +1226,23 @@ $data = User::where('users.id', $getCurrentUserId)
             $data->save();
 
             return redirect()->back()->with('success_message', 'Feedback has been submitted. Thanks for your time. :)');
-
         } else {
 
             return redirect()->back()->with('error_message', 'Access denied!');
         }
+    }
+
+
+    public function tuition_and_fees()
+    {
+
+        $data =  Auth::user();
+
+        $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+
+        $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+
+
+        return view("studentdashboard.tuition_and_fees", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
     }
 }
