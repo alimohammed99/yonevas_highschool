@@ -589,6 +589,10 @@ route::get('/tuition_and_fees', [StudentController::class, 'tuition_and_fees']);
 
 route::get('/course_feedback', [StudentController::class, 'course_feedback']);
 
+route::get('/view_grades', [StudentController::class, 'view_grades']);
+
+route::get('/generate_transcript', [StudentController::class, 'generate_transcript']);
+
 
 
 Route::post("/submit_course_feedback", [StudentController::class, "submit_course_feedback"]);

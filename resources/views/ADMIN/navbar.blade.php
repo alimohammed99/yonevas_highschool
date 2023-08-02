@@ -103,7 +103,7 @@
                                                         <img alt="Image placeholder"
                                                             src="../../assets/img/team/profile-picture-2.jpg"
                                                             class="avatar-md rounded">
-                                                    </div>
+                                                   </div>
                                                     <div class="col ps-0 ms-2">
                                                         <div class="d-flex justify-content-between align-items-center">
                                                             <div>

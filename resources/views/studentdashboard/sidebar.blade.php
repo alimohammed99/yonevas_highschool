@@ -12,7 +12,7 @@
         <span class="sidebar-icon">
             <!-- <img src="../../assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo"> -->
         </span><br>
-        <span style="color:green; border:none; border-radius:20px; padding:12px; background:white" class="mt-5 ml-5 mb-4 ms-1 sidebar-text">Hi, {{$data->last_name}}  </span><br><br>
+        <span style="color:green; border:none; border-radius:20px; padding:12px; background:white" class="mt-5 ml-5 mb-4 ms-1 sidebar-text">Hi, {{$data->last_name}} </span><br><br>
 
     </li>
     <li class="nav-item  active ">
@@ -43,11 +43,11 @@
 
     @if(!$isRegComplete == 1)
     <li class="nav-item ">
-            <span>
+        <span>
 
-                <a href="{{url('update_student_profile')}}" target="_self" class="nav-link d-flex justify-content-between">
-                    <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Update Profile<span style="font-size:25px; font-weight:bolder">!</span></span>
-                </a></span>
+            <a href="{{url('update_student_profile')}}" target="_self" class="nav-link d-flex justify-content-between">
+                <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Update Profile<span style="font-size:25px; font-weight:bolder">!</span></span>
+            </a></span>
     </li>
     @endif
 
@@ -86,12 +86,12 @@
 
     @if(!$student_documents_status == 9)
     <li class="nav-item ">
-            <span>
+        <span>
 
-                <a href="{{url('upload_olevel_and_utme')}}" target="_self" class="nav-link d-flex justify-content-between">
-                    <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Upload Documents<span style="font-size:25px; font-weight:bolder">!</span>
-                    </span>
-                </a></span>
+            <a href="{{url('upload_olevel_and_utme')}}" target="_self" class="nav-link d-flex justify-content-between">
+                <span style="color:red; font-size:17px; background:white; padding:5px; border-radius:15px" class="sidebar-text">Upload Documents<span style="font-size:25px; font-weight:bolder">!</span>
+                </span>
+            </a></span>
     </li>
     @endif
 
@@ -160,10 +160,33 @@
     </li>
 
 
-    <li class="nav-item ">
-        <a href="javascript:void(0)" target="_self" class="nav-link d-flex justify-content-between">
-            <span class="sidebar-text">Transcripts / Grades</span>
-        </a>
+    <li class="nav-item">
+        <span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#submenu-app2">
+            <span>
+
+                <span class="sidebar-text">Transcripts</span>
+            </span>
+            <span class="link-arrow">
+                <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+            </span>
+        </span>
+        <div class="multi-level collapse " role="list" id="submenu-app2" aria-expanded="false">
+            <ul class="flex-column nav">
+                <li class="nav-item ">
+                        <a href="{{ url('view_grades') }}" target="_self" class="nav-link d-flex justify-content-between">
+                            <span class="sidebar-text">View grades</span>
+                        </a>
+                </li>
+                <li class="nav-item ">
+                        <a href="{{ url('generate_transcript') }}" target="_self" class="nav-link d-flex justify-content-between">
+                            <span class="sidebar-text">Generate Transcript</span>
+                        </a>
+                </li>
+
+            </ul>
+        </div>
     </li>
 
 

@@ -1245,4 +1245,36 @@ class StudentController extends Controller
 
         return view("studentdashboard.tuition_and_fees", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
     }
+
+
+
+
+    public function view_grades()
+    {
+
+        $data =  Auth::user();
+
+        $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+
+        $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+
+
+        return view("studentdashboard.view_grades", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
+    }
+
+
+
+
+    public function generate_transcript()
+    {
+
+        $data =  Auth::user();
+
+        $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
+
+        $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
+
+
+        return view("studentdashboard.generate_transcript", compact('studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
+    }
 }
