@@ -57,60 +57,52 @@
         <h3 style="margin-top:20px; color:brown; font-size:27px">Estimated cost per semester is calculated based upon
             all possible fee payable and scholarship deductions.
         </h3>
-
         <div class="row table-responsive">
-            <table style=" border: 2px solid green">
-                <tr style="text-align: center; align:center; border-bottom:2px solid grey">
+            <div style="display:flex; align-items:center; justify-content:space-between">
+                <span style="font-size:22px; word-break: keep-all" class="p-4" style="border-right: 5px double black">
+                    Total fee due per year:
+                </span>
+
+                <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
+                    <td style="font-size:22px" class="p-4" style="border-right: 5px double black">
+                        <span style="color:indigo; font-size:25px">₦229,480</span>
+                    </td>
+                </div>
+
+                <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
+                    <td class="p-4 s_l" style="border: 17px groove black">
+                        <a title="Click to download change of course form" class="btn btn-success s_l_l"
+                            href="javascript:;" download="transcript_request_form" style="font-size:20px">
+                            PAY NOW
+                            <i style="font-size:26px" class="uil uil-credit-card"></i> </a>
+                    </td>
+                </div>
+            </div>
+
+            <div style="display:flex; align-items:center; justify-content:space-between">
 
 
-                    <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
-                        <td style="font-size:22px" class="p-4" style="border-right: 5px double black">
-                            Total fee due per year:
-                        </td>
-                    </div>
+                <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
+                    <td style="font-size:22px" class="p-4" style="border-right: 5px double black">
+                        Pay part of the fee:
+                    </td>
+                </div>
 
-                    <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
-                        <td style="font-size:22px" class="p-4" style="border-right: 5px double black">
-                            <span style="color:indigo; font-size:25px">₦229,480</span>
-                        </td>
-                    </div>
+                <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
+                    <td style="font-size:22px" class="p-4" style="border-right: 5px double black;">
+                        <span style="color:indigo; font-size:25px">₦114,740</span>
+                    </td>
+                </div>
 
-                    <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
-                        <td class="p-4 s_l" style="border: 17px groove black">
-                            <a title="Click to download change of course form" class="btn btn-success s_l_l"
-                                href="javascript:;" download="transcript_request_form" style="font-size:20px">
-                                PAY NOW
-                                <i style="font-size:26px" class="uil uil-credit-card"></i> </a>
-                        </td>
-                    </div>
-                </tr>
-
-                <tr style="text-align: center; align:center; border-bottom:2px solid grey">
-
-
-                    <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
-                        <td style="font-size:22px" class="p-4" style="border-right: 5px double black">
-                            Pay part of the fee:
-                        </td>
-                    </div>
-
-                    <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
-                        <td style="font-size:22px" class="p-4" style="border-right: 5px double black;">
-                            <span style="color:indigo; font-size:25px">₦114,740</span>
-                        </td>
-                    </div>
-
-                    <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
-                        <td class="p-4 s_l" style="border: 17px groove black">
-                            <a title="Click to download change of course form" class="btn btn-success s_l_l"
-                                href="javascript:void(0)" download="transcript_request_form" style="font-size:20px">
-                                PAY NOW
-                                <i style="font-size:26px" class="uil uil-credit-card"></i> </a>
-                        </td>
-                    </div>
-                </tr>
-            </table>
-
+                <div style="font-size:23px; text-align:center;" class="col-lg-4 p-4">
+                    <td class="p-4 s_l" style="border: 17px groove black">
+                        <a title="Click to download change of course form" class="btn btn-success s_l_l"
+                            href="javascript:void(0)" download="transcript_request_form" style="font-size:20px">
+                            PAY NOW
+                            <i style="font-size:26px" class="uil uil-credit-card"></i> </a>
+                    </td>
+                </div>
+            </div>
         </div>
 
         <p class="pt-3" style="color:slateblue; font-size:22px">Feel free to contact registrar office for any

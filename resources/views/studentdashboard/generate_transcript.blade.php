@@ -80,7 +80,7 @@
 
         <h3 style="font-size:25px; color:red">
             <marquee scrollamount="10">
-                No records found! <i style="font-size:35px;" class="uil uil-sad"></i>
+                No record found! <i style="font-size:35px;" class="uil uil-sad"></i>
             </marquee>
         </h3>
 

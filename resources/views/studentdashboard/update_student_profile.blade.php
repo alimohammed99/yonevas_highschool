@@ -411,9 +411,9 @@
                                 class="myselection form-control">
                                 <option value="">Select Programme Type</option>
                                 <option class="form-control" value="1">BACHELORS DEGREE</option>
-                                <!--<option class="form-control" value="2">PROFESSIONAL CERTIFICATE/NON-DEGREE-->
-                                <!--</option>-->
-                                <!--<option class="form-control" value="3">CONTINOUS LEARNING EDUCATION</option>-->
+                                <option class="form-control" value="2">PROFESSIONAL CERTIFICATE/NON-DEGREE
+                                </option>
+                                <option class="form-control" value="3">CONTINOUS LEARNING EDUCATION</option>
                             </select>
                         </div>
 

@@ -679,3 +679,7 @@ Route::get("/view_job_applicants", [AdminController::class, "view_job_applicants
 route::post('/upload_application_form_pdf', [AdminController::class, 'upload_application_form_pdf']);
 
 Route::get("/students_course_feedback", [AdminController::class, "students_course_feedback"]);
+
+
+
+route::post('/non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);

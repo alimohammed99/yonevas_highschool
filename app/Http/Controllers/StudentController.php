@@ -18,6 +18,10 @@ use App\Models\Departments;
 
 use App\Models\ProgrammeType;
 
+use App\Models\NonDegreeCourse;
+
+use App\Models\NonDegreeStudentCourse;
+
 use App\Models\Logo;
 
 use App\Models\Semesters;
@@ -542,28 +546,53 @@ class StudentController extends Controller
 
             if (Auth::user()->reg_complete == 1) {
 
-                $data = User::where('users.id', $getCurrentUserId)
+                $programEnrolled = User::where('users.id', $getCurrentUserId)
                     ->join('students_details', 'users.id', '=', 'students_details.student_id')
-                    ->join('countries', 'students_details.country', '=', 'countries.id')
-                    ->join('states', 'students_details.state', '=', 'states.id')
-                    ->join('cities', 'students_details.city', '=', 'cities.id')
-                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                    ->join('departments', 'students_details.department', '=', 'departments.id')
-                    ->select(
-                        'users.id as id',
-                        'users.*',
-                        'students_details.*',
-                        'countries.name_country',
-                        'states.name_state',
-                        'cities.name_city',
-                        'academic_sessions.academic_session',
-                        'programme_types.programme',
-                        'faculties.faculty_name as faculty',
-                        'departments.department_name as department'
-                    )
+                    ->select('students_details.programme_type')
                     ->first();
+                if ($programEnrolled->programme_type == '1') {
+                    $data = User::where('users.id', $getCurrentUserId)
+                        ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                        ->join('countries', 'students_details.country', '=', 'countries.id')
+                        ->join('states', 'students_details.state', '=', 'states.id')
+                        ->join('cities', 'students_details.city', '=', 'cities.id')
+                        ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                        ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                        ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                        ->join('departments', 'students_details.department', '=', 'departments.id')
+                        ->select(
+                            'users.id as id',
+                            'users.*',
+                            'students_details.*',
+                            'countries.name_country',
+                            'states.name_state',
+                            'cities.name_city',
+                            'academic_sessions.academic_session',
+                            'programme_types.programme',
+                            'faculties.faculty_name as faculty',
+                            'departments.department_name as department'
+                        )
+                        ->first();
+                } else {
+                    $data = User::where('users.id', $getCurrentUserId)
+                        ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                        ->join('countries', 'students_details.country', '=', 'countries.id')
+                        ->join('states', 'students_details.state', '=', 'states.id')
+                        ->join('cities', 'students_details.city', '=', 'cities.id')
+                        ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                        ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                        ->select(
+                            'users.id as id',
+                            'users.*',
+                            'students_details.*',
+                            'countries.name_country',
+                            'states.name_state',
+                            'cities.name_city',
+                            'academic_sessions.academic_session',
+                            'programme_types.programme'
+                        )
+                        ->first();
+                }
                 $exist = ApplicantsOldResults::where('student_id', auth()->user()->id);
                 if (!$exist) return redirect('/upload_olevel_and_utme')->with('error_message', 'Please Upload your documents first');
                 $olevel_data = $exist->select('applicants_old_results.utme as utme', 'applicants_old_results.waec_or_neco_1 as waco1', 'applicants_old_results.waec_or_neco_2 as waco2')->first();
@@ -599,20 +628,101 @@ class StudentController extends Controller
 
         if ($usertype == '3') {
 
-            $data = User::where('users.id', $getCurrentUserId)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                ->join('countries', 'students_details.country', '=', 'countries.id')
-                ->join('states', 'students_details.state', '=', 'states.id')
-                ->join('cities', 'students_details.city', '=', 'cities.id')
-                ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-                ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-                // ->join('levels', 'students_details.level', '=', 'levels.id')
-                ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                ->join('departments', 'students_details.department', '=', 'departments.id')
-                // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
 
-
-                ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'students_details.marital_status as status', 'students_details.date_of_birth', 'students_details.zip_code', 'students_details.religion', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'students_details.military_force', 'students_details.government_official', 'students_details.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
-
+            $programEnrolled = User::where('users.id', $getStudentId)
+                ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                ->select('students_details.programme_type')
+                ->first();
+            if ($programEnrolled->programme_type == '1') {
+                $data = User::where('users.id', $getCurrentUserId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                    ->join('departments', 'students_details.department', '=', 'departments.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme',
+                        'faculties.faculty_name as faculty',
+                        'departments.department_name as department'
+                    )
+                    ->first();
+            } else {
+                $data = User::where('users.id', $getCurrentUserId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme'
+                    )
+                    ->first();
+            }
+            $programEnrolled = User::where('users.id', $getStudentId)
+                ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                ->select('students_details.programme_type')
+                ->first();
+            if ($programEnrolled->programme_type == '1') {
+                $data = User::where('users.id', $getCurrentUserId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                    ->join('departments', 'students_details.department', '=', 'departments.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme',
+                        'faculties.faculty_name as faculty',
+                        'departments.department_name as department'
+                    )
+                    ->first();
+            } else {
+                $data = User::where('users.id', $getCurrentUserId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme'
+                    )
+                    ->first();
+            }
 
 
             $data1 = MaritalStatus::all();
@@ -946,20 +1056,63 @@ class StudentController extends Controller
         }
     }
 
+    public function non_degree_course_reg(Request $request)
+    {
+        $nonDegreeCourseToStudentData = new NonDegreeStudentCourse();
+        $nonDegreeCourseToStudentData->student_id = Auth::user()->id;
+        $nonDegreeCourseToStudentData->status = 0;
+        $nonDegreeCourseToStudentData->course_name = $request->name_of_certificate_course;
+
+        return back()->with('success_message', 'You have successfully added the new course!');
+    }
+
     public function students_course_reg()
     {
+        $getStudentId = Auth::user()->id;
+
+        $programEnrolled = User::where('users.id', $getStudentId)
+            ->join('students_details', 'users.id', '=', 'students_details.student_id')
+            ->select('students_details.programme_type')
+            ->first();
+        // dd($programEnrolled->programme_type);
+
+        // If users want to do course reg without filling their full details.
+        // If users want to do course reg without filling their full details.
+        if (!$programEnrolled) {
+            // return redirect()->route('upload_students_profile');
+            return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration.');
+        }
+
+
+        if ($programEnrolled->programme_type == '3' || $programEnrolled->programme_type == '2') {
+
+            $data = User::where('users.id', $getStudentId)
+                ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                ->select(
+                    'users.id as id',
+                    'users.*',
+                    'students_details.*',
+                    'academic_sessions.academic_session',
+                    'programme_types.programme'
+                )
+                ->first();
+
+            $course_details = NonDegreeStudentCourse::where('student_id', $getStudentId)
+                ->get();
+
+            $courses = NonDegreeCourse::where('programme_type', $programEnrolled->programme_type)->get();
+            return view("studentdashboard.non_degree_course_reg", compact('data', 'course_details', 'courses'));
+        }
+
 
         $usertype = Auth::user()->usertype;
-
-        $getStudentId = Auth::user()->id;
 
 
         if ($usertype == '3') {
 
             if (Auth::user()->reg_complete == 1) {
-
-
-
                 $data = User::where('users.id', $getStudentId)->join('students_details', 'users.id', '=', 'students_details.student_id')
                     ->join('countries', 'students_details.country', '=', 'countries.id')
                     ->join('states', 'students_details.state', '=', 'states.id')
@@ -970,8 +1123,6 @@ class StudentController extends Controller
                     ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
                     ->join('departments', 'students_details.department', '=', 'departments.id')
                     // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
-
-
                     ->select('users.id as id', 'users.*', 'students_details.*',  'countries.name_country', 'states.name_state', 'cities.name_city', 'academic_sessions.academic_session', 'programme_types.programme')->first();
 
                 $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
@@ -1231,6 +1382,7 @@ class StudentController extends Controller
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
+
 
 
     public function tuition_and_fees()
