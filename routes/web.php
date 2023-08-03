@@ -81,7 +81,6 @@ Route::post("/update_faculties/{id}", [AdminController::class, "update_faculties
 
 
 
-
 route::get('/view_departments', [AdminController::class, 'view_departments']);
 
 route::post('/upload_departments', [AdminController::class, 'upload_departments']);
@@ -679,3 +678,7 @@ Route::get("/students_course_feedback", [AdminController::class, "students_cours
 
 
 route::post('/add_non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);
+
+route::get('/a_noncourse', [AdminController::class, 'a_noncourse']);
+
+Route::post('/ad-noncourse', [AdminController::class, 'ad_noncourse'])->name('ad_noncourse');

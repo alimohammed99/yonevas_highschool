@@ -88,6 +88,8 @@ use App\Models\CourseFeedback;
 
 use Illuminate\Support\Facades\Stroage;
 
+use App\Models\NonDegreeCourse;
+
 
 class AdminController extends Controller
 {
@@ -100,6 +102,32 @@ class AdminController extends Controller
 
             return $next($request);
         });
+    }
+
+
+    public function a_noncourse(Request $request)
+    {
+        $usertype = Auth::user()->usertype;
+        if ($usertype == '1') {
+
+            return view("ADMIN.a_noncourse");
+        } else {
+            return redirect()->back()->with('error_message', 'Access denied!');
+        }
+    }
+    public function ad_noncourse(Request $request)
+    {
+        $usertype = Auth::user()->usertype;
+        if ($usertype == '1') {
+            $data = new NonDegreeCourse;
+            $data->programme_type = $request->programme_type;
+            $data->course_name = $request->course_name;
+
+            $data->save();
+            return redirect()->back()->with('success', 'Form data saved successfully!');
+        } else {
+            return redirect()->back()->with('error_message', 'Access denied!');
+        }
     }
 
     public function view_faculties()
