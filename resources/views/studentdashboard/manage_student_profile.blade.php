@@ -936,19 +936,12 @@
 
 
                     @if(!empty($data->name_of_certificate_course) && $data->name_of_certificate_course != "null")
-                    @php
-
-
-                    $getcourse = DB::table('courses')->where('id', '=', $data->name_of_certificate_course)->first();
-
-
-                    @endphp
 
 
 
 
                     <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                        <h6 class="mb-0"> Name of Certificate Course:</h6>
+                        <h6 class="mb-0"> Name of Course:</h6>
                         <span class="text-secondary">~{{$data->name_of_certificate_course}}</span>
                     </li>
                     @endif
