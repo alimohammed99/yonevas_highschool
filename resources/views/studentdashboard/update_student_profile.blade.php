@@ -403,8 +403,7 @@
 
                             </select>
                         </div>
-
-  <label style="color:red; font-size:20px" class="control-label" for="">Registration is fully completed for Bachelors Programmes. <br> <span style="color:indigo">Other Programme types are undergoing maintenance.</span></label>
+                        
                         <div class="form-group">
                             <label class="control-label" for="email">Programme Type:</label>
                             <select required="required" name="programme_type" id="myselection"
@@ -416,44 +415,6 @@
                                 <option class="form-control" value="3">CONTINOUS LEARNING EDUCATION</option>
                             </select>
                         </div>
-
-                        {{-- <div style="display:none" id="show1" class="diploma-display myDiv show1 myDiv1">
-
-                            <div class="form-group">
-                                <label class="control-label" for="email">Faculty:</label>
-
-                                <select style="" name="di_faculty" id="faculty1"
-                                    class="faculty form-control">
-                                    <option value="">Select Faculty</option>
-                                    @foreach (App\Models\Faculty::orderBy('faculty_name')->get() as $key => $value)
-                                        <option value="{{ $value->faculty_name }}">{{ $value->faculty_name }}</option>
-                                    @endforeach
-                                </select>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label" for="pwd">Department:</label>
-
-                                <select style="width:" name="di_department" id="department"
-                                    class="form-control department">
-                                    <option value="">Select Department</option>
-
-                                </select>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="input__label">Level:</label>
-                                <select style="width:" name="di_level" id="states" class="form-control">
-                                    <option value="">Select Level</option>
-                                    @foreach (App\Models\Level::where('programme_type', '=', 1)->orderBy('level_name')->limit(1)->get() as $key => $value)
-                                        <option value="{{ $value->level_name }}">{{ $value->level_name }}</option>
-                                    @endforeach
-
-                                </select>
-                            </div>
-                        </div> --}}
 
                         <div style="display:none" id="show1" class="degree-display myDiv show1 myDiv7">
 
@@ -500,40 +461,17 @@
 
 
                         <div id="show2" class="myDiv show2" style="display:none">
-
+                            
                             <div class="form-group">
                                 <label class="control-label" for="pwd">Name of Certificate
                                     Course:</label>
 
                                 <select style="width:" name="name_of_certificate_course" id=""
                                     class="form-control">
-                                    <option value="Web Development">Web Development</option>
-                                    <option value="Creative Leadership">Creative Leadership</option>
-                                    <option value="Creative Writing">Creative Writing</option>
-                                    <option value="Case Report">Case Report</option>
-                                    <option value="Social Media Strategist">Social Media Strategist</option>
-                                    <option value="Private Investigator">Private Investigator</option>
-                                    <option value="Programming">Programming</option>
-                                    <option value="Networking">Networking</option>
-                                    <option value="Cyber Security">Cyber Security</option>
-                                    <option value="Visual Presentation">Visual Presentation</option>
-                                    <option value="3D Motion Graphics">3D Motion Graphics</option>
-                                    <option value="Social Awareness">Social Awareness</option>
-                                    <option value="Digital Learning">Digital Learning</option>
-                                    <option value="Public Speaking">Public Speaking</option>
-                                    <option value="Graphics Design">Graphics Design</option>
-                                    <option value="Animations and 3D Motion">Animations and 3D Motion</option>
-                                    <option value="Criminal Justice">Criminal Justice</option>
-                                    <option value="Graphic Design | Media Arts">Graphic Design | Media Arts</option>
-                                    <option value="Physical and Health Education">Physical and Health Education
-                                    </option>
-                                    <option value="Social Work">Social Work</option>
-                                    <option value="Forensic Accounting & Fraud Investigation">Forensic Accounting &
-                                        Fraud Investigation</option>
-                                    <option value="Human Resource Management">Human Resource Management</option>
-                                    <option value="Event and Meeting Management">Event and Meeting Management</option>
-                                    <option value="Early Childhood Special Education">Early Childhood Special Education
-                                    </option>
+                                    <option >please select an option</option>
+                                    @foreach ($certificateCourses as $item)
+                                    <option value="{{$item->course_name}}">{{$item->course_name}}</option>
+                                    @endforeach
                                 </select>
 
                             </div>
@@ -548,46 +486,10 @@
 
                                 <select style="width:" name="name_of_continous_learning_course" id=""
                                     class="form-control">
-                                    <option value="Digital Marketing and Social Media Strategy">Digital Marketing and
-                                        Social Media Strategy</option>
-                                    <option value="Personal Finance and Investment Planning">Personal Finance and
-                                        Investment Planning</option>
-                                    <option value="Brand Development and Marketing in the Creative Industries">Brand
-                                        Development and Marketing in the Creative Industries</option>
-                                    <option
-                                        value="Virtual Collaboration: Navigating Challenges and Maximizing Opportunities">
-                                        Virtual Collaboration: Navigating Challenges and Maximizing Opportunities
-                                    </option>
-                                    <option value="Sustainable Business Practices and Environmental Responsibility">
-                                        Sustainable Business Practices and Environmental Responsibility</option>
-                                    <option value="Introduction to Artificial Intelligence and Machine Learning">
-                                        Introduction to Artificial Intelligence and Machine Learning</option>
-                                    <option value="The Importance of Play in Child Development and Behavior">The
-                                        Importance of Play in Child Development and Behavior</option>
-                                    <option
-                                        value="Protecting Yourself from Internet Fraud: Safeguarding Your Online Presence">
-                                        Protecting Yourself from Internet Fraud: Safeguarding Your Online Presence
-                                    </option>
-                                    <option value="Digital Storytelling and Content Creation">Digital Storytelling and
-                                        Content Creation</option>
-                                    <option value="Creative Leadership and Team Management">Creative Leadership and
-                                        Team Management</option>
-                                    <option value="Sustainable Transportation: Innovations and Challenges">Sustainable
-                                        Transportation: Innovations and Challenges</option>
-                                    <option value="Mastering Temperament: The Art of Emotional Control">Mastering
-                                        Temperament: The Art of Emotional Control</option>
-                                    <option value="Design Thinking for Innovation in the Creative Industries">Design
-                                        Thinking for Innovation in the Creative Industries</option>
-                                    <option
-                                        value="Developmental Psychology: Nurturing Resilience and Academic Success from Childhood to Adulthood">
-                                        Developmental Psychology: Nurturing Resilience and Academic Success from
-                                        Childhood to Adulthood</option>
-                                    <option value="Emotional Intelligence and Communication Skills">Emotional
-                                        Intelligence and Communication Skills</option>
-                                    <option value="The Impact of Nature and Nurture on Child Behavior">The Impact of
-                                        Nature and Nurture on Child Behavior</option>
-
-
+                                    <option >please select an option</option>
+                                    @foreach ($adultLearninCourses as $item)
+                                    <option value="{{$item->course_name}}">{{$item->course_name}}</option>
+                                    @endforeach
                                 </select>
 
                             </div>

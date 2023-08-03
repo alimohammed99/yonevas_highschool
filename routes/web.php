@@ -10,6 +10,8 @@ use App\Http\Controllers\TeacherController;
 
 use App\Http\Controllers\StudentController;
 
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,12 +52,6 @@ require __DIR__ . '/pages.php';
 // ROUTES FOR FRONTEND PAGESROUTES FOR FRONTEND PAGES
 // ROUTES FOR FRONTEND PAGESROUTES FOR FRONTEND PAGES
 // ROUTES FOR FRONTEND PAGESROUTES FOR FRONTEND PAGES
-
-
-
-
-
-
 
 
 
@@ -682,4 +678,4 @@ Route::get("/students_course_feedback", [AdminController::class, "students_cours
 
 
 
-route::post('/non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);
+route::post('/add_non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);

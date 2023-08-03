@@ -39,6 +39,7 @@ use App\Models\SiteLogo;
 use App\Models\StudentsCircular;
 use App\Models\EmployeeApplication;
 use App\Models\VisitorsFeedback;
+use Illuminate\Support\Facades\Validator;
 
 use App\Models\NonDegreeStudentCourse;
 
@@ -48,7 +49,6 @@ use Mail;
 
 use App\Mail\ContactMail;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -107,25 +107,18 @@ class HomeController extends Controller
         $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
         $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
-        return view("studentdashboard.update_student_profile", compact('data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'acad', 'level', 'cert_courses', 'logo', 'studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
+        return view("studentdashboard.update_student_profile", compact('data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'acad', 'level', 'cert_courses', 'logo', 'studentsCircularCount', 'studentsCircular', 'certificateCourses', 'adultLearninCourses'))->with(['data' => $data]);
     }
+
     public function upload_students_profile(Request $request)
     {
-        if ($request->programme_type == "1") {
-            if ($request->de_faculty && $request->countries && $request->states && $request->cities && $request->academic_session && $request->de_department) {
-                User::where('id', Auth::user()->id)->update(['reg_complete' => '1']);
-            } else {
-                return back()->with('error_message', 'Please provide your country, city and state and complete the academic section!');
-            }
+        $validator = Validator::make($request->all(), $this->getValidationRules($request->programme_type));
+
+        if ($validator->fails()) {
+            return back()->with('error_message', 'Please provide your country, city and state and complete the academic section!');
         }
 
-        if ($request->programme_type == "2") {
-            if ($request->countries && $request->states && $request->cities && $request->academic_session) {
-                User::where('id', Auth::user()->id)->update(['reg_complete' => '1']);
-            } else {
-                return back()->with('error_message', 'Please provide your country, city and state and complete the academic section!');
-            }
-        }
+        User::where('id', Auth::user()->id)->update(['reg_complete' => '1']);
         $usertype = Auth::user()->usertype;
         $data2 = new StudentsDetails;
         $data2->student_password = Auth::user()->password;
@@ -243,7 +236,7 @@ class HomeController extends Controller
             $data2->group_of_individual_or_organization = " ";
         }
         if ($data2->group_of_individual_or_organization == 'Yes') {
-            $data2->group_of_individual_or_organization == 'Yes';
+            $data2->group_of_individual_or_organization = 'Yes';
             $data2->name_them = $request->name_them;
         } else {
             $data2->group_of_individual_or_organization == ' ';
@@ -280,17 +273,51 @@ class HomeController extends Controller
             $data2->faculty = $request->de_faculty;
             $data2->department = $request->de_department;
             $data2->name_of_certificate_course = 'null';
-        } else {
+        } else if($data2->programme_type == '2') {
             $data2->level = 'null';
             $data2->faculty = 'null';
             $data2->department = 'null';
             $data2->name_of_certificate_course = $request->name_of_certificate_course;
             $nonDegreeCourseToStudentData = new NonDegreeStudentCourse();
             $nonDegreeCourseToStudentData->student_id = Auth::user()->id;
+            $nonDegreeCourseToStudentData->status = 1;
             $nonDegreeCourseToStudentData->course_name = $request->name_of_certificate_course;
+            $nonDegreeCourseToStudentData->save();
+        } else {
+            $data2->level = 'null';
+            $data2->faculty = 'null';
+            $data2->department = 'null';
+            $data2->name_of_certificate_course = $request->name_of_continous_learning_course;
+            $nonDegreeCourseToStudentData = new NonDegreeStudentCourse();
+            $nonDegreeCourseToStudentData->student_id = Auth::user()->id;
+            $nonDegreeCourseToStudentData->status = 1;
+            $nonDegreeCourseToStudentData->course_name = $request->name_of_continous_learning_course;
+            $nonDegreeCourseToStudentData->save();
         }
         $data2->save();
-        return redirect('/services_and_links')->with('success_message', 'You have successfully completed your profile!');
+        return redirect('/students_course_reg')->with('success_message', 'You have successfully completed your profile!');
+    }
+    
+    protected function getValidationRules($programmeType)
+    {
+        if ($programmeType == "1") {
+            return [
+                'de_faculty' => 'required_without_all:countries,states,cities,academic_session,de_department',
+                'academic_session' => 'required_without_all:countries,states,cities,de_faculty,de_department',
+                // Add other validation rules for program type 1
+            ];
+        } else {
+            return [
+                'countries' => 'required',
+                'states' => 'required',
+                'cities' => 'required',
+                'academic_session' => 'required',
+                // Add other validation rules for program type 2
+            ];
+        }
+
+        // Add default validation rules for other program types, if needed
+        return [];
     }
     // ROUTES FOR THE FRONTEND PAGES
     // ROUTES FOR THE FRONTEND PAGES

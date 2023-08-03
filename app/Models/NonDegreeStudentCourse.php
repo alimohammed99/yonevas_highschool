@@ -10,5 +10,5 @@ class NonDegreeStudentCourse extends Model
     use HasFactory;
     protected $table = 'non_degree_student_courses';
 
-    protected $fillable = ['student_id', 'course_name'];
+    protected $fillable = ['student_id', 'course_name', 'status'];
 }

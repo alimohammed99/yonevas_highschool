@@ -39,7 +39,7 @@
         <hr style="">
 
         {{-- form to add course --}}
-        <form style="width:" class="form" action="{{ url('non_degree_course_reg') }}" method="post" enctype="multipart/form-data">
+        <form style="width:" class="form" action="{{ url('add_non_degree_course_reg') }}" method="post" enctype="multipart/form-data">
 
             @csrf
             <div class="form-group">
@@ -67,13 +67,9 @@
                     <tr style="text-align:center; color:white; background-color:rgb(18, 18, 63)">
                         <td style="">S/N</td>
                         <td style="">Course Name</td>
-                        <tr style="text-align: center">
-                            <td>1</td>
-                            <td>{{ $firstCourse }}</td>
-                        <tr>
                         @foreach ($course_details as $studentsData1)
                     <tr style="text-align: center">
-                        <td>{{ $loop->iteration + 1 }}</td>
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $studentsData1->course_name }}</td>
                     <tr>
                         @endforeach
