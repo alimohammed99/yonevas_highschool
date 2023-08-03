@@ -1072,13 +1072,12 @@ class StudentController extends Controller
 
         $programEnrolled = User::where('users.id', $getStudentId)
             ->join('students_details', 'users.id', '=', 'students_details.student_id')
-            ->select('students_details.programme_type')
+            ->select('students_details.programme_type', 'students_details.name_of_certificate_course')
             ->first();
         // dd($programEnrolled->programme_type);
 
         // If users want to do course reg without filling their full details.
-        // If users want to do course reg without filling their full details.
-        if (!$programEnrolled) {
+        if (!Auth::user()->reg_complete == 1) {
             // return redirect()->route('upload_students_profile');
             return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration.');
         }
@@ -1102,8 +1101,16 @@ class StudentController extends Controller
             $course_details = NonDegreeStudentCourse::where('student_id', $getStudentId)
                 ->get();
 
-            $courses = NonDegreeCourse::where('programme_type', $programEnrolled->programme_type)->get();
-            return view("studentdashboard.non_degree_course_reg", compact('data', 'course_details', 'courses'));
+            $registered_course_names = NonDegreeStudentCourse::where('student_id', $getStudentId)
+                ->pluck('course_name')
+                ->toArray(); // Pluck the course names that the student has already registered for
+
+            $courses = NonDegreeCourse::where('programme_type', $programEnrolled->programme_type)
+                ->where('course_name', '!=', $programEnrolled->name_of_certificate_course)
+                ->whereNotIn('course_name', $registered_course_names)
+                ->get();
+            $firstCourse = $programEnrolled->name_of_certificate_course;
+            return view("studentdashboard.non_degree_course_reg", compact('data', 'course_details', 'courses', 'firstCourse'));
         }
 
 

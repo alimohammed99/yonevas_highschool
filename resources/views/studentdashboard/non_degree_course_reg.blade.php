@@ -67,11 +67,14 @@
                     <tr style="text-align:center; color:white; background-color:rgb(18, 18, 63)">
                         <td style="">S/N</td>
                         <td style="">Course Name</td>
+                        <tr style="text-align: center">
+                            <td>1</td>
+                            <td>{{ $firstCourse }}</td>
+                        <tr>
                         @foreach ($course_details as $studentsData1)
                     <tr style="text-align: center">
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $loop->iteration + 1 }}</td>
                         <td>{{ $studentsData1->course_name }}</td>
-                        {{-- <td></td> --}}
                     <tr>
                         @endforeach
                 </table>
