@@ -459,12 +459,12 @@ public function a_course(Request $request)
             $data->course_status = $request->course_status;
             $data->course_unit = $request->course_unit;
             $data->image = $request->course_image;
-        
+
             $data->save();
-            return redirect()->back()->with('success', 'Form data saved successfully!');  
+            return redirect()->back()->with('success', 'Form data saved successfully!');
         } else {
             return redirect()->back()->with('error_message', 'Access denied!');
-        }  
+        }
     }
 
 
@@ -508,10 +508,10 @@ public function a_course(Request $request)
         $usertype = Auth::user()->usertype;
         if ($usertype == '1') {
             $data = new Courses;
-        
+
             $data->course_title = $request->course_title;
             $data->programme_type = $request->programme_type;
-        
+
             if ($data->programme_type == '1') {
                 // DIPLOMA
                 $data->faculty_id = $request->di_faculty;
@@ -529,33 +529,33 @@ public function a_course(Request $request)
                 $data->department_id = 'null';
                 $data->level = 'null';
             }
-        
+
             $data->course_code = $request->course_code;
             $data->course_status = $request->course_status;
             $data->course_unit = $request->course_unit;
             $data->semester = $request->semester;
             $data->course_status = $request->course_status;
             $data->course_description = $request->course_description;
-        
+
             if (!empty($request->course_image)) {
                 $image = $request->course_image;
                 $imagename = time() . '.' . $image->getClientOriginalExtension();
-        
+
                 if ($data->programme_type == '1') {
                     $request->course_image->move('diplomaCourseImages', $imagename);
                 } else if ($data->programme_type == '2') {
                     $request->course_image->move('degreeCourseImages', $imagename);
                 }
-        
+
                 $data->image = $imagename;
             }
-        
+
             $data->save();
-        
+
             return redirect()->back()->with('success_message', 'You have successfully added a Course ');
         } else {
             return redirect()->back()->with('error_message', 'Access denied!');
-        }        
+        }
     }
 
 
@@ -3226,8 +3226,8 @@ public function a_course(Request $request)
                 ->select('users.id as id',
                 'users.*' ,
                 'students_details.*'
-                ,'countries.name_country', 
-                'states.name_state', 
+                ,'countries.name_country',
+                'states.name_state',
                 'cities.name_city'
                 )->first();
 
@@ -5175,7 +5175,7 @@ public function a_course(Request $request)
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
-    
+
       public function students_course_feedback()
     {
         $usertype = Auth::user()->usertype;
@@ -5190,6 +5190,33 @@ public function a_course(Request $request)
             return redirect()->back()->with('error_message', 'Access denied!');
         }
     }
+
+
+
+    public function get_all_non_degree_students()
+{
+    $usertype = Auth::user()->usertype;
+
+    if ($usertype == '1') {
+        $nonDegreeStudents = User::join('students_details', 'users.id', '=', 'students_details.student_id')
+            ->where('students_details.programme_type', '!=', '1')
+            ->join('non_degree_student_courses', 'students_details.student_id', '=', 'non_degree_student_courses.student_id')
+            ->join('academic_sessions', 'academic_sessions.id', '=', 'students_details.academic_session')
+            ->join('programme_types', 'programme_types.id', '=', 'students_details.programme_type')
+            ->select('students_details.student_id', 'users.first_name', 'users.last_name', 'students_details.programme_type', 'students_details.name_of_certificate_course', 'students_details.academic_session', 'non_degree_student_courses.course_name', 'academic_sessions.academic_session', 'programme_types.programme')
+            ->orderByDesc("students_details.created_at")
+            ->get();
+            // dd($nonDegreeStudents);
+
+        return view("ADMIN.view_non_degree_students", compact('nonDegreeStudents'));
+    } else {
+        return redirect()->back()->with('error_message', 'Access denied!');
+    }
+}
+
+
+
+
 }
 
 

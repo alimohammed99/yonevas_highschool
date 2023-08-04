@@ -683,3 +683,10 @@ Route::get("/students_course_feedback", [AdminController::class, "students_cours
 
 
 route::post('/non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);
+
+
+
+
+Route::get("/get_all_non_degree_students", [AdminController::class, "get_all_non_degree_students"]);
+
+

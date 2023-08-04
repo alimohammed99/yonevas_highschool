@@ -35,7 +35,7 @@
 
     <span style="color:red; font-size:22px">Fill all details carefully. Do not leave any field blank.</span>
     <div class="card card_border mt-2 py-2 mb-4">
-        Religion
+        
         <div class="card-body" back>
 
             <form class="form-horizontal" action="{{ url('upload_students_profile') }}" method="post"

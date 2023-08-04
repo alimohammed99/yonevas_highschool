@@ -109,6 +109,9 @@ class HomeController extends Controller
         $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
         return view("studentdashboard.update_student_profile", compact('data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'acad', 'level', 'cert_courses', 'logo', 'studentsCircularCount', 'studentsCircular'))->with(['data' => $data]);
     }
+
+
+    
     public function upload_students_profile(Request $request)
     {
         if ($request->programme_type == "1") {
