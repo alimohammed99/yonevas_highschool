@@ -676,53 +676,6 @@ class StudentController extends Controller
                     )
                     ->first();
             }
-            $programEnrolled = User::where('users.id', $getStudentId)
-                ->join('students_details', 'users.id', '=', 'students_details.student_id')
-                ->select('students_details.programme_type')
-                ->first();
-            if ($programEnrolled->programme_type == '1') {
-                $data = User::where('users.id', $getCurrentUserId)
-                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
-                    ->join('countries', 'students_details.country', '=', 'countries.id')
-                    ->join('states', 'students_details.state', '=', 'states.id')
-                    ->join('cities', 'students_details.city', '=', 'cities.id')
-                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                    ->join('departments', 'students_details.department', '=', 'departments.id')
-                    ->select(
-                        'users.id as id',
-                        'users.*',
-                        'students_details.*',
-                        'countries.name_country',
-                        'states.name_state',
-                        'cities.name_city',
-                        'academic_sessions.academic_session',
-                        'programme_types.programme',
-                        'faculties.faculty_name as faculty',
-                        'departments.department_name as department'
-                    )
-                    ->first();
-            } else {
-                $data = User::where('users.id', $getCurrentUserId)
-                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
-                    ->join('countries', 'students_details.country', '=', 'countries.id')
-                    ->join('states', 'students_details.state', '=', 'states.id')
-                    ->join('cities', 'students_details.city', '=', 'cities.id')
-                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
-                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-                    ->select(
-                        'users.id as id',
-                        'users.*',
-                        'students_details.*',
-                        'countries.name_country',
-                        'states.name_state',
-                        'cities.name_city',
-                        'academic_sessions.academic_session',
-                        'programme_types.programme'
-                    )
-                    ->first();
-            }
 
 
             $data1 = MaritalStatus::all();
@@ -982,25 +935,53 @@ class StudentController extends Controller
 
             if (Auth::user()->reg_complete == 1) {
 
-                $data = User::where('users.id', $getStudentId)->join('students_details', 'users.id', '=', 'students_details.student_id')
-                    ->join('marital_statuses', 'students_details.marital_status', '=', 'marital_statuses.id')
-                    ->join('religions', 'students_details.religion', '=', 'religions.id')
+                $programEnrolled = User::where('users.id', $getStudentId)
+                ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                ->select('students_details.programme_type')
+                ->first();
+            if ($programEnrolled->programme_type == '1') {
+                $data = User::where('users.id', $getStudentId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
                     ->join('countries', 'students_details.country', '=', 'countries.id')
                     ->join('states', 'students_details.state', '=', 'states.id')
                     ->join('cities', 'students_details.city', '=', 'cities.id')
-                    ->join('military_forces', 'students_details.military_force', '=', 'military_forces.id')
-                    ->join('government_officials', 'students_details.government_official', '=', 'government_officials.id')
-                    ->join('medical_conditions', 'students_details.medical_conditions', '=', 'medical_conditions.id')
                     ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
                     ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
-                    // ->join('levels', 'students_details.level', '=', 'levels.id')
-                    // ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
-                    // ->join('departments', 'students_details.department', '=', 'departments.id')
-                    // ->join('courses', 'students_details.name_of_certificate_course', '=', 'courses.id')
-
-
-                    ->select('users.id as id', 'users.first_name', 'users.last_name', 'users.other_names', 'students_details.student_image', 'users.email', 'users.phone', 'countries.name_country', 'states.name_state', 'cities.name_city', 'students_details.address', 'marital_statuses.status', 'students_details.date_of_birth', 'students_details.zip_code', 'religions.religion_name', 'students_details.student_password', 'students_details.gender', 'students_details.student_image', 'students_details.free_time', 'students_details.residential_home', 'students_details.group_of_individual_or_organization', 'academic_sessions.academic_session', 'students_details.name_them', 'students_details.languages', 'military_forces.military_force', 'government_officials.government_official', 'medical_conditions.medical_conditions', 'students_details.currently_studying', 'students_details.name_of_current_institution', 'students_details.major', 'students_details.years_of_study', 'students_details.online_classes', 'students_details.how_long_for_online_classes', 'students_details.type_of_enrollment', 'students_details.type_of_enrollment', 'students_details.enrollment_period', 'programme_types.programme', 'students_details.level', 'students_details.faculty', 'students_details.department', 'students_details.name_of_certificate_course', 'students_details.facebook_page', 'students_details.twitter_page', 'students_details.instagram_page', 'students_details.linkedin_page', 'students_details.next_of_kin_name', 'students_details.next_of_kin_email', 'students_details.next_of_kin_phone', 'students_details.next_of_kin_address')->first();
-
+                    ->join('faculties', 'students_details.faculty', '=', 'faculties.id')
+                    ->join('departments', 'students_details.department', '=', 'departments.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme',
+                        'faculties.faculty_name as faculty',
+                        'departments.department_name as department'
+                    )
+                    ->first();
+            } else {
+                $data = User::where('users.id', $getStudentId)
+                    ->join('students_details', 'users.id', '=', 'students_details.student_id')
+                    ->join('countries', 'students_details.country', '=', 'countries.id')
+                    ->join('states', 'students_details.state', '=', 'states.id')
+                    ->join('cities', 'students_details.city', '=', 'cities.id')
+                    ->join('academic_sessions', 'students_details.academic_session', '=', 'academic_sessions.id')
+                    ->join('programme_types', 'students_details.programme_type', '=', 'programme_types.id')
+                    ->select(
+                        'users.id as id',
+                        'users.*',
+                        'students_details.*',
+                        'countries.name_country',
+                        'states.name_state',
+                        'cities.name_city',
+                        'academic_sessions.academic_session',
+                        'programme_types.programme'
+                    )
+                    ->first();
+            }
                 $studentsCircularCount = StudentsCircular::select('students_circulars.title as title', 'students_circulars.content as content')->count();
 
                 $studentsCircular = StudentsCircular::select('students_circulars.id as id', 'students_circulars.title as title', 'students_circulars.content as content')->get();
@@ -1062,6 +1043,7 @@ class StudentController extends Controller
         $nonDegreeCourseToStudentData->student_id = Auth::user()->id;
         $nonDegreeCourseToStudentData->status = 0;
         $nonDegreeCourseToStudentData->course_name = $request->name_of_certificate_course;
+        $nonDegreeCourseToStudentData->save();
 
         return back()->with('success_message', 'You have successfully added the new course!');
     }
@@ -1070,18 +1052,17 @@ class StudentController extends Controller
     {
         $getStudentId = Auth::user()->id;
 
-        $programEnrolled = User::where('users.id', $getStudentId)
-            ->join('students_details', 'users.id', '=', 'students_details.student_id')
-            ->select('students_details.programme_type')
-            ->first();
-        // dd($programEnrolled->programme_type);
-
         // If users want to do course reg without filling their full details.
-        // If users want to do course reg without filling their full details.
-        if (!$programEnrolled) {
+        if (!Auth::user()->reg_complete == 1) {
             // return redirect()->route('upload_students_profile');
             return redirect()->back()->with('error_message', 'You have not completed your Profile! Kindly do so to complete your registration.');
         }
+
+        $programEnrolled = User::where('users.id', $getStudentId)
+            ->join('students_details', 'users.id', '=', 'students_details.student_id')
+            ->select('students_details.programme_type', 'students_details.name_of_certificate_course')
+            ->first();
+        // dd($programEnrolled->programme_type);
 
 
         if ($programEnrolled->programme_type == '3' || $programEnrolled->programme_type == '2') {
@@ -1102,7 +1083,14 @@ class StudentController extends Controller
             $course_details = NonDegreeStudentCourse::where('student_id', $getStudentId)
                 ->get();
 
-            $courses = NonDegreeCourse::where('programme_type', $programEnrolled->programme_type)->get();
+            $registered_course_names = NonDegreeStudentCourse::where('student_id', $getStudentId)
+                ->pluck('course_name')
+                ->toArray(); // Pluck the course names that the student has already registered for
+
+            $courses = NonDegreeCourse::where('programme_type', $programEnrolled->programme_type)
+                ->where('course_name', '!=', $programEnrolled->name_of_certificate_course)
+                ->whereNotIn('course_name', $registered_course_names)
+                ->get();
             return view("studentdashboard.non_degree_course_reg", compact('data', 'course_details', 'courses'));
         }
 

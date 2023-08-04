@@ -67,10 +67,6 @@
 
 
 
-                            <!--                {{ $studentsCircularCount }}-->
-
-
-
                             <!--            </span>-->
                             <!--            <svg style="font-size:30px" xmlns="http://www.w3.org/2000/svg" width="16"-->
                             <!--                height="16" fill="currentColor" class="bi bi-envelope pl-1"-->
@@ -90,11 +86,8 @@
 
                             <!--                            {{-- <img alt="Image placeholder" src="../../assets/img/team/profile-picture-1.jpg" class="avatar-md rounded"> --}}-->
                             <!--                        </div>-->
-
-                            <!--                        @foreach ($studentsCircular as $studentsCircular)-->
                             <!--                            <div style="border-bottom:2px solid grey"-->
                             <!--                                class="col-12 ps-0 ms-2">-->
-                            <!--                                <h2 class="text-success pt-2">{{ $studentsCircular->title }}-->
                             <!--                                </h2>-->
                             <!--                                <div-->
                             <!--                                    class="d-flex justify-content-between align-items-center">-->
@@ -107,10 +100,6 @@
                             <!--                                    </div>-->
                             <!--                                    {{-- <h3 class="font-smal">Added you to an event "h3roject stand-up" tomorrow at 12:30 AM.  </h3> --}}-->
                             <!--                                    <p class="font-small mt-3 mb-0">-->
-                            <!--                                        {{ $studentsCircular->content }} </p>-->
-
-                            <!--                                </div>-->
-                            <!--                                <a href="{{ route('read', $studentsCircular->id) }}"-->
                             <!--                                    class="btn btn-success">Mark as read</a> <br><br>-->
 
 
@@ -118,7 +107,6 @@
 
                             <!--                            </div>-->
                             <!--                            {{-- <hr/> --}}-->
-                            <!--                        @endforeach-->
                             <!--                    </div>-->
                             <!--                </div>-->
 

@@ -30,9 +30,7 @@
         <label class="control-label" for="email">Programme Type:</label>
         <select name="programme_type" id="myselection" class="myselection form-control" required="required">
             <option value="">Select Programme Type</option>
-            @foreach(App\Models\ProgrammeType::orderBy('programme')->get() as $key => $value)
-                            <option value="{{ $value->id }}" >{{ $value->programme }}</option>
-                        @endforeach
+            <option value="1" >BACHELORS DEGREE</option>
         </select>
     </div>
 

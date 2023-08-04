@@ -39,7 +39,7 @@
         <hr style="">
 
         {{-- form to add course --}}
-        <form style="width:" class="form" action="{{ url('non_degree_course_reg') }}" method="post" enctype="multipart/form-data">
+        <form style="width:" class="form" action="{{ url('add_non_degree_course_reg') }}" method="post" enctype="multipart/form-data">
 
             @csrf
             <div class="form-group">
@@ -71,7 +71,6 @@
                     <tr style="text-align: center">
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $studentsData1->course_name }}</td>
-                        {{-- <td></td> --}}
                     <tr>
                         @endforeach
                 </table>

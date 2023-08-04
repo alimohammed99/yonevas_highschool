@@ -10,6 +10,8 @@ use App\Http\Controllers\TeacherController;
 
 use App\Http\Controllers\StudentController;
 
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,12 +57,6 @@ require __DIR__ . '/pages.php';
 
 
 
-
-
-
-
-
-
 route::get('/redirect', [HomeController::class, 'redirect'])->middleware('auth', 'verified');
 
 route::get('/', [HomeController::class, 'index']);
@@ -82,7 +78,6 @@ Route::get('/edit_faculties/{id}', [AdminController::class, 'edit_faculties']);
 Route::get("/delete_faculties/{id}", [AdminController::class, "delete_faculties"]);
 
 Route::post("/update_faculties/{id}", [AdminController::class, "update_faculties"]);
-
 
 
 
@@ -682,4 +677,8 @@ Route::get("/students_course_feedback", [AdminController::class, "students_cours
 
 
 
-route::post('/non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);
+route::post('/add_non_degree_course_reg', [StudentController::class, 'non_degree_course_reg']);
+
+route::get('/a_noncourse', [AdminController::class, 'a_noncourse']);
+
+Route::post('/ad-noncourse', [AdminController::class, 'ad_noncourse'])->name('ad_noncourse');
